@@ -154,7 +154,7 @@
                 <a class="nav-link text-white me-4" href="#"></a>
               </li>
               <li class="nav-item d-flex align-items-center">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="https://www.uni-freiburg.de">
                   <img
                     src="static/ufr-logo-white.svg"
                     alt="Albert-Ludwigs-Universität Freiburg"
@@ -182,7 +182,10 @@
               </li>
               <li class="nav-item d-none d-xl-block mr-4">
                 <h2>
-                  <a href="" class="nav-link text-white" href="#">
+                  <a
+                    class="nav-link text-white"
+                    href="https://www.stochastik.uni-freiburg.de/de/professoren/peter-pfaffelhuber"
+                  >
                     Peter Pfaffelhuber</a
                   >
                 </h2>
@@ -199,11 +202,92 @@
         </div>
       </nav>
     </header>
-    {% block navbar %}
-    {% include 'partials/_navbar.html' %}    
-    {% endblock %} {% block content %}
-    
-    {% endblock %}
+
+    <header class="navbar navbar-expand-xl bg-ufr-blue">
+      <nav class="navbar navbar-expand-xl navbar-dark">
+        <div class="container-fluid">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <ul class="navbar-nav align-items-lg-center">
+              <li class="nav-item">
+                <a class="nav-link text-white me-4" href="#"></a>
+              </li>
+              <li class="nav-item dropdown px-3">
+                <a
+                  class="nav-link dropdown-toggle active"
+                  href=""
+                  id="navbarDropdownMenuLink"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Research</a
+                >
+                <ul class="dropdown-menu" data-bs-theme="light">
+                  <li>
+                    <a
+                      class="dropdown-item text-black"
+                      href="projects.html"
+                      >Projects</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item text-black"
+                      href="publications.html"
+                      >Publications</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown px-3">
+                <a
+                  class="nav-link dropdown-toggle active"
+                  href=""
+                  id="navbarDropdownMenuLink"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Lehre/Teaching</a
+                >
+                <ul
+                  class="dropdown-menu"
+                  aria-labelledby="navbarDropdownMenuLink"
+                >
+                  <li class="dropdown-submenu">
+                    <a
+                      class="dropdown-item text-black"
+                      href="2024ss_wtheorie.html"
+                      >SoSe 2024, Wahrscheinlichkeitstheorie</a
+                    >
+                  </li>
+                  <li class="dropdown-submenu">
+                    <a
+                      class="dropdown-item text-black"
+                      href="measure.html"
+                      >Measure theory for probabilists</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    {% block content %} {% endblock %}
 
     <div><br /></div>
     <div><br /></div>
@@ -217,20 +301,12 @@
             >
               <div class="col-md-2">
                 <h6 class="text-uppercase font-weight-bold">
-                  <a
-                    href="contact.html"
-                    class="text-white"
-                    >Impressum</a
-                  >
+                  <a href="contact.html" class="text-white">Impressum</a>
                 </h6>
               </div>
               <div class="col-md-2">
                 <h6 class="text-uppercase font-weight-bold">
-                  <a
-                    href="contact.html"
-                    class="text-white"
-                    >Datenschutz</a
-                  >
+                  <a href="contact.html" class="text-white">Datenschutz</a>
                 </h6>
               </div>
             </div>
