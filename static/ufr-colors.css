@@ -1,0 +1,129 @@
+css
+
+
+/*
+* #e7e7e7
+* "#ffd058": Master-Arbeit
+* #d7d7e7": Zeilen der Tabelle
+* f0db5f Präsentation der Master-Arbeit
+* #ffff66: Vertiefungsmodul, Mathematik, Reine Mathematik, Angewandte Mathematik
+* #e6e666:Seminar
+* #af8daa Wahlmodul
+* 
+*/
+
+body {
+}
+.praesentation-abschlussarbeit {
+    background-color: #f6f1e3;
+}
+.abschlussarbeit {
+    background-color: #afb1d8;
+}
+.mathematik {
+    background-color: #ffec86;
+}
+.mathematik-weitere {
+    background-color: #fff1a9;
+}
+.seminar {
+    background-color: #fff6c8;
+}
+.wahlmodul {
+    background-color: #f5c2ed;
+}
+.bok {
+    background-color: #cce666;
+}
+.anwendungsfach {
+    background-color: #868DC2;
+}
+.bildungswissenschaft {
+    background-color: #7bc6b4;
+}
+.fachdidaktik {
+    background-color: #00a082;
+}
+
+
+.bg-ufr-darkblue {
+    background-color:#00004a;
+}
+.bg-ufr-blue {
+    background-color: #344A9A;
+}
+.bg-ufr-blue-80 {
+    background-color: #5D6BAD;
+}
+.bg-ufr-blue-60 {
+    background-color: #868DC2;
+}
+.bg-ufr-blue-40 {
+    background-color:#AFB1D8;
+}
+.bg-ufr-blue-20 {
+    background-color:#D7D8EC;
+}
+.bg-ufr-sand {
+    background-color: #f6f1e3;
+}
+.bg-ufr-green {
+    background-color: #00a082;
+}
+.bg-ufr-green-80 {
+    background-color: #27b29b;
+}
+.bg-ufr-green-60 {
+    background-color: #7bc6b4;
+}
+.bg-ufr-green-40 {
+    background-color: #afdace;
+}
+.bg-ufr-green-20 {
+    background-color: #daede7;
+}
+.bg-ufr-brown {
+    background-color: #8f6b30;
+}
+.bg-ufr-brown-80 {
+    background-color: #a58552;
+}
+.bg-ufr-brown-60 {
+    background-color: #baa078;
+}
+.bg-ufr-brown-40 {
+    background-color: #d0bda2;
+}
+.bg-ufr-brown-20 {
+    background-color: #e7ddce;
+}
+.bg-ufr-yellow {
+    background-color: #ffe863;
+}
+.bg-ufr-yellow-80 {
+    background-color: #ffec86;
+}
+.bg-ufr-yellow-60 {
+    background-color: #fff1a9;
+}
+.bg-ufr-yellow-40 {
+    background-color: #fff6c8;
+}
+.bg-ufr-yellow-20 {
+    background-color: #fffae5;
+}
+.bg-ufr-pink {
+    background-color: #f5c2ed;
+}
+.bg-ufr-pink-80 {
+    background-color: #ebcfe5;
+}
+.bg-ufr-pink-60 {
+    background-color: #f0dbec;
+}
+.bg-ufr-pink-40 {
+    background-color: #f5e7f3;
+}
+.bg-ufr-pink-20 {
+    background-color: #faf3f9;
+}

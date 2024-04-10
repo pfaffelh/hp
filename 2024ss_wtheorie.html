@@ -135,9 +135,9 @@
         background-color: #344a9a !important;
       }
     </style>
-    {% block styles %}
+    
     <!-- Add additional styles here -->
-    {% endblock %}
+    
   </head>
 
   <body class="bg-white">
@@ -199,11 +199,83 @@
         </div>
       </nav>
     </header>
-    {% block navbar %}
-    {% include 'partials/_navbar.html' %}    
-    {% endblock %} {% block content %}
     
-    {% endblock %}
+    <header class="navbar navbar-expand-xl bg-ufr-blue">
+  <nav class="navbar navbar-expand-xl navbar-dark">
+    <div class="container-fluid">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarTogglerDemo01"
+        aria-controls="navbarTogglerDemo01"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <ul class="navbar-nav align-items-lg-center">
+          <li class="nav-item">
+            <a class="nav-link text-white me-4" href="#"></a>
+          </li>
+          <li class="nav-item dropdown px-3">
+            <a
+              class="nav-link dropdown-toggle active"
+              href=""
+              id="navbarDropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Research</a
+            >
+            <ul class="dropdown-menu" data-bs-theme="light">
+              <li>
+                <a class="dropdown-item text-black" href="">Publications</a>
+              </li>
+              <li>
+                <a class="dropdown-item text-black" href="">Projects</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown px-3">
+            <a
+              class="nav-link dropdown-toggle active"
+              href=""
+              id="navbarDropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Lehre/Teaching</a
+            >
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li class="dropdown-submenu">
+                <a class="dropdown-item text-black" href="2024ss_wtheorie.html"
+                  >SoSe 2024, Wahrscheinlichkeitstheorie</a
+                >
+              </li>
+              <li class="dropdown-submenu">
+                <a class="dropdown-item text-black" href="measure.html"
+                  >Measure theory for probabilists</a
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>    
+     
+<div class="container">
+  <div class="col-12">
+    <h1>Vorlesung Wahrscheinlichkeitstheorie, Sommersemester 2024</h1>
+    <p>This page is under construction. Currently there is only some content for teaching.</p>
+  </div>
+</div>
+
 
     <div><br /></div>
     <div><br /></div>
@@ -251,6 +323,6 @@
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    {% block js %} {% endblock %}
+     
   </body>
 </html>
