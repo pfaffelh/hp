@@ -1,311 +1,4 @@
-<!DOCTYPE html>
-<html lang="de">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>
-      Mathematisches Institut, Universität Freiburg, Peter Pfaffelhuber
-    </title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      id="unitheme-style-css"
-      href="static/unitheme.css?ver=2.0.02"
-      type="text/css"
-      media="all"
-    />
-    <link
-      rel="stylesheet"
-      href="static/ufr-colors.css"
-      type="text/css"
-      media="all"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    />
-    <script></script>
-    <link href="static/ufr-colors.css" type="text/css" media="all" />
-    <script>
-      $('[data-toggle="tooltip"]').tooltip({
-        template:
-          '<div class="tooltip tooltip-custom"><div class="title">Test</div><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>',
-      });
-    </script>
-    <style>
-      .btn:focus {
-        outline: none;
-        box-shadow: none;
-      }
-      @media (min-width: 768px) {
-        .container-small {
-          width: 300px;
-        }
-        .container-large {
-          width: 970px;
-        }
-      }
-      @media (min-width: 992px) {
-        .container-small {
-          width: 500px;
-        }
-        .container-large {
-          width: 1170px;
-        }
-      }
-      @media (min-width: 1200px) {
-        .container-small {
-          width: 700px;
-        }
-        .container-large {
-          width: 1500px;
-        }
-      }
-
-      .container-small,
-      .container-large {
-        max-width: 100%;
-      }
-      .carousel-image {
-        width: 100%;
-        height: 360px;
-        object-fit: cover;
-      }
-
-      .navbar-nav li:hover > ul.dropdown-menu {
-        display: block;
-      }
-
-      .dropdown-submenu {
-        position: relative;
-      }
-
-      .dropdown-submenu > .dropdown-menu {
-        top: 0;
-        left: 100%;
-        margin-top: -6px;
-      }
-
-      /* rotate caret on hover */
-      .dropdown-menu > li > a:hover:after {
-        text-decoration: underline;
-        transform: rotate(-45deg);
-      }
-      .dropdown-submenu.btn:focus-within {
-        background-color: white;
-      }
-      .dropdown-toggle::after {
-        display: inline-block;
-        width: 0.5em;
-        height: 0.5em;
-        margin: -0.3em 0 0 0.4em;
-        vertical-align: middle;
-        content: "";
-        border: 0.3em solid;
-        border-width: 0 0.15em 0.15em 0;
-        transform: rotateZ(45deg);
-      }
-      .accordion-button::after {
-        background-image: url("static/Bilder/plus-svgrepo-com.svg");
-      }
-      .accordion-button:not(.collapsed)::after {
-        background-image: url("static/Bilder/cross-svgrepo-com.svg");
-      }
-      .accordion-button:not(.collapsed) {
-        background-color: #fffae5;
-        color-scheme: #fffae5;
-      }
-      .accordion-button:hover {
-        background-color: #fffae5;
-        outline: none;
-      }
-      .table-borderless td,
-      .table-borderless th {
-        border: 0;
-      }
-      .btn-primary,
-      .btn-primary:hover,
-      .btn-primary:active,
-      .btn-primary:visited {
-        background-color: #344a9a !important;
-      }
-    </style>
-    
-    <!-- Add additional styles here -->
-    
-  </head>
-
-  <body class="bg-white">
-    <header class="bg-ufr-darkblue">
-      <nav
-        id="site-navigation"
-        class="navbar navbar-expand-xl"
-        aria-label="Oberes Menü"
-      >
-        <div class="container-fluid">
-          <div class="d-flex flex-grow-1">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link text-white me-4" href="#"></a>
-              </li>
-              <li class="nav-item d-flex align-items-center">
-                <a class="navbar-brand" href="https://www.uni-freiburg.de">
-                  <img
-                    src="static/ufr-logo-white.svg"
-                    alt="Albert-Ludwigs-Universität Freiburg"
-                    width="339"
-                    height="55"
-                  />
-                </a>
-              </li>
-              <li class="nav-item d-none d-xl-block align-self-center">
-                <i class="fa fa-chevron-right fa-55 text-white ms-2 me-2"></i>
-              </li>
-              <li class="nav-item d-none d-xl-block mr-4">
-                <h2>
-                  <a
-                    href="https://www.math.uni-freiburg.de"
-                    class="nav-link text-white"
-                    href="#"
-                  >
-                    Mathematisches Institut</a
-                  >
-                </h2>
-              </li>
-              <li class="nav-item d-none d-xl-block align-self-center">
-                <i class="fa fa-chevron-right fa-55 text-white ms-2 me-2"></i>
-              </li>
-              <li class="nav-item d-none d-xl-block mr-4">
-                <h2>
-                  <a
-                    class="nav-link text-white"
-                    href="https://www.stochastik.uni-freiburg.de/de/professoren/peter-pfaffelhuber"
-                  >
-                    Peter Pfaffelhuber</a
-                  >
-                </h2>
-              </li>
-              <li class="nav-item d-none d-xl-block align-self-center">
-                <i class="fa fa-chevron-right fa-55 text-white ms-2 me-2"></i>
-              </li>
-            </ul>
-            <div
-              class="align-self-center justify-content-end"
-              id="navbarSupportedContentRight"
-            ></div>
-          </div>
-        </div>
-      </nav>
-    </header>
-
-    <header class="navbar navbar-expand-xl bg-ufr-blue">
-      <nav class="navbar navbar-expand-xl navbar-dark">
-        <div class="container-fluid">
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarTogglerDemo01"
-            aria-controls="navbarTogglerDemo01"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <ul class="navbar-nav align-items-lg-center">
-              <li class="nav-item">
-                <a class="nav-link text-white me-4" href="#"></a>
-              </li>
-              <li class="nav-item dropdown px-3">
-                <a
-                  class="nav-link dropdown-toggle active"
-                  href=""
-                  id="navbarDropdownMenuLink"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  Research</a
-                >
-                <ul class="dropdown-menu" data-bs-theme="light">
-                  <li>
-                    <a
-                      class="dropdown-item text-black"
-                      href="projects.html"
-                      >Projects</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      class="dropdown-item text-black"
-                      href="publications.html"
-                      >Publications</a
-                    >
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-item dropdown px-3">
-                <a
-                  class="nav-link dropdown-toggle active"
-                  href=""
-                  id="navbarDropdownMenuLink"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  Lehre/Teaching</a
-                >
-                <ul
-                  class="dropdown-menu"
-                  aria-labelledby="navbarDropdownMenuLink"
-                >
-                  <li class="dropdown-submenu">
-                    <a
-                      class="dropdown-item text-black"
-                      href="2024ss_wtheorie.html"
-                      >SoSe 2024, Wahrscheinlichkeitstheorie</a
-                    >
-                  </li>
-                  <li class="dropdown-submenu">
-                    <a
-                      class="dropdown-item text-black"
-                      href="measure_theory.html"
-                      >Measure theory for probabilists</a
-                    >
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
-
-    
-<div class="container">
-  <div class="col-12">
-    <h1>Publications</h1>
-    <p>
-      My research is published in both, mathematical and biological journals.
-      Only peer-reviewed papers are listed. <br /><br />
-      Here is the list from
-      <a
-        href="http://www.ams.org/mathscinet/search/publications.html?pg1=IID&amp;s1=790871"
-        >MathSciNet</a
-      >
-      <br />
-      Here is the list from
-      <a href="http://scholar.google.com/citations?user=3CbtWncAAAAJ&amp;hl=de"
-        >google scholar</a
-      >
-    </p>
-    <ul>
+<ul>
   
   <li>
     <span class="authors"> David Criens, Peter Pfaffelhuber, and Thorsten Schmidt. </span>
@@ -313,15 +6,8 @@
        
       <a href="https://doi:10.1214/23-EJP902">The martingale problem method revisited</a>. 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">Electronic Journal of Probability</span>,
-
-    
-    <span>28, </span>
-    
-    <span>1--46 </span>,
-
     <span class="date">
        2023.
     </span>
@@ -338,15 +24,8 @@
        
       <a href="https://doi:10.1214/23-EJP934">A diploid population model for copy number variation of genetic elements</a>. 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">Electronic Journal of Probability</span>,
-
-    
-    <span>28, </span>
-    
-    <span>1--15 </span>,
-
     <span class="date">
        2023.
     </span>
@@ -362,15 +41,8 @@
     <span class="title">
         A unified framework for limit results in chemical reaction networks on multiple time-scales. 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">Electronic Journal of Probability</span>,
-
-    
-    <span>28, </span>
-    
-    <span>1--33 </span>,
-
     <span class="date">
        2023.
     </span>
@@ -387,15 +59,8 @@
        
       <a href="https://doi.org/10.1016/j.spa.2022.07.006">Mean-field limits for non-linear Hawkes processes with excitation and inhibition</a>. 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">Stochastic Processes and their Applications</span>,
-
-    
-    <span>153, </span>
-    
-    <span>57--78 </span>,
-
     <span class="date">
        2022.
     </span>
@@ -411,15 +76,8 @@
     <span class="title">
         Inference of recent admixture using genotype data. 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">Forensic Science International: Genetics</span>,
-
-    
-    <span>56, </span>
-    
-    <span>102593 </span>,
-
     <span class="date">
        2022.
     </span>
@@ -436,16 +94,8 @@
        
       <a href="https://doi.org/10.1371/journal.pcbi.1010407">Neural networks for self-adjusting mutation rate estimation when the recombination rate is unknown</a>. 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">PLOS Computational Biology 18(8)</span>,
-
-    
-    <span>18
-    (8), </span>
-    
-    <span>e1010407 </span>,
-
     <span class="date">
        2022.
     </span>
@@ -462,15 +112,8 @@
        
       <a href="https://doi.org/10.1016/j.tpb.2022.09.003">A central limit theorem concerning uncertainty in estimates of individual admixture</a>. 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">Theoretical Population Biology</span>,
-
-    
-    <span>148, </span>
-    
-    <span>28--39 </span>,
-
     <span class="date">
        2022.
     </span>
@@ -487,16 +130,8 @@
        
       <a href="https://doi.org/10.1038/d41586-021-03416-3">Europe’s Roma people are vulnerable to poor practice in genetics</a>. 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">Nature 599(7885)</span>,
-
-    
-    <span>599
-    (7885), </span>
-    
-    <span>368--371 </span>,
-
     <span class="date">
        2021.
     </span>
@@ -512,16 +147,8 @@
     <span class="title">
         The range of once-reinforced random walk in one dimension. 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">Random Structures \& Algorithms 58(1)</span>,
-
-    
-    <span>58
-    (1), </span>
-    
-    <span>164--175 </span>,
-
     <span class="date">
        2021.
     </span>
@@ -537,15 +164,8 @@
     <span class="title">
         The partial duplication random graph with edge deletion. 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">ALEA</span>,
-
-    
-    <span>18, </span>
-    
-    <span>325--347 </span>,
-
     <span class="date">
        2021.
     </span>
@@ -561,16 +181,8 @@
     <span class="title">
         Pgainsim: A Method to Assess the Mode of Inheritance for Quantitative Trait Loci in Genome-Wide Association Studies. 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">HUMAN HEREDITY</span>,
-
-    
-    <span>85
-    (2), </span>
-    
-    <span>91--92 </span>,
-
     <span class="date">
        2021.
     </span>
@@ -587,15 +199,8 @@
        
       <a href="https://doi:10.1016/j.fsigen.2020.102259">How to choose sets of ancestry informative markers: A supervised feature selection approach</a>. 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">Forensic Science International: Genetics</span>,
-
-    
-    <span>46, </span>
-    
-    <span>102259 </span>,
-
     <span class="date">
        2020.
     </span>
@@ -611,16 +216,8 @@
     <span class="title">
         Inference of historical population-size changes with allele-frequency data. 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">G3: Genes, Genomes, Genetics 10(1)</span>,
-
-    
-    <span>10
-    (1), </span>
-    
-    <span>211--223 </span>,
-
     <span class="date">
        2020.
     </span>
@@ -637,16 +234,8 @@
        
       <a href="https://doi.org/10.1016/j.spa.2019.07.011">Markov branching processes with disasters: extinction, survival and duality to p-jump processes</a>. 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">Stochastic Processes and their Applications 130(4)</span>,
-
-    
-    <span>130
-    (4), </span>
-    
-    <span>2488--2518 </span>,
-
     <span class="date">
        2020.
     </span>
@@ -662,16 +251,8 @@
     <span class="title">
         Modifiers of mutation rate in selectively fluctuating environments. 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">Stochastic Processes and their Applications 130(11)</span>,
-
-    
-    <span>130
-    (11), </span>
-    
-    <span>6843--6862 </span>,
-
     <span class="date">
        2020.
     </span>
@@ -688,15 +269,8 @@
        
       <a href="https://doi.org/10.1016/j.tpb.2019.10.002">Genealogical distances under low levels of selection</a>. 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">Theoretical Population Biology</span>,
-
-    
-    <span>131, </span>
-    
-    <span>2--11 </span>,
-
     <span class="date">
        2020.
     </span>
@@ -713,16 +287,8 @@
        
       <a href="https://doi.org/10.1515/jwiet-2019-0006">Interdisziplin\"are Überlegungen zu Erweiterten DNA-Analysen</a>. 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">Jahrbuch f\"ur Wissenschaft und Ethik 24(1)</span>,
-
-    
-    <span>24
-    (1), </span>
-    
-    <span>119--154 </span>,
-
     <span class="date">
        2019.
     </span>
@@ -738,16 +304,8 @@
     <span class="title">
         High-complexity regions in mammalian genomes are enriched for developmental genes. 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">Bioinformatics 35(11)</span>,
-
-    
-    <span>35
-    (11), </span>
-    
-    <span>1813--1819 </span>,
-
     <span class="date">
        2019.
     </span>
@@ -764,15 +322,8 @@
        
       <a href="https://doi: 10.1016/j.fsigen.2018.01.009">Forensic DNA phenotyping legislation cannot be based on “Ideal FDP”—A response to Caliebe, Krawczak and Kayser (2017)</a>. 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">Forensic Science International: Genetics</span>,
-
-    
-    <span>34, </span>
-    
-    <span>e13--e14 </span>,
-
     <span class="date">
        2018.
     </span>
@@ -788,16 +339,8 @@
     <span class="title">
         Limits of noise for autoregulated gene expression. 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">Journal of mathematical biology 77(4)</span>,
-
-    
-    <span>77
-    (4), </span>
-    
-    <span>1153--1191 </span>,
-
     <span class="date">
        2018.
     </span>
@@ -813,16 +356,8 @@
     <span class="title">
         The fixation probability and time for a doubly beneficial mutant. 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">Stochastic Processes and their Applications 128(12)</span>,
-
-    
-    <span>128
-    (12), </span>
-    
-    <span>4018--4050 </span>,
-
     <span class="date">
        2018.
     </span>
@@ -839,15 +374,8 @@
        
       <a href="https://doi: 10.1016/j.tpb.2017.11.001">The independent loss model with ordered insertions for the evolution of CRISPR spacers</a>. 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">Theoretical Population Biology</span>,
-
-    
-    <span>119, </span>
-    
-    <span>72--82 </span>,
-
     <span class="date">
        2018.
     </span>
@@ -863,15 +391,8 @@
     <span class="title">
         Fixation probabilities and hitting times for low levels of frequency-dependent selection. 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">Theoretical Population Biology</span>,
-
-    
-    <span>124, </span>
-    
-    <span>61--69 </span>,
-
     <span class="date">
        2018.
     </span>
@@ -887,16 +408,8 @@
     <span class="title">
         A spatial model for selection and cooperation. 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">Journal of Applied Probability 54(2)</span>,
-
-    
-    <span>54
-    (2), </span>
-    
-    <span>522--539 </span>,
-
     <span class="date">
        2017.
     </span>
@@ -912,15 +425,8 @@
     <span class="title">
         Large-scale behavior of the partial duplication random graph.. 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">ALEA. Latin American Journal of Probability \& Mathematical Statistics</span>,
-
-    
-    <span>13, </span>
-    
-    <span> </span>,
-
     <span class="date">
        2016.
     </span>
@@ -936,16 +442,8 @@
     <span class="title">
         The fixation time of a strongly beneficial allele in a structured population. 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">Electron. J. Probab 21(61)</span>,
-
-    
-    <span>21
-    (61), </span>
-    
-    <span>1--42 </span>,
-
     <span class="date">
        2016.
     </span>
@@ -961,16 +459,8 @@
     <span class="title">
         In silico modeling of the dynamics of low density lipoprotein composition via a single plasma sample [S]. 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">Journal of lipid research 57(5)</span>,
-
-    
-    <span>57
-    (5), </span>
-    
-    <span>882--893 </span>,
-
     <span class="date">
        2016.
     </span>
@@ -986,16 +476,8 @@
     <span class="title">
         andi: Fast and accurate estimation of evolutionary distances between closely related genomes. 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">Bioinformatics 31(8)</span>,
-
-    
-    <span>31
-    (8), </span>
-    
-    <span>1169--1175 </span>,
-
     <span class="date">
        2015.
     </span>
@@ -1011,15 +493,8 @@
     <span class="title">
         Classification of phenotypic subpopulations in isogenic bacterial cultures by triple promoter probing at single cell level. 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">Journal of Biotechnology</span>,
-
-    
-    <span>198, </span>
-    
-    <span>3--14 </span>,
-
     <span class="date">
        2015.
     </span>
@@ -1035,15 +510,8 @@
     <span class="title">
         Stochastic gene expression with delay. 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">Journal of theoretical biology</span>,
-
-    
-    <span>364, </span>
-    
-    <span>355--363 </span>,
-
     <span class="date">
        2015.
     </span>
@@ -1059,16 +527,8 @@
     <span class="title">
         SCALING LIMITS OF SPATIAL COMPARTMENT MODELS FOR CHEMICAL REACTION NETWORKS. 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">The Annals of Applied Probability 25(6)</span>,
-
-    
-    <span>25
-    (6), </span>
-    
-    <span>3162--3208 </span>,
-
     <span class="date">
        2015.
     </span>
@@ -1084,16 +544,8 @@
     <span class="title">
         The stationary distribution of a markov jump process glued together from two state spaces at two vertices. 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">Stochastic Models 31(4)</span>,
-
-    
-    <span>31
-    (4), </span>
-    
-    <span>525--553 </span>,
-
     <span class="date">
        2015.
     </span>
@@ -1109,16 +561,8 @@
     <span class="title">
         How spatial heterogeneity shapes multiscale biochemical reaction network dynamics. 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">Journal of the Royal Society Interface 12(104)</span>,
-
-    
-    <span>12
-    (104), </span>
-    
-    <span>20141106 </span>,
-
     <span class="date">
        2015.
     </span>
@@ -1134,15 +578,8 @@
     <span class="title">
         A mixing tree-valued process arising under neutral evolution with recombination. 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">Electronic Journal of Probability</span>,
-
-    
-    <span>20, </span>
-    
-    <span>1--22 </span>,
-
     <span class="date">
        2015.
     </span>
@@ -1158,16 +595,8 @@
     <span class="title">
         Genome-wide linkage-disequilibrium profiles from single individuals. 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">Genetics 198(1)</span>,
-
-    
-    <span>198
-    (1), </span>
-    
-    <span>269--281 </span>,
-
     <span class="date">
        2014.
     </span>
@@ -1183,16 +612,8 @@
     <span class="title">
         The infinitely many genes model with horizontal gene transfer. 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">Electron. J. Probab 19(115)</span>,
-
-    
-    <span>19
-    (115), </span>
-    
-    <span>1--27 </span>,
-
     <span class="date">
        2014.
     </span>
@@ -1208,16 +629,8 @@
     <span class="title">
         Some large deviations in Kingman's coalescent. 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">Elec. Comm. Probab. 20(7)</span>,
-
-    
-    <span>20
-    (7), </span>
-    
-    <span>1--14 </span>,
-
     <span class="date">
        2014.
     </span>
@@ -1233,16 +646,8 @@
     <span class="title">
         Some limit results for Markov chains indexed by trees. 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">Elect. Comm. in Probab. 19(77)</span>,
-
-    
-    <span>19
-    (77), </span>
-    
-    <span>1--11 </span>,
-
     <span class="date">
        2014.
     </span>
@@ -1258,16 +663,8 @@
     <span class="title">
         Correction: The Yule Approximation for the Site Frequency Spectrum after a Selective Sweep. 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">Plos one 9(1)</span>,
-
-    
-    <span>9
-    (1), </span>
-    
-    <span> </span>,
-
     <span class="date">
        2014.
     </span>
@@ -1283,16 +680,8 @@
     <span class="title">
         Tree-valued resampling dynamics martingale problems and applications. 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">Probability Theory and Related Fields 155(3-4)</span>,
-
-    
-    <span>155
-    (3-4), </span>
-    
-    <span>789--838 </span>,
-
     <span class="date">
        2013.
     </span>
@@ -1308,15 +697,8 @@
     <span class="title">
         The ancestral selection graph under strong directional selection. 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">Theoretical population biology</span>,
-
-    
-    <span>87, </span>
-    
-    <span>25--33 </span>,
-
     <span class="date">
        2013.
     </span>
@@ -1332,16 +714,8 @@
     <span class="title">
         An alignment-free test for recombination. 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">Bioinformatics 29(24)</span>,
-
-    
-    <span>29
-    (24), </span>
-    
-    <span>3121--3127 </span>,
-
     <span class="date">
        2013.
     </span>
@@ -1357,16 +731,8 @@
     <span class="title">
         Path-properties of the tree-valued Fleming--Viot process. 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">Electron. J. Probab 18(84)</span>,
-
-    
-    <span>18
-    (84), </span>
-    
-    <span>1--47 </span>,
-
     <span class="date">
        2013.
     </span>
@@ -1382,16 +748,8 @@
     <span class="title">
         A Brownian ratchet for protein translocation including dissociation of ratcheting sites. 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">Journal of mathematical biology 66(3)</span>,
-
-    
-    <span>66
-    (3), </span>
-    
-    <span>505--534 </span>,
-
     <span class="date">
        2013.
     </span>
@@ -1407,15 +765,8 @@
     <span class="title">
         Competing islands limit the rate of adaptation in structured populations. 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">Theoretical population biology</span>,
-
-    
-    <span>90, </span>
-    
-    <span>1--11 </span>,
-
     <span class="date">
        2013.
     </span>
@@ -1431,15 +782,8 @@
     <span class="title">
         Modeling quorum sensing in Sinorhizobium meliloti. 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">International Journal of Biomathematics and Biostatistics</span>,
-
-    
-    <span>2, </span>
-    
-    <span>59--74 </span>,
-
     <span class="date">
        2013.
     </span>
@@ -1455,16 +799,8 @@
     <span class="title">
         The yule approximation for the site frequency spectrum after a selective sweep. 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">PLoS One 8(12)</span>,
-
-    
-    <span>8
-    (12), </span>
-    
-    <span>e81738 </span>,
-
     <span class="date">
        2013.
     </span>
@@ -1480,16 +816,8 @@
     <span class="title">
         The infinitely many genes model for the distributed genome of bacteria. 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">Genome biology and evolution 4(4)</span>,
-
-    
-    <span>4
-    (4), </span>
-    
-    <span>443--456 </span>,
-
     <span class="date">
        2012.
     </span>
@@ -1506,16 +834,8 @@
        
       <a href="https://doi:10.1214/11-AAP831">Tree-valued Fleming-Viot dynamics with mutation and selection</a>. 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">Annals of applied probability 22(6)</span>,
-
-    
-    <span>22
-    (6), </span>
-    
-    <span>2560--2615 </span>,
-
     <span class="date">
        2012.
     </span>
@@ -1531,16 +851,8 @@
     <span class="title">
         Muller's ratchet with compensatory mutations.. 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">Annals of applied probability 22(5)</span>,
-
-    
-    <span>22
-    (5), </span>
-    
-    <span>2108--2132 </span>,
-
     <span class="date">
        2012.
     </span>
@@ -1556,16 +868,8 @@
     <span class="title">
         Alignment-free population genomics: an efficient estimator of sequence diversity. 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">G3: Genes| Genomes| Genetics 2(8)</span>,
-
-    
-    <span>2
-    (8), </span>
-    
-    <span>883--889 </span>,
-
     <span class="date">
        2012.
     </span>
@@ -1581,15 +885,8 @@
     <span class="title">
         Compact metric measure spaces and $\Lambda$-coalescents coming down from infinity. 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">ALEA</span>,
-
-    
-    <span>9, </span>
-    
-    <span>269--278 </span>,
-
     <span class="date">
        2012.
     </span>
@@ -1605,15 +902,8 @@
     <span class="title">
         Marked metric measure spaces. 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">Elect. Comm. in Probab.</span>,
-
-    
-    <span>16, </span>
-    
-    <span>174--188 </span>,
-
     <span class="date">
        2011.
     </span>
@@ -1629,15 +919,8 @@
     <span class="title">
         The tree length of an evolving coalescent. 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">Probability theory and related fields</span>,
-
-    
-    <span>151, </span>
-    
-    <span>529--557 </span>,
-
     <span class="date">
        2011.
     </span>
@@ -1653,16 +936,8 @@
     <span class="title">
         Alignment-free estimation of nucleotide diversity. 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">Bioinformatics 27(4)</span>,
-
-    
-    <span>27
-    (4), </span>
-    
-    <span>449--455 </span>,
-
     <span class="date">
        2011.
     </span>
@@ -1678,16 +953,8 @@
     <span class="title">
         Selective sweeps for recessive alleles and for other modes of dominance. 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">Journal of mathematical biology 63(3)</span>,
-
-    
-    <span>63
-    (3), </span>
-    
-    <span>399--431 </span>,
-
     <span class="date">
        2011.
     </span>
@@ -1703,16 +970,8 @@
     <span class="title">
         Estimating parameters of speciation models based on refined summaries of the joint site-frequency spectrum. 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">PLoS One 6(5)</span>,
-
-    
-    <span>6
-    (5), </span>
-    
-    <span>e18155 </span>,
-
     <span class="date">
        2011.
     </span>
@@ -1728,16 +987,8 @@
     <span class="title">
         In silico modelling of human lipoprotein metabolism. 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">Atherosclerosis Supplements</span>,
-
-    
-    <span>12
-    (1), </span>
-    
-    <span>22--23 </span>,
-
     <span class="date">
        2011.
     </span>
@@ -1753,16 +1004,8 @@
     <span class="title">
         Sensitivity analysis of one parameter semigroups exemplified by the Wright--Fisher diffusion. 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">Intern. J. Funct. Anal., Oper. Th. Appl. 3(2)</span>,
-
-    
-    <span>3
-    (2), </span>
-    
-    <span>109--128 </span>,
-
     <span class="date">
        2011.
     </span>
@@ -1778,15 +1021,8 @@
     <span class="title">
         mlRho--a program for estimating the population mutation and recombination rates from shotgun-sequenced diploid genomes. 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">Molecular ecology</span>,
-
-    
-    <span>19, </span>
-    
-    <span>277--284 </span>,
-
     <span class="date">
        2010.
     </span>
@@ -1802,13 +1038,8 @@
     <span class="title">
         THE DIVERSITY OF A DISTRIBUTED GENOME IN BACTERIAL POPULATIONS. 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">The Annals of Applied Probability</span>,
-
-    
-    <span>1567--1606 </span>,
-
     <span class="date">
        2010.
     </span>
@@ -1824,15 +1055,8 @@
     <span class="title">
         The Aldous--Shields model revisited (with application to cellular ageing). 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">Elec. Comm. Probab.</span>,
-
-    
-    <span>15, </span>
-    
-    <span>475--488 </span>,
-
     <span class="date">
        2010.
     </span>
@@ -1848,16 +1072,8 @@
     <span class="title">
         Asymptotics of a Brownian ratchet for protein translocation. 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">Stochastic processes and their applications 120(6)</span>,
-
-    
-    <span>120
-    (6), </span>
-    
-    <span>901--925 </span>,
-
     <span class="date">
        2010.
     </span>
@@ -1873,16 +1089,8 @@
     <span class="title">
         Experimentelle und theoretische Biologie: getrennte Welten?. 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">Biologie in unserer Zeit 40(1)</span>,
-
-    
-    <span>40
-    (1), </span>
-    
-    <span>12--12 </span>,
-
     <span class="date">
        2010.
     </span>
@@ -1899,16 +1107,8 @@
        
       <a href="https://academic.oup.com/genetics/article/182/1/205/6062953?login=true">The impact of sampling schemes on the site frequency spectrum in nonequilibrium subdivided populations</a>. 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">Genetics 182(1)</span>,
-
-    
-    <span>182
-    (1), </span>
-    
-    <span>205--216 </span>,
-
     <span class="date">
        2009.
     </span>
@@ -1924,16 +1124,8 @@
     <span class="title">
         Convergence in distribution of random metric measure spaces ($\Lambda$-coalescent measure trees). 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">Probability Theory and Related Fields 145(1-2)</span>,
-
-    
-    <span>145
-    (1-2), </span>
-    
-    <span>285--322 </span>,
-
     <span class="date">
        2009.
     </span>
@@ -1949,16 +1141,8 @@
     <span class="title">
         Estimating mutation distances from unaligned genomes. 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">Journal of Computational Biology 16(10)</span>,
-
-    
-    <span>16
-    (10), </span>
-    
-    <span>1487--1500 </span>,
-
     <span class="date">
        2009.
     </span>
@@ -1974,15 +1158,8 @@
     <span class="title">
         How often does the ratchet click? Facts, heuristics, asymptotics. 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">Trends in stochastic analysis</span>,
-
-    
-    <span>353, </span>
-    
-    <span>365--390 </span>,
-
     <span class="date">
        2009.
     </span>
@@ -1998,16 +1175,8 @@
     <span class="title">
         Linkage disequilibrium under genetic hitchhiking in finite populations. 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">Genetics 179(1)</span>,
-
-    
-    <span>179
-    (1), </span>
-    
-    <span>527--537 </span>,
-
     <span class="date">
        2008.
     </span>
@@ -2023,16 +1192,8 @@
     <span class="title">
         The pattern of genetic hitchhiking under recurrent mutation. 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">Elec. J. Probab. 13(68)</span>,
-
-    
-    <span>13
-    (68), </span>
-    
-    <span>2069--2106 </span>,
-
     <span class="date">
        2008.
     </span>
@@ -2048,16 +1209,8 @@
     <span class="title">
         Approximating genealogies for partially linked neutral loci under a selective sweep. 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">Journal of mathematical biology 55(3)</span>,
-
-    
-    <span>55
-    (3), </span>
-    
-    <span>299--330 </span>,
-
     <span class="date">
        2007.
     </span>
@@ -2073,16 +1226,8 @@
     <span class="title">
         An approximate sampling formula under genetic hitchhiking. 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">ANNALS OF APPLIED PROBABILITY 16(2)</span>,
-
-    
-    <span>16
-    (2), </span>
-    
-    <span> </span>,
-
     <span class="date">
        2006.
     </span>
@@ -2098,16 +1243,8 @@
     <span class="title">
         The process of most recent common ancestors in an evolving coalescent. 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">Stochastic Processes and their Applications 116(12)</span>,
-
-    
-    <span>116
-    (12), </span>
-    
-    <span>1836--1859 </span>,
-
     <span class="date">
        2006.
     </span>
@@ -2123,16 +1260,8 @@
     <span class="title">
         Approximate genealogies under genetic hitchhiking. 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">Genetics 174(4)</span>,
-
-    
-    <span>174
-    (4), </span>
-    
-    <span>1995--2008 </span>,
-
     <span class="date">
        2006.
     </span>
@@ -2148,13 +1277,8 @@
     <span class="title">
         The Finite System Scheme for State-dependent interacting multitype Branching Systems. 
     </span>
-
     <span class="venuetype"></span
     ><span class="venue">Electronic Journal of Probability</span>,
-
-    
-    <span> </span>,
-
     <span class="date">
        2003.
     </span>
@@ -2166,48 +1290,3 @@
 
   
 </ul>
-  </div>
-</div>
-
-
-    <div><br /></div>
-    <div><br /></div>
-
-    <div class="container">
-      <footer class="text-center text-white" style="background-color: #004a99">
-        <div class="container">
-          <section class="mt-2">
-            <div
-              class="row text-center d-flex justify-content-center pt-4 pb-4"
-            >
-              <div class="col-md-2">
-                <h6 class="text-uppercase font-weight-bold">
-                  <a href="contact.html" class="text-white">Impressum</a>
-                </h6>
-              </div>
-              <div class="col-md-2">
-                <h6 class="text-uppercase font-weight-bold">
-                  <a href="contact.html" class="text-white">Datenschutz</a>
-                </h6>
-              </div>
-            </div>
-          </section>
-        </div>
-        <div class="text-center p-3" style="background-color: #143669">
-          © 2024 Copyright:
-          <a class="text-white" href="https://math.uni-freiburg.de/"
-            >Mathematisches Institut, Universität Freiburg</a
-          >
-        </div>
-      </footer>
-    </div>
-    <script>
-      if (location.hash !== null && location.hash !== "") {
-        $(location.hash + ".collapse").collapse("show");
-      }
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-     
-  </body>
-</html>

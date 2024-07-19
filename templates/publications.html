@@ -1,8 +1,22 @@
 {% extends '_base.html' %}{% block title %}Home{% endblock %}{% block content %}
-<div class="container-fluid">
-  <div class="col-12 text-center">
-    <h1>Personal homepage</h1>
-    <p>This page is under construction. Currently there is no content in reasearch.</p>
+<div class="container">
+  <div class="col-12">
+    <h1>Publications</h1>
+    <p>
+      My research is published in both, mathematical and biological journals.
+      Only peer-reviewed papers are listed. <br /><br />
+      Here is the list from
+      <a
+        href="http://www.ams.org/mathscinet/search/publications.html?pg1=IID&amp;s1=790871"
+        >MathSciNet</a
+      >
+      <br />
+      Here is the list from
+      <a href="http://scholar.google.com/citations?user=3CbtWncAAAAJ&amp;hl=de"
+        >google scholar</a
+      >
+    </p>
+    {% include 'publications_content.html' %}
   </div>
 </div>
 {% endblock %}

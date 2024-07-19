@@ -1,0 +1,3 @@
+For an update, run
+
+bibble own-bib.bib simple.html > ../templates/publications_content.html
