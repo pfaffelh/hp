@@ -220,7 +220,7 @@
                 <li class="nav-item">
                   <a class="nav-link text-white" href="#"></a>
                 </li>
-                <li class="nav-item dropdown px-0">
+                <li class="nav-item dropdown">
                   <a
                     class="nav-link dropdown-toggle active py-3 px-0"
                     href=""
@@ -821,6 +821,7 @@
       var x = window.location.search.replace("?", "_");
       var element = document.getElementById(x);
       element.classList.add("show");
+      element.scrollIntoView();
       var element = document.querySelector("[aria-controls=" + x + "]");
       element.classList.remove("collapsed");
     </script>
