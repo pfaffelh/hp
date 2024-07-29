@@ -133,9 +133,9 @@
         background-color: #344a9a !important;
       }
     </style>
-    {% block styles %}
+    
     <!-- Add additional styles here -->
-    {% endblock %}
+    
   </head>
 
   <body class="bg-white">
@@ -302,7 +302,88 @@
       </nav>
     </header>
 
-    {% block content %} {% endblock %}
+    
+<div class="container">
+  <h1>Carola Heinzel</h1>
+  <div class="row">
+    <div class="col-8">
+      <h2>Information:</h2>
+      <p></p>
+      <p>Here is some information!</p>
+    </div>
+    <div class="col-4">
+      <img
+        src="static/Bilder/nn.png"
+        style="float: right"
+        title="nn_bild"
+        align="right"
+        height="355"
+        width="270"
+        alt="nn"
+        class="px-4"
+      />
+    </div>
+    <div class="col-12">
+      <div id="accordion">
+        <div class="accordion accordion-flush" id="accordionExample">
+          <div class="accordion-item" id="_vorbereitung">
+            <h4 class="accordion-header" id="header_vorbereitung">
+              <button
+                aria-controls="_researchTopics"
+                aria-expanded="false"
+                class="accordion-button collapsed"
+                data-bs-target="#_researchTopics"
+                data-bs-toggle="collapse"
+                type="button"
+              >
+                <h3 class="h5">Topic 1</h3>
+              </button>
+            </h4>
+            <div
+              aria-labelledby="_researchTopics"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionExample"
+              id="_researchTopics"
+            >
+              <div class="accordion-body" id="researchTopics">
+                <ul>
+                  <li>List item 1</li>
+                  <li>List item 2</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item" id="_einfuehrungswoche">
+            <h4 class="accordion-header" id="header_einfuehrungswoche">
+              <button
+                aria-controls="_publications"
+                aria-expanded="false"
+                class="accordion-button collapsed"
+                data-bs-target="#_publications"
+                data-bs-toggle="collapse"
+                type="button"
+              >
+                <h3 class="h5">Publications</h3>
+              </button>
+            </h4>
+            <div
+              id="_publications"
+              aria-labelledby="_publications"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body" id="publications">
+                <p>Here are some publications.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p></p>
+    </div>
+  </div>
+  
 
     <div><br /></div>
     <div><br /></div>
@@ -355,6 +436,6 @@
       async
       src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
     ></script>
-    {% block js %} {% endblock %}
+     
   </body>
 </html>

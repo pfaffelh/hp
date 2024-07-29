@@ -3,26 +3,12 @@
   <div class="col-12">
     <div class="container" id="inhalt">
       <h1>Projects</h1>
-      <p>My research has three goals:</p>
-      <ul>
-        <li>
-          Stochastics is the basis for understanding in the life sciences.
-          Fields of application that we work on are population genetics,
-          forensic genetics and neuroscience.
-        </li>
-        <li>
-          The characterization and convergence of stochastic processes can be
-          studied by (so-called) martingale problems. We are working on the
-          development of new convergence results using this technique.
-        </li>
-        <li>
-          In recent years, mathematicians can formalize their research results
-          using the
-          <a href="https://leanprover.github.io/">Lean Theorem prover</a>. We
-          are working to expand the stochastics section of the corresponding
-          library.
-        </li>
-      </ul>
+      <p>Here are some descriptions of ongoing research projects.</p>
+      <p>
+        In all our work, we use probability theory as the basis for
+        understanding phenomena in the life sciences. Fields of application that
+        we work on are population genetics, forensic genetics and neuroscience.
+      </p>
     </div>
 
     <!--    <div class="container text-end">
@@ -94,18 +80,53 @@
             id="_forensicGenetics"
           >
             <div class="accordion-body" id="forensicGenetics">
-              Zusammen mit
-              <a
-                href="https://www.stochastik.uni-freiburg.de/de/professoren/rohde"
-                >Angelika Rohde</a
-              >
-              und
-              <a
-                href="https://www.uniklinik-freiburg.de/rechtsmedizin/forensische-molekularbiologie.html"
-                >Sabine Lutz-Bonengel</a
-              >
-              bin ich Projektleiter in einem Projekt zur forensischen Genetik
-              des Sonderforschungsbereichs
+              <p>
+                We consider \(K\) populations and data on the DNA sequence at
+                \(M\) different positions (i.e., we use \(M\) different markers)
+                for \(N\) individuals. Based on this knowledge, we estimate the
+                ancestry of individuals with the Admixture Model. Specifically,
+                we assume that the ancestry of each individual is a mixture of
+                the $K$ non-admixed populations, such as those from Europe or
+                Africa.
+              </p>
+              <p>
+                We mainly focus on the following topics concerning the ancestry
+                of individuals:
+              </p>
+              <ul>
+                <li>
+                  Theoretical Properties of the Estimator: The ancestry is often
+                  estimated with a Maximum-Likelihood Estimator. We prove some
+                  theoretical properties of this estimator, e.g. consistency and
+                  central limit results. Marker Selection: The question arises
+                  which markers are the best ones for the estimation of the
+                  ancestry. We use central limit results to answer this
+                  question.
+                </li>
+                <li>
+                  Classification: In the forensic genetics, researchers often
+                  classify the individuals into populations. The output is the
+                  probability that an individual comes from a specific
+                  population. We combine – together with Frank Hutter and
+                  Lennart Purucker – machine learning and probability theory to
+                  improve the state-of-the-art method to classify individuals
+                  into populations.
+                </li>
+                <li>
+                  Statistical Test: It might be that the parents of an
+                  individual are from different populations. Then, it does not
+                  make sense to classify this individual into one single
+                  population. We provide statistical tests to e.g. evaluate
+                  whether the classification makes sense. A Part of this work is
+                  joint with
+                  <a
+                    href="https://www.uniklinik-freiburg.de/rechtsmedizin/forensische-molekularbiologie.html"
+                    >Sabine Lutz-Bonengel</a
+                  >
+                  .
+                </li>
+              </ul>
+              This project if part of the CRC
               <a href="https://www.smalldata-initiative.de">Small Data.</a>
             </div>
           </div>
@@ -155,6 +176,12 @@
           >
             <div class="accordion-body" id="CRNs">
               <p>CRNs</p>
+              <p>
+                The characterization and convergence of stochastic processes can
+                be studied by (so-called) martingale problems. We are working on
+                the development of new convergence results using this technique,
+                in particular corresponding to Chemical Reaction Networks.
+              </p>
             </div>
           </div>
         </div>
@@ -179,12 +206,16 @@
             id="_mathlib"
           >
             <div class="accordion-body" id="mathlib">
-              <p>Lean</p>
+              In recent years, mathematicians can formalize their research
+              results using the
+              <a href="https://leanprover.github.io/">Lean Theorem prover</a>.
+              We are working to expand the stochastics section of the
+              corresponding library.
             </div>
           </div>
         </div>
       </div>
-      {% endblock %}
     </div>
+    {% endblock %}
   </div>
 </div>

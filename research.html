@@ -133,9 +133,9 @@
         background-color: #344a9a !important;
       }
     </style>
-    {% block styles %}
+    
     <!-- Add additional styles here -->
-    {% endblock %}
+    
   </head>
 
   <body class="bg-white">
@@ -302,7 +302,225 @@
       </nav>
     </header>
 
-    {% block content %} {% endblock %}
+    
+<div class="container">
+  <div class="col-12">
+    <div class="container" id="inhalt">
+      <h1>Projects</h1>
+      <p>Here are some descriptions of ongoing research projects.</p>
+      <p>
+        In all our work, we use probability theory as the basis for
+        understanding phenomena in the life sciences. Fields of application that
+        we work on are population genetics, forensic genetics and neuroscience.
+      </p>
+    </div>
+
+    <!--    <div class="container text-end">
+      <div class="row">
+        <div class="col">
+          <a
+            href="/de/studiengaenge/bachelor"
+            class="btn btn-primary"
+            role="button"
+            aria-disabled="true"
+          >
+            Bachelor
+          </a>
+          <a
+            href="/de/studiengaenge/master"
+            class="btn btn-primary"
+            role="button"
+            aria-disabled="true"
+          >
+            Master
+          </a>
+          <a
+            href="/de/studiengaenge/lehramt"
+            class="btn btn-primary"
+            role="button"
+            aria-disabled="true"
+          >
+            Lehramt
+          </a>
+          <a
+            href="/de/studienberatung/"
+            class="btn btn-primary"
+            role="button"
+            aria-disabled="true"
+          >
+            Studienberatung
+          </a>
+          <a
+            href="https://fachschaft-mathe-freiburg.de/"
+            class="btn btn-primary"
+            role="button"
+            aria-disabled="true"
+          >
+            Fachschaft
+          </a>
+        </div>
+      </div>
+    </div>-->
+
+    <div id="accordion">
+      <div class="accordion accordion-flush" id="accordionExample">
+        <div class="accordion-item" id="_vorbereitung">
+          <h4 class="accordion-header" id="header_vorbereitung">
+            <button
+              aria-controls="_forensicGenetics"
+              aria-expanded="false"
+              class="accordion-button collapsed"
+              data-bs-target="#_forensicGenetics"
+              data-bs-toggle="collapse"
+              type="button"
+            >
+              <h3 class="h5">Forensic Genetics</h3>
+            </button>
+          </h4>
+          <div
+            aria-labelledby="_forensicGenetics"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionExample"
+            id="_forensicGenetics"
+          >
+            <div class="accordion-body" id="forensicGenetics">
+              <p>
+                We consider \(K\) populations and data on the DNA sequence at
+                \(M\) different positions (i.e., we use \(M\) different markers)
+                for \(N\) individuals. Based on this knowledge, we estimate the
+                ancestry of individuals with the Admixture Model. Specifically,
+                we assume that the ancestry of each individual is a mixture of
+                the $K$ non-admixed populations, such as those from Europe or
+                Africa.
+              </p>
+              <p>
+                We mainly focus on the following topics concerning the ancestry
+                of individuals:
+              </p>
+              <ul>
+                <li>
+                  Theoretical Properties of the Estimator: The ancestry is often
+                  estimated with a Maximum-Likelihood Estimator. We prove some
+                  theoretical properties of this estimator, e.g. consistency and
+                  central limit results. Marker Selection: The question arises
+                  which markers are the best ones for the estimation of the
+                  ancestry. We use central limit results to answer this
+                  question.
+                </li>
+                <li>
+                  Classification: In the forensic genetics, researchers often
+                  classify the individuals into populations. The output is the
+                  probability that an individual comes from a specific
+                  population. We combine – together with Frank Hutter and
+                  Lennart Purucker – machine learning and probability theory to
+                  improve the state-of-the-art method to classify individuals
+                  into populations.
+                </li>
+                <li>
+                  Statistical Test: It might be that the parents of an
+                  individual are from different populations. Then, it does not
+                  make sense to classify this individual into one single
+                  population. We provide statistical tests to e.g. evaluate
+                  whether the classification makes sense. A Part of this work is
+                  joint with
+                  <a
+                    href="https://www.uniklinik-freiburg.de/rechtsmedizin/forensische-molekularbiologie.html"
+                    >Sabine Lutz-Bonengel</a
+                  >
+                  .
+                </li>
+              </ul>
+              This project if part of the CRC
+              <a href="https://www.smalldata-initiative.de">Small Data.</a>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="_vorkurs">
+          <h4 class="accordion-header" id="header_vorkurs">
+            <button
+              aria-controls="_transposableElements"
+              aria-expanded="false"
+              class="accordion-button collapsed"
+              data-bs-target="#_transposableElements"
+              data-bs-toggle="collapse"
+              type="button"
+            >
+              <h3 class="h5">Transposable Elements</h3>
+            </button>
+          </h4>
+          <div
+            aria-labelledby="_transposableElements"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionExample"
+            id="_transposableElements"
+          >
+            <div class="accordion-body" id="transposableElements">
+              <p>TEs</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="_einfuehrungswoche">
+          <h4 class="accordion-header" id="header_einfuehrungswoche">
+            <button
+              aria-controls="_CRNs"
+              aria-expanded="false"
+              class="accordion-button collapsed"
+              data-bs-target="#_CRNs"
+              data-bs-toggle="collapse"
+              type="button"
+            >
+              <h3 class="h5">Chemical Reaction Networks</h3>
+            </button>
+          </h4>
+          <div
+            id="_CRNs"
+            aria-labelledby="_CRNs"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body" id="CRNs">
+              <p>CRNs</p>
+              <p>
+                The characterization and convergence of stochastic processes can
+                be studied by (so-called) martingale problems. We are working on
+                the development of new convergence results using this technique,
+                in particular corresponding to Chemical Reaction Networks.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item" id="_beginn">
+          <h4 class="accordion-header" id="header_beginn">
+            <button
+              aria-controls="_mathlib"
+              aria-expanded="false"
+              class="accordion-button collapsed"
+              data-bs-target="#_mathlib"
+              data-bs-toggle="collapse"
+              type="button"
+            >
+              <h3 class="h5">Formalizing Probability</h3>
+            </button>
+          </h4>
+          <div
+            aria-labelledby="_mathlib"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionExample"
+            id="_mathlib"
+          >
+            <div class="accordion-body" id="mathlib">
+              In recent years, mathematicians can formalize their research
+              results using the
+              <a href="https://leanprover.github.io/">Lean Theorem prover</a>.
+              We are working to expand the stochastics section of the
+              corresponding library.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
 
     <div><br /></div>
     <div><br /></div>
@@ -355,6 +573,6 @@
       async
       src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
     ></script>
-    {% block js %} {% endblock %}
+     
   </body>
 </html>
