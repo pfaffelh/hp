@@ -1,0 +1,1280 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mathematical Institute, Universität Freiburg, AG Pfaffelhuber</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      id="unitheme-style-css"
+      href="static/unitheme.css?ver=2.0.02"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="static/ufr-colors.css"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <script></script>
+    <link href="static/ufr-colors.css" type="text/css" media="all" />
+    <script>
+      $('[data-toggle="tooltip"]').tooltip({
+        template:
+          '<div class="tooltip tooltip-custom"><div class="title">Test</div><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>',
+      });
+    </script>
+    <style>
+      .btn:focus {
+        outline: none;
+        box-shadow: none;
+      }
+      @media (min-width: 768px) {
+        .container-small {
+          width: 300px;
+        }
+        .container-large {
+          width: 970px;
+        }
+      }
+      @media (min-width: 992px) {
+        .container-small {
+          width: 500px;
+        }
+        .container-large {
+          width: 1170px;
+        }
+      }
+      @media (min-width: 1200px) {
+        .container-small {
+          width: 700px;
+        }
+        .container-large {
+          width: 1500px;
+        }
+      }
+
+      .container-small,
+      .container-large {
+        max-width: 100%;
+      }
+      .carousel-image {
+        width: 100%;
+        height: 360px;
+        object-fit: cover;
+      }
+
+      .navbar-nav li:hover > ul.dropdown-menu {
+        display: block;
+      }
+
+      .dropdown-submenu {
+        position: relative;
+      }
+
+      .dropdown-submenu > .dropdown-menu {
+        top: 0;
+        left: 100%;
+        margin-top: -6px;
+      }
+
+      /* rotate caret on hover */
+      .dropdown-menu > li > a:hover:after {
+        text-decoration: underline;
+        transform: rotate(-45deg);
+      }
+      .dropdown-submenu.btn:focus-within {
+        background-color: white;
+      }
+      .dropdown-toggle::after {
+        display: inline-block;
+        width: 0.5em;
+        height: 0.5em;
+        margin: -0.3em 0 0 0.4em;
+        vertical-align: middle;
+        content: "";
+        border: 0.3em solid;
+        border-width: 0 0.15em 0.15em 0;
+        transform: rotateZ(45deg);
+      }
+      .accordion-button::after {
+        background-image: url("static/Bilder/plus-svgrepo-com.svg");
+      }
+      .accordion-button:not(.collapsed)::after {
+        background-image: url("static/Bilder/cross-svgrepo-com.svg");
+      }
+      .accordion-button:not(.collapsed) {
+        background-color: #fffae5;
+        color-scheme: #fffae5;
+      }
+      .accordion-button:hover {
+        background-color: #fffae5;
+        outline: none;
+      }
+      .table-borderless td,
+      .table-borderless th {
+        border: 0;
+      }
+      .btn-primary,
+      .btn-primary:hover,
+      .btn-primary:active,
+      .btn-primary:visited {
+        background-color: #344a9a !important;
+      }
+    </style>
+    
+    <!-- Add additional styles here -->
+    
+  </head>
+
+  <body class="bg-white">
+    <header class="bg-ufr-darkblue">
+      <nav
+        id="site-navigation"
+        class="navbar navbar-expand-xl"
+        aria-label="Oberes Menü"
+      >
+        <div class="container-fluid">
+          <div class="container">
+            <div class="d-flex flex-grow-1">
+              <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                  <a class="nav-link text-white me-0" href="#"></a>
+                </li>
+                <li class="nav-item d-flex align-items-center">
+                  <a class="navbar-brand" href="https://www.uni-freiburg.de">
+                    <img
+                      src="static/ufr-logo-white.svg"
+                      alt="Albert-Ludwigs-Universität Freiburg"
+                      width="339"
+                      height="55"
+                    />
+                  </a>
+                </li>
+                <li class="nav-item d-none d-xl-block align-self-center">
+                  <i class="fa fa-chevron-right fa-55 text-white ms-2 me-2"></i>
+                </li>
+                <li class="nav-item d-none d-xl-block mr-4">
+                  <h2>
+                    <a
+                      href="https://www.math.uni-freiburg.de"
+                      class="nav-link text-white"
+                      href="#"
+                    >
+                      Mathematical Institute</a
+                    >
+                  </h2>
+                </li>
+                <li class="nav-item d-none d-xl-block align-self-center">
+                  <i class="fa fa-chevron-right fa-55 text-white ms-2 me-2"></i>
+                </li>
+                <li class="nav-item d-none d-xl-block mr-4">
+                  <h2>
+                    <a class="nav-link text-white" href="index.html">
+                      AG Pfaffelhuber</a
+                    >
+                  </h2>
+                </li>
+                <li class="nav-item d-none d-xl-block align-self-center">
+                  <i class="fa fa-chevron-right fa-55 text-white ms-2 me-2"></i>
+                </li>
+              </ul>
+              <div
+                class="align-self-center justify-content-end"
+                id="navbarSupportedContentRight"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <nav class="navbar navbar-expand-xl navbar-dark flex bg-ufr-blue">
+        <div class="container-fluid">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="container">
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+              <ul class="navbar-nav align-items-lg-center">
+                <li class="nav-item dropdown px-0">
+                  <a
+                    class="nav-link dropdown-toggle active"
+                    href=""
+                    id="navbarDropdownMenuLink"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Research</a
+                  >
+                  <ul class="dropdown-menu" data-bs-theme="light">
+                    <li>
+                      <a class="dropdown-item text-black" href="projects.html"
+                        >Projects</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item text-black"
+                        href="publications.html"
+                        >Publications</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle active py-3 px-4"
+                    href=""
+                    id="navbarDropdownMenuLink"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    People</a
+                  >
+                  <ul class="dropdown-menu" data-bs-theme="light">
+                    <li>
+                      <a
+                        class="dropdown-item text-black"
+                        href="pfaffelhuber.html"
+                        >Peter Pfaffelhuber</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item text-black" href="stiefel.html"
+                        >Jakob Stiefel</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item text-black" href="heinzel.html"
+                        >Carola Heinzel</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item text-black" href="adeosun.html"
+                        >Samuel Adeosun</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item text-black" href="stroppel.html"
+                        >Sebastian Stroppel</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown px-3">
+                  <a
+                    class="nav-link dropdown-toggle active"
+                    href=""
+                    id="navbarDropdownMenuLink"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Lehre/Teaching</a
+                  >
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                    <li class="dropdown-submenu">
+                      <a
+                        class="dropdown-item text-black"
+                        href="2024WS_stochastic_processes.html"
+                        >Stochastic Processes (WS 2024)</a
+                      >
+                    </li>
+                    <li class="dropdown-submenu">
+                      <a
+                        class="dropdown-item text-black"
+                        href="2024WS_measure_theory.html"
+                        >Measure theory for probabilists (WS 2024)</a
+                      >
+                    </li>
+                    <li class="dropdown-submenu">
+                      <a
+                        class="dropdown-item text-black"
+                        href="2024SS_probability_theory.html"
+                        >Probability theory (SS 2024)</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    
+<br />
+<div class="container" id="inhalt">
+  <h2>Wahrscheinlichkeitstheorie (SS 2024)</h2>
+  <p>Dozent: Prof. Dr. Peter Pfaffelhuber</p>
+  <p>Assistenz: Samuel Adeosun</p>
+  <p>Tutorat: Jakob Kailer</p>
+
+  <div class="accordion" id="accordionExample">
+    <div class="accordion-item" id="kurz">
+      <h3 class="accordion-header" id="headerkurz">
+        <button
+          type="button"
+          class="accordion-button"
+          data-bs-target="#schueler"
+          aria-controls="schueler"
+          aria-expanded="true"
+          data-bs-toggle="collapse"
+        >
+          <h3 class="h5">Termine, Ablauf, Dokumente</h3>
+        </button>
+      </h3>
+      <p></p>
+      <div
+        aria-labelledby="schueler"
+        class="accordion-collapse collapse show"
+        data-bs-parent="#accordionExample"
+        id="schueler"
+      >
+        <div class="accordion-body">
+          <p>Vorlesung: Mo 12-14, HS II, Albertstr. 23b</p>
+          <p>Übung: Mi 16-18, SR127, Ernst-Zermelo-Str. 1</p>
+          <p>
+            Klausur: Die Klausur findet am 5.8.2024 um 9:30 im Hörsaal II statt. Die Klausureinsicht ist am 8.8.2024 um 14:00 im Raum 232.
+            Die Nachklausur findet am 26.9.2024, ebenfalls um
+            9:30 im Hörsaal II, statt.
+          </p>
+          <p>
+            Fragestunde: Es gibt eine Fragestunde zur Klausur am 29.7. um 12:15
+            im Hörsaal II. Dort können Fragen besprochen werden, etwa auch zu
+            den folgenden
+            <a href="static/2024SS_probability_theory/exampreparation.pdf"
+              >Probeaufgaben</a
+            >.
+          </p>
+          <p>
+            Studien- und Prüfungsleistung: Bitte sehen Sie
+            <a href="https://www.math.uni-freiburg.de/lehre/v/ss24.pdf">hier</a>
+            nach, welche Anforderungen es gibt. (In den meisten Fällen sind dies
+            50% der Punkte auf alle Übungsaufgaben, zweimaliges Vorrechnen im
+            Tutorat, sowie das Bestehen der Klausur (als Prüfungsleistung) am
+            Ende des Semesters.)
+          </p>
+          <p>
+            Ablauf: Die Vorlesungsinhalte werden mit (englischsprachigen)
+            Lehrvideos anhand des Skriptes vermittelt. Jeden Montag gibt es
+            eine Wiederholung der Inhalte, sowie die Möglichkeit, Fragen in der
+            Vorlesung zu stellen. Jeden Dienstag mittag gibt es ein neues
+            Aufgabenblatt, das bis zum darauffolgenden Montag 12 Uhr zu
+            bearbeiten ist. Die Abgabe ist im Zettelkasten im Keller der
+            Ernst-Zermelo-Str. 1. Doppelabgabe ist möglich.
+          </p>
+          <p>
+            Skript: Eine aktuelle Version des Skriptes (englisch) ist
+            <a href="static/2024SS_probability_theory/manuscript.pdf">hier</a>.
+            Es gibt auch eine deutsche, allerdings ältere Version des Skriptes,
+            die Sie
+            <a href="static/2024SS_probability_theory/zyklus.pdf">hier</a>
+            herunterladen können. Sie beinhaltet auch die Vorlesungen
+            <i>Stochastische Prozesse</i> und <i>Stochastische Integration</i>.
+          </p>
+          <p>
+            Zusätzliche Materialien: Die Wahrscheinlichkeitstheorie baut auf
+            maßtheoretischen Grundlagen auf. Diese kann man sich etwa in diesem
+            <a href="2024WS_measure_theory.html">Kurs</a> aneignen.
+          </p>
+          <p>Übungsblätter</p>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col"></th>
+                <th scope="col">Sections</th>
+                <th scope="col">Ausgabe</th>
+                <th scope="col">Abgabe</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <p>
+                    <a href="static/2024SS_probability_theory/Tutorial1.pdf"
+                      >Blatt 1: Wiederholung Maßtheorie</a
+                    >
+                  </p>
+                  <p>
+                    <a href="static/2024SS_probability_theory/Tutorial1_Sol.pdf">
+                      Lösungen</a
+                    >
+                  </p>
+                </td>
+                <td>Kurs Maßtheorie</td>
+                <td>16.4.2024</td>
+                <td>22.4.2024</td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <a href="static/2024SS_probability_theory/Tutorial2.pdf"
+                      >Blatt 2: Verbindungen zur Maßtheorie</a
+                    >
+                  </p>
+                  <p>
+                    <a href="static/2024SS_probability_theory/Tutorial2_Sol.pdf">
+                      Lösungen</a
+                    >
+                  </p>
+                </td>
+                <td>
+                  <p>Kurs Maßtheorie, Section 6.1</p>
+                </td>
+                <td>23.4.2024</td>
+                <td>29.4.2024</td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <a href="static/2024SS_probability_theory/Tutorial3.pdf"
+                      >Blatt 3: Erwartungswerte</a
+                    >
+                  </p>
+                  <p>
+                    <a href="static/2024SS_probability_theory/Tutorial3_Sol.pdf">
+                      Lösungen</a
+                    >
+                  </p>
+                </td>
+                <td>
+                  <p>Section 6.2, 6.3</p>
+                </td>
+                <td>30.4.2024</td>
+                <td>6.5.2024</td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <a href="static/2024SS_probability_theory/Tutorial4.pdf"
+                      >Blatt 4: Konvergenzarten</a
+                    >
+                  </p>
+                  <p>
+                    <a href="static/2024SS_probability_theory/Tutorial4_Sol.pdf">
+                      Lösungen</a
+                    >
+                  </p>
+                </td>
+                <td>
+                  <p>Section 7.1, 7.2, 7.3</p>
+                </td>
+                <td>7.5.2024</td>
+                <td>13.5.2024</td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <a href="static/2024SS_probability_theory/Tutorial5.pdf"
+                      >Blatt 5: Terminale Ereignisse</a
+                    >
+                  </p>
+                  <p>
+                    <a href="static/2024SS_probability_theory/Tutorial5_Sol.pdf">
+                      Lösungen</a
+                    >
+                  </p>
+                </td>
+                <td>
+                  <p>Sections 8.1, 8.2</p>
+                </td>
+                <td>14.5.2024</td>
+                <td>27.5.2024</td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <a href="static/2024SS_probability_theory/Tutorial6.pdf"
+                      >Blatt 6: Das Starke Gesetz Großer Zahlen</a
+                    >
+                  </p>
+                  <p>
+                    <a href="static/2024SS_probability_theory/Tutorial6_Sol.pdf">
+                      Lösungen</a
+                    >
+                  </p>
+                </td>
+                <td>
+                  <p>Sections 8.3, 8.4</p>
+                </td>
+                <td>28.5.2024</td>
+                <td>3.6.2024</td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <a href="static/2024SS_probability_theory/Tutorial7.pdf"
+                      >Blatt 7: Schwache Konvergenz 1</a
+                    >
+                  </p>
+                  <p>
+                    <a href="static/2024SS_probability_theory/Tutorial7_Sol.pdf">
+                      Lösungen</a
+                    >
+                  </p>
+                </td>
+                <td>
+                  <p>Sections 9.1, 9.2</p>
+                </td>
+                <td>4.6.2024</td>
+                <td>10.6.2024</td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <a href="static/2024SS_probability_theory/Tutorial8.pdf"
+                      >Blatt 8: Schwache Konvergenz 2</a
+                    >
+                  </p>
+                  <p>
+                    <a href="static/2024SS_probability_theory/Tutorial8_Sol.pdf">
+                      Lösungen</a
+                    >
+                  </p>
+                </td>
+                <td>
+                  <p>Sections 9.3, 9.4</p>
+                </td>
+                <td>11.6.2024</td>
+                <td>17.6.2024</td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <a href="static/2024SS_probability_theory/Tutorial9.pdf"
+                      >Blatt 9: Poisson-Konvergenz</a
+                    >
+                  </p>
+                  <p>
+                    <a href="static/2024SS_probability_theory/Tutorial9_Sol.pdf">
+                      Lösungen</a
+                    >
+                  </p>
+                </td>
+                <td>
+                  <p>Section 10.1</p>
+                </td>
+                <td>18.6.2024</td>
+                <td>24.6.2024</td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <a href="static/2024SS_probability_theory/Tutorial10.pdf"
+                      >Blatt 10: Der Zentrale Grenzwertsatz</a
+                    >
+                  </p>
+                  <p>
+                    <a href="static/2024SS_probability_theory/Tutorial10_Sol.pdf">
+                      Lösungen</a
+                    >
+                  </p>
+                </td>
+                <td>
+                  <p>Sections 10.2, 10.3</p>
+                </td>
+                <td>25.6.2024</td>
+                <td>1.7.2024</td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <a href="static/2024SS_probability_theory/Tutorial11.pdf"
+                      >Blatt 11: Bedingte Erwartung 1</a
+                    >
+                  </p>
+                  <p>
+                    <a href="static/2024SS_probability_theory/Tutorial11_Sol.pdf">
+                      Lösungen</a
+                    >
+                  </p>
+                </td>
+                <td>
+                  <p>Sections 11.1, 11.2, 11.3</p>
+                </td>
+                <td>2.7.2024</td>
+                <td>8.7.2024</td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <a href="static/2024SS_probability_theory/Tutorial12.pdf"
+                      >Blatt 12: Bedingte Erwartung 2</a
+                    >
+                  </p>
+                  <p>
+                    <a href="static/2024SS_probability_theory/Tutorial12_Sol.pdf">
+                      Lösungen</a
+                    >
+                  </p>
+                </td>
+                <td>
+                  <p>Sections 11.4, 11.5</p>
+                </td>
+                <td>9.7.2024</td>
+                <td>15.7.2024</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item" id="kurz">
+      <h3 class="accordion-header" id="headerkurz">
+        <button
+          type="button"
+          class="accordion-button collapsed"
+          data-bs-target="#online"
+          aria-controls="online"
+          aria-expanded="true"
+          data-bs-toggle="collapse"
+        >
+          <h3 class="h5">Videos</h3>
+        </button>
+      </h3>
+      <div
+        aria-labelledby="online"
+        class="accordion-collapse collapse"
+        data-bs-parent="#accordionExample"
+        id="online"
+      >
+        <div class="accordion-body">
+          <div class="row row-cols-1 row-cols-md-3 g-3">
+            <div class="col">
+              <div class="card h-100">
+                <center>
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/yquiVZfyiNA?si=Tbad2VRdMG3qjx0V"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </center>
+                <div class="card-body">
+                  <h3 class="h5">1. Introduction</h3>
+                  <div class="card-text">
+                    <p>Covers Section 6.1</p>
+                    <p>
+                      <a href="static/2024SS_probability_theory/slides01.pdf"
+                        >Slides</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <center>
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/MaPgQuGUdjI?si=9TZyzmCzZ2GniXkU"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </center>
+                <div class="card-body">
+                  <h3 class="h5">
+                    2. Moments, characteristic functions and Laplace transforms
+                  </h3>
+                  <div class="card-text">
+                    <p>Covers Sections 6.2, 6.3</p>
+                    <p>
+                      <a href="static/2024SS_probability_theory/slides02.pdf"
+                        >Slides</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <center>
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/CPmdNgCHgVk?si=ACKkUrxIqjoIm7db"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </center>
+                <div class="card-body">
+                  <h3 class="h5">3. Different kinds of convergence</h3>
+                  <div class="card-text">
+                    <p>Covers Section 7.1</p>
+                    <p>
+                      <a href="static/2024SS_probability_theory/slides03.pdf"
+                        >Slides</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <center>
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/SvUHNC0RLls?si=VVAYibj-dMvxeoPD"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </center>
+                <div class="card-body">
+                  <h3 class="h5">
+                    4. Almost sure convergence and convergence in probability
+                  </h3>
+                  <div class="card-text">
+                    <p>Covers Section 7.2</p>
+                    <p>
+                      <a href="static/2024SS_probability_theory/slides04.pdf"
+                        >Slides</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <center>
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/kyGQYOzVIo8?si=hFD5uEj_9HJJtb-D"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </center>
+                <div class="card-body">
+                  <h3 class="h5">
+                    5. Convergence in probability and L^p-convergence
+                  </h3>
+                  <div class="card-text">
+                    <p>Covers Section 7.3</p>
+                    <p>
+                      <a href="static/2024SS_probability_theory/slides05.pdf"
+                        >Slides</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <center>
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/M0KKLNx1FsQ?si=CjIIJ7sEf3VpI0AD"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </center>
+                <div class="card-body">
+                  <h3 class="h5">6. The Lemma of Borel-Cantelli</h3>
+                  <div class="card-text">
+                    <p>Covers Section 8.1</p>
+                    <p>
+                      <a href="static/2024SS_probability_theory/slides06.pdf"
+                        >Slides</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <center>
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/y5UURki6UAA?si=NOdgr7bPt-rOBklV"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </center>
+                <div class="card-body">
+                  <h3 class="h5">7. Kolmogorov's 0-1-Law</h3>
+                  <div class="card-text">
+                    <p>Covers Section 8.2</p>
+                    <p>
+                      <a href="static/2024SS_probability_theory/slides07.pdf"
+                        >Slides</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <center>
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/t0aC4W8PQP8?si=1QUFRZL-e1gcMoEe"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </center>
+                <div class="card-body">
+                  <h3 class="h5">8. Sums of independent random variables</h3>
+                  <div class="card-text">
+                    <p>Covers Section 8.3</p>
+                    <p>
+                      <a href="static/2024SS_probability_theory/slides08.pdf"
+                        >Slides</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <center>
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/14s2OublRrw?si=yRXLBsK0V_ulXx94"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </center>
+                <div class="card-body">
+                  <h3 class="h5">9. The Strong Law of Large Numbers</h3>
+                  <div class="card-text">
+                    <p>Covers Section 8.4</p>
+                    <p>
+                      <a href="static/2024SS_probability_theory/slides09.pdf"
+                        >Slides</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <center>
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/3v3RP-SzlF4?si=LmcuiDKUcM0LkNxH"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </center>
+                <div class="card-body">
+                  <h3 class="h5">10. Introduction to weak convergence</h3>
+                  <div class="card-text">
+                    <p>Covers Section 9.1</p>
+                    <p>
+                      <a href="static/2024SS_probability_theory/slides10.pdf"
+                        >Slides</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <center>
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/r3Sg4zeqAt8?si=CjH8_3p0SE7vPnH6"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </center>
+                <div class="card-body">
+                  <h3 class="h5">11. Prohorov's Theorem</h3>
+                  <div class="card-text">
+                    <p>Covers Section 9.2</p>
+                    <p>
+                      <a href="static/2024SS_probability_theory/slides11.pdf"
+                        >Slides</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <center>
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/KoWKSGOJRu4?si=zxM4bMJtIUia6rhe"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </center>
+                <div class="card-body">
+                  <h3 class="h5">12. Separating classes of functions</h3>
+                  <div class="card-text">
+                    <p>Covers Section 9.3</p>
+                    <p>
+                      <a href="static/2024SS_probability_theory/slides12.pdf"
+                        >Slides</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <center>
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/tCd8mHqOy1g?si=hFKbHpQJNDboq8fG"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </center>
+                <div class="card-body">
+                  <h3 class="h5">13. Lévy's Theorem</h3>
+                  <div class="card-text">
+                    <p>Covers Section 9.4</p>
+                    <p>
+                      <a href="static/2024SS_probability_theory/slides13.pdf"
+                        >Slides</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <center>
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/4RFM3Y_c3R8?si=A67Ha0j5APq1Zh7h"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </center>
+                <div class="card-body">
+                  <h3 class="h5">14. Poisson convergence</h3>
+                  <div class="card-text">
+                    <p>Covers Section 10.1</p>
+                    <p>
+                      <a href="static/2024SS_probability_theory/slides14.pdf"
+                        >Slides</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <center>
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/V-VwgSk5m30?si=3svZDUTqBNLGMrzM"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </center>
+                <div class="card-body">
+                  <h3 class="h5">15. The Central Limit Theorem</h3>
+                  <div class="card-text">
+                    <p>Covers Section 10.2</p>
+                    <p>
+                      <a href="static/2024SS_probability_theory/slides15.pdf"
+                        >Slides</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <center>
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/1aX2bk4Tr2I?si=r_d2Guj3vznAx3me"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </center>
+                <div class="card-body">
+                  <h3 class="h5">16. Multidimensional weak limits</h3>
+                  <div class="card-text">
+                    <p>Covers Section 10.3</p>
+                    <p>
+                      <a href="static/2024SS_probability_theory/slides16.pdf"
+                        >Slides</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <center>
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/_6BiLCZdG3E?si=aJ5y-YxKLve40zvm"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </center>
+                <div class="card-body">
+                  <h3 class="h5">
+                    17. Introduction to conditional expectation
+                  </h3>
+                  <div class="card-text">
+                    <p>Covers Section 11.1, 11.2</p>
+                    <p>
+                      <a href="static/2024SS_probability_theory/slides17.pdf"
+                        >Slides</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <center>
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/anuY1zFUL_0?si=ME__HMOmcG3IJrIK"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </center>
+                <div class="card-body">
+                  <h3 class="h5">18. The case G = σ(X) and some examples</h3>
+                  <div class="card-text">
+                    <p>Covers Section 11.3</p>
+                    <p>
+                      <a href="static/2024SS_probability_theory/slides18.pdf"
+                        >Slides</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <center>
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/cptvy8lZWZ8?si=N0BhgLAsJ8unu_W5"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </center>
+                <div class="card-body">
+                  <h3 class="h5">19. Conditional independence</h3>
+                  <div class="card-text">
+                    <p>Covers Section 11.4</p>
+                    <p>
+                      <a href="static/2024SS_probability_theory/slides19.pdf"
+                        >Slides</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <center>
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/QAdEzdXWp-k?si=LSnI3hLafNjXAKpg"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </center>
+                <div class="card-body">
+                  <h3 class="h5">
+                    20. Regular version of conditional distribution
+                  </h3>
+                  <div class="card-text">
+                    <p>Covers Section 11.5</p>
+                    <p>
+                      <a href="static/2024SS_probability_theory/slides20.pdf"
+                        >Slides</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <div><br /></div>
+    <div><br /></div>
+
+    <div class="container">
+      <footer class="text-center text-white" style="background-color: #004a99">
+        <div class="container">
+          <section class="mt-2">
+            <div
+              class="row text-center d-flex justify-content-center pt-4 pb-4"
+            >
+              <div class="col-md-2">
+                <h6 class="text-uppercase font-weight-bold">
+                  <a href="contact.html" class="text-white">Impressum</a>
+                </h6>
+              </div>
+              <div class="col-md-2">
+                <h6 class="text-uppercase font-weight-bold">
+                  <a href="contact.html" class="text-white">Datenschutz</a>
+                </h6>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="text-center p-3" style="background-color: #143669">
+          © 2024 Copyright:
+          <a class="text-white" href="https://math.uni-freiburg.de/"
+            >Mathematisches Institut, Universität Freiburg</a
+          >
+        </div>
+      </footer>
+    </div>
+    <script>
+      if (location.hash !== null && location.hash !== "") {
+        $(location.hash + ".collapse").collapse("show");
+      }
+    </script>
+    <script>
+      var x = window.location.search.replace("?", "_");
+      var element = document.getElementById(x);
+      element.classList.add("show");
+      element.scrollIntoView();
+      var element = document.querySelector("[aria-controls=" + x + "]");
+      element.classList.remove("collapsed");
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+     
+  </body>
+</html>

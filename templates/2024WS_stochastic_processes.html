@@ -1,0 +1,910 @@
+{% extends '_base.html' %}{% block title %}Home{% endblock %}{% block content %}
+<br />
+<div class="container" id="inhalt">
+  <h2>Stochastic Processes (WS 2024)</h2>
+  <p>Teacher: Prof. Dr. Peter Pfaffelhuber</p>
+  <p>Assistant and Tutor: Samuel Adeosun</p>
+
+  <div class="accordion" id="accordionExample">
+    <div class="accordion-item" id="kurz">
+      <h3 class="accordion-header" id="headerkurz">
+        <button
+          type="button"
+          class="accordion-button"
+          data-bs-target="#schueler"
+          aria-controls="schueler"
+          aria-expanded="true"
+          data-bs-toggle="collapse"
+        >
+          <h3 class="h5">Organisation and Documents</h3>
+        </button>
+      </h3>
+      <p></p>
+      <div
+        aria-labelledby="schueler"
+        class="accordion-collapse collapse show"
+        data-bs-parent="#accordionExample"
+        id="schueler"
+      >
+        <div class="accordion-body">
+          <p>Lecture: Mo 10-12, HS II, Albertstr. 23b</p>
+          <p>Exercises: tba</p>
+          <p>
+            Examinations: Please check
+            <a
+              href="https://www.math.uni-freiburg.de/nlehre/en/lehrveranstaltungen/2024WS/"
+              >here</a
+            >
+            what you need to do in order to obtain the ECTS points. In most
+            cases, this is 50% of all credits of the exercise sheets, as well as
+            presenting a solution two times during class for the pass/fail
+            examination (Studienleistung). For the graded examination
+            (Prüfungsleistung), there will be oral exams in both, BSc
+            Mathematics and MSc programs.
+          </p>
+          <p>
+            General: The lecture contains (english) videos, which basically
+            explain the content of the manuscript. During the lecture on
+            Mondays, there will be a repetition of the videos. Here, you have
+            the possibility to ask questions and interact with other people.
+            There will be a new exercise sheet every Tuesday, which you have to
+            hand in by Monday in then following week. It is best to do this in
+            the mailbox in the basement of the Ernst-Zermelo-Str. 1. Two
+            students can work together and hand in their solutions together.
+          </p>
+          <p>
+            Manuscript: The current version of the manuscript is
+            <a href="static/2024WS_stochastic_processes/manuscript.pdf"
+              >here</a
+            >. There is also an older (German) version of the manuscript, which
+            can be found
+            <a href="static/probability_theory/zyklus.pdf">here</a>. Note that
+            the manuscript builds upon the mansucripts on
+            <a href="static/2024WS_measure_theory/manuscript.pdf"
+              >measure theory</a
+            >
+            and
+            <a href="static/2024SS_probability_theory/manuscript.pdf"
+              >probability theory</a
+            >.
+          </p>
+          <p>Exercise sheets</p>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col"></th>
+                <th scope="col">Sections</th>
+                <th scope="col">Handed out</th>
+                <th scope="col">to be handed in</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <p>
+                    <a href="static/2024WS_stochastic_processes/Tutorial1.pdf"
+                      >Sheet 1: Repetition Probabiliy Theory</a
+                    >
+                  </p>
+                  <p>
+                    <a href="static/2024WS_stochastic_processes/Tutorial1_Sol.pdf">
+                      Solutions</a
+                    >
+                  </p>
+                </td>
+                <td>Full course on probability theory</td>
+                <td>15.10.2024</td>
+                <td>21.10.2024</td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <a href="static/2024WS_stochastic_processes/Tutorial2.pdf"
+                      >Sheet 2: Introduction</a
+                    >
+                  </p>
+                  <p>
+                    <a href="static/2024WS_stochastic_processes/Tutorial1_Sol.pdf">
+                      Solutions</a
+                    >
+                  </p>
+                </td>
+                <td>Section 13.1</td>
+                <td>22.10.2024</td>
+                <td>28.10.2024</td>
+              </tr>
+
+              <tr>
+                <td>
+                  <p>
+                    <a href="static/2024WS_stochastic_processes/Tutorial3.pdf"
+                      >Sheet 3: Poisson process and Brownian Motion
+                    </a>
+                  </p>
+                  <p>
+                    <a href="static/2024WS_stochastic_processes/Tutorial3_Sol.pdf">
+                      Solutions</a
+                    >
+                  </p>
+                </td>
+                <td>Section 13.2, 13.3</td>
+                <td>29.10.2024</td>
+                <td>4.11.2024</td>
+              </tr>
+
+              <tr>
+                <td>
+                  <p>
+                    <a href="static/2024WS_stochastic_processes/Tutorial4.pdf"
+                      >Sheet 4: Filtrations, Stopping Times, Measurability
+                    </a>
+                  </p>
+                  <p>
+                    <a href="static/2024WS_stochastic_processes/Tutorial4_Sol.pdf">
+                      Solutions</a
+                    >
+                  </p>
+                </td>
+                <td>Section 13.4, 13.5</td>
+                <td>5.11.2024</td>
+                <td>11.11.2024</td>
+              </tr>
+
+              <tr>
+                <td>
+                  <p>
+                    <a href="static/2024WS_stochastic_processes/Tutorial5.pdf"
+                      >Sheet 5: Martingales 1
+                    </a>
+                  </p>
+                  <p>
+                    <a href="static/2024WS_stochastic_processes/Tutorial5_Sol.pdf">
+                      Solutions</a
+                    >
+                  </p>
+                </td>
+                <td>Section 14.1</td>
+                <td>12.11.2024</td>
+                <td>18.11.2024</td>
+              </tr>
+
+              <tr>
+                <td>
+                  <p>
+                    <a href="static/2024WS_stochastic_processes/Tutorial6.pdf"
+                      >Sheet 6: Martingales 2
+                    </a>
+                  </p>
+                  <p>
+                    <a href="static/2024WS_stochastic_processes/Tutorial6_Sol.pdf">
+                      Solutions</a
+                    >
+                  </p>
+                </td>
+                <td>Section 14.2</td>
+                <td>19.11.2024</td>
+                <td>25.11.2024</td>
+              </tr>
+
+              <tr>
+                <td>
+                  <p>
+                    <a href="static/2024WS_stochastic_processes/Tutorial7.pdf"
+                      >Sheet 7: Martingales 2
+                    </a>
+                  </p>
+                  <p>
+                    <a href="static/2024WS_stochastic_processes/Tutorial7_Sol.pdf">
+                      Solutions</a
+                    >
+                  </p>
+                </td>
+                <td>Section 14.3</td>
+                <td>26.11.2024</td>
+                <td>2.12.2024</td>
+              </tr>
+
+              <tr>
+                <td>
+                  <p>
+                    <a href="static/2024WS_stochastic_processes/Tutorial8.pdf"
+                      >Sheet 8: Martingales 3
+                    </a>
+                  </p>
+                  <p>
+                    <a href="static/2024WS_stochastic_processes/Tutorial8_Sol.pdf">
+                      Solutions</a
+                    >
+                  </p>
+                </td>
+                <td>Section 14.4, 14.5</td>
+                <td>3.12.2024</td>
+                <td>9.12.2024</td>
+              </tr>
+
+              <tr>
+                <td>
+                  <p>
+                    <a href="static/2024WS_stochastic_processes/Tutorial9.pdf"
+                      >Sheet 9: Markov Processes 1
+                    </a>
+                  </p>
+                  <p>
+                    <a href="static/2024WS_stochastic_processes/Tutorial9_Sol.pdf">
+                      Solutions</a
+                    >
+                  </p>
+                </td>
+                <td>Section 15.1</td>
+                <td>10.12.2024</td>
+                <td>16.12.2024</td>
+              </tr>
+
+              <tr>
+                <td>
+                  <p>
+                    <a href="static/2024WS_stochastic_processes/Tutorial10.pdf"
+                      >Sheet 10: Markov Processes 2
+                    </a>
+                  </p>
+                  <p>
+                    <a href="static/2024WS_stochastic_processes/Tutorial10_Sol.pdf">
+                      Solutions</a
+                    >
+                  </p>
+                </td>
+                <td>Section 15.2</td>
+                <td>17.12.2024</td>
+                <td>7.1.2025</td>
+              </tr>
+
+              <tr>
+                <td>
+                  <p>
+                    <a href="static/2024WS_stochastic_processes/Tutorial11.pdf"
+                      >Sheet 11: Markov Processes 3
+                    </a>
+                  </p>
+                  <p>
+                    <a href="static/2024WS_stochastic_processes/Tutorial11_Sol.pdf">
+                      Solutions</a
+                    >
+                  </p>
+                </td>
+                <td>Section 15.3, 15.4</td>
+                <td>7.1.2025</td>
+                <td>13.1.2025</td>
+              </tr>
+
+              <tr>
+                <td>
+                  <p>
+                    <a href="static/2024WS_stochastic_processes/Tutorial12.pdf"
+                      >Sheet 12: Brownian Motion 1
+                    </a>
+                  </p>
+                  <p>
+                    <a href="static/2024WS_stochastic_processes/Tutorial12_Sol.pdf">
+                      Solutions</a
+                    >
+                  </p>
+                </td>
+                <td>Section 16.1, 16.2</td>
+                <td>14.1.2025</td>
+                <td>20.1.2025</td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <a href="static/2024WS_stochastic_processes/Tutorial13.pdf"
+                      >Sheet 13: Brownian Motion 2
+                    </a>
+                  </p>
+                  <p>
+                    <a href="static/2024WS_stochastic_processes/Tutorial13_Sol.pdf">
+                      Solutions</a
+                    >
+                  </p>
+                </td>
+                <td>Section 16.3, 16.4</td>
+                <td>21.1.2025</td>
+                <td>27.1.2025</td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <a href="static/2024WS_stochastic_processes/Tutorial14.pdf"
+                      >Sheet 14: Brownian Motion 3
+                    </a>
+                  </p>
+                  <p>
+                    <a href="static/2024WS_stochastic_processes/Tutorial14_Sol.pdf">
+                      Solutions</a
+                    >
+                  </p>
+                </td>
+                <td>Section 16.5</td>
+                <td>28.1.2025</td>
+                <td>3.2.2025</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item" id="kurz">
+      <h3 class="accordion-header" id="headerkurz">
+        <button
+          type="button"
+          class="accordion-button collapsed"
+          data-bs-target="#online"
+          aria-controls="online"
+          aria-expanded="true"
+          data-bs-toggle="collapse"
+        >
+          <h3 class="h5">Videos</h3>
+        </button>
+      </h3>
+      <div
+        aria-labelledby="online"
+        class="accordion-collapse collapse"
+        data-bs-parent="#accordionExample"
+        id="online"
+      >
+        <div class="accordion-body">
+          <div class="row row-cols-1 row-cols-md-3 g-3">
+            <div class="col">
+              <div class="card h-100">
+                <center>
+                  <iframe
+                    width="560"
+                    height="315"
+                    src=""
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </center>
+                <div class="card-body">
+                  <h3 class="h5">1. Introduction</h3>
+                  <div class="card-text">
+                    <p>Covers Section 13.1</p>
+                    <p>
+                      <a href="static/2024WS_stochastic_processes/slides01.pdf"
+                        >Slides</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <center>
+                  <iframe
+                    width="560"
+                    height="315"
+                    src=""
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </center>
+                <div class="card-body">
+                  <h3 class="h5">2. The Poisson Process</h3>
+                  <div class="card-text">
+                    <p>Covers Sections 13.2</p>
+                    <p>
+                      <a href="static/2024WS_stochastic_processes/slides02.pdf"
+                        >Slides</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <center>
+                  <iframe
+                    width="560"
+                    height="315"
+                    src=""
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </center>
+                <div class="card-body">
+                  <h3 class="h5">3. Brownian Motion</h3>
+                  <div class="card-text">
+                    <p>Covers Section 13.3</p>
+                    <p>
+                      <a href="static/2024WS_stochastic_processes/slides03.pdf"
+                        >Slides</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <center>
+                  <iframe
+                    width="560"
+                    height="315"
+                    src=""
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </center>
+                <div class="card-body">
+                  <h3 class="h5">4. Filtrations and Stopping Times</h3>
+                  <div class="card-text">
+                    <p>Covers Section 13.4</p>
+                    <p>
+                      <a href="static/2024WS_stochastic_processes/slides04.pdf"
+                        >Slides</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <center>
+                  <iframe
+                    width="560"
+                    height="315"
+                    src=""
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </center>
+                <div class="card-body">
+                  <h3 class="h5">5. Progrssive Measurability</h3>
+                  <div class="card-text">
+                    <p>Covers Section 13.5</p>
+                    <p>
+                      <a href="static/2024WS_stochastic_processes/slides05.pdf"
+                        >Slides</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <center>
+                  <iframe
+                    width="560"
+                    height="315"
+                    src=""
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </center>
+                <div class="card-body">
+                  <h3 class="h5">6. Introduction to Martingales</h3>
+                  <div class="card-text">
+                    <p>Covers Section 14.1</p>
+                    <p>
+                      <a href="static/2024WS_stochastic_processes/slides06.pdf"
+                        >Slides</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <center>
+                  <iframe
+                    width="560"
+                    height="315"
+                    src=""
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </center>
+                <div class="card-body">
+                  <h3 class="h5">7. The stochastic integral as a martingale</h3>
+                  <div class="card-text">
+                    <p>Covers Section 14.2</p>
+                    <p>
+                      <a href="static/2024WS_stochastic_processes/slides07.pdf"
+                        >Slides</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <center>
+                  <iframe
+                    width="560"
+                    height="315"
+                    src=""
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </center>
+                <div class="card-body">
+                  <h3 class="h5">8. Stopped Martingales</h3>
+                  <div class="card-text">
+                    <p>Covers Section 14.3</p>
+                    <p>
+                      <a href="static/2024WS_stochastic_processes/slides08.pdf"
+                        >Slides</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <center>
+                  <iframe
+                    width="560"
+                    height="315"
+                    src=""
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </center>
+                <div class="card-body">
+                  <h3 class="h5">9. Martingale Convergence</h3>
+                  <div class="card-text">
+                    <p>Covers Section 14.4</p>
+                    <p>
+                      <a href="static/2024WS_stochastic_processes/slides09.pdf"
+                        >Slides</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <center>
+                  <iframe
+                    width="560"
+                    height="315"
+                    src=""
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </center>
+                <div class="card-body">
+                  <h3 class="h5">
+                    10. The Central Limit Theorem for Martingales
+                  </h3>
+                  <div class="card-text">
+                    <p>Covers Section 14.5</p>
+                    <p>
+                      <a href="static/2024WS_stochastic_processes/slides10.pdf"
+                        >Slides</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <center>
+                  <iframe
+                    width="560"
+                    height="315"
+                    src=""
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </center>
+                <div class="card-body">
+                  <h3 class="h5">11. Martingales in Continuous Times</h3>
+                  <div class="card-text">
+                    <p>Covers Section 14.6</p>
+                    <p>
+                      <a href="static/2024WS_stochastic_processes/slides11.pdf"
+                        >Slides</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <center>
+                  <iframe
+                    width="560"
+                    height="315"
+                    src=""
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </center>
+                <div class="card-body">
+                  <h3 class="h5">
+                    12. Markov Processes: Definition and Examples
+                  </h3>
+                  <div class="card-text">
+                    <p>Covers Section 15.1</p>
+                    <p>
+                      <a href="static/2024WS_stochastic_processes/slides12.pdf"
+                        >Slides</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <center>
+                  <iframe
+                    width="560"
+                    height="315"
+                    src=""
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </center>
+                <div class="card-body">
+                  <h3 class="h5">13. Strong Markov Processes</h3>
+                  <div class="card-text">
+                    <p>Covers Section 15.2</p>
+                    <p>
+                      <a href="static/2024WS_stochastic_processes/slides13.pdf"
+                        >Slides</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <center>
+                  <iframe
+                    width="560"
+                    height="315"
+                    src=""
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </center>
+                <div class="card-body">
+                  <h3 class="h5">14. The distribution of a Markov process</h3>
+                  <div class="card-text">
+                    <p>Covers Section 15.3</p>
+                    <p>
+                      <a href="static/2024WS_stochastic_processes/slides14.pdf"
+                        >Slides</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <center>
+                  <iframe
+                    width="560"
+                    height="315"
+                    src=""
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </center>
+                <div class="card-body">
+                  <h3 class="h5">15. Semigroups and Generators</h3>
+                  <div class="card-text">
+                    <p>Covers Section 15.4</p>
+                    <p>
+                      <a href="static/2024WS_stochastic_processes/slides15.pdf"
+                        >Slides</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <center>
+                  <iframe
+                    width="560"
+                    height="315"
+                    src=""
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </center>
+                <div class="card-body">
+                  <h3 class="h5">16. Brownian Motion: Quadratic Variation</h3>
+                  <div class="card-text">
+                    <p>Covers Section 16.1</p>
+                    <p>
+                      <a href="static/2024WS_stochastic_processes/slides16.pdf"
+                        >Slides</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <center>
+                  <iframe
+                    width="560"
+                    height="315"
+                    src=""
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </center>
+                <div class="card-body">
+                  <h3 class="h5">
+                    17. Brownian Motion: Reflextion Pronciple
+                  </h3>
+                  <div class="card-text">
+                    <p>Covers Section 16.2</p>
+                    <p>
+                      <a href="static/2024WS_stochastic_processes/slides17.pdf"
+                        >Slides</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <center>
+                  <iframe
+                    width="560"
+                    height="315"
+                    src=""
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </center>
+                <div class="card-body">
+                  <h3 class="h5">18. Brownian Motion: The Iterated Logarithm</h3>
+                  <div class="card-text">
+                    <p>Covers Section 16.3</p>
+                    <p>
+                      <a href="static/2024WS_stochastic_processes/slides18.pdf"
+                        >Slides</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <center>
+                  <iframe
+                    width="560"
+                    height="315"
+                    src=""
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </center>
+                <div class="card-body">
+                  <h3 class="h5">19. Donsker's Theorem</h3>
+                  <div class="card-text">
+                    <p>Covers Section 16.4</p>
+                    <p>
+                      <a href="static/2024WS_stochastic_processes/slides19.pdf"
+                        >Slides</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <center>
+                  <iframe
+                    width="560"
+                    height="315"
+                    src=""
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </center>
+                <div class="card-body">
+                  <h3 class="h5">
+                    20. The Skorohod embedding Theorem
+                  </h3>
+                  <div class="card-text">
+                    <p>Covers Section 16.4</p>
+                    <p>
+                      <a href="static/2024WS_stochastic_processes/slides20.pdf"
+                        >Slides</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

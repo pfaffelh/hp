@@ -201,27 +201,45 @@
 
       <nav class="navbar navbar-expand-xl navbar-dark flex bg-ufr-blue">
         <div class="container-fluid">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
           <div class="container">
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarTogglerDemo01"
-              aria-controls="navbarTogglerDemo01"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
             <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-link text-white" href="#"></a>
-                </li>
-                <li class="nav-item px-0">
-                  <a class="nav-link text-white  py-3 px-0" href="research.html"
-                    >Research</a
+              <ul class="navbar-nav align-items-lg-center">
+                <li class="nav-item dropdown px-0">
+                  <a
+                    class="nav-link dropdown-toggle active"
+                    href=""
+                    id="navbarDropdownMenuLink"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
                   >
+                    Research</a
+                  >
+                  <ul class="dropdown-menu" data-bs-theme="light">
+                    <li>
+                      <a class="dropdown-item text-black" href="projects.html"
+                        >Projects</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item text-black"
+                        href="publications.html"
+                        >Publications</a
+                      >
+                    </li>
+                  </ul>
                 </li>
                 <li class="nav-item dropdown">
                   <a
@@ -266,7 +284,7 @@
                 </li>
                 <li class="nav-item dropdown px-3">
                   <a
-                    class="nav-link dropdown-toggle active py-3 px-0"
+                    class="nav-link dropdown-toggle active"
                     href=""
                     id="navbarDropdownMenuLink"
                     data-toggle="dropdown"
@@ -282,15 +300,22 @@
                     <li class="dropdown-submenu">
                       <a
                         class="dropdown-item text-black"
-                        href="2024ss_wtheorie.html"
-                        >SoSe 2024, Wahrscheinlichkeitstheorie</a
+                        href="2024WS_stochastic_processes.html"
+                        >Stochastic Processes (WS 2024)</a
                       >
                     </li>
                     <li class="dropdown-submenu">
                       <a
                         class="dropdown-item text-black"
-                        href="measure_theory.html"
-                        >Measure theory for probabilists</a
+                        href="2024WS_measure_theory.html"
+                        >Measure theory for probabilists (WS 2024)</a
+                      >
+                    </li>
+                    <li class="dropdown-submenu">
+                      <a
+                        class="dropdown-item text-black"
+                        href="2024SS_probability_theory.html"
+                        >Probability theory (SS 2024)</a
                       >
                     </li>
                   </ul>

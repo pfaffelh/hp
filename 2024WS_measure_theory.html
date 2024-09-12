@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mathematical Institute, Universität Freiburg, AG Pfaffelhuber</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      id="unitheme-style-css"
+      href="static/unitheme.css?ver=2.0.02"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="static/ufr-colors.css"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <script></script>
+    <link href="static/ufr-colors.css" type="text/css" media="all" />
+    <script>
+      $('[data-toggle="tooltip"]').tooltip({
+        template:
+          '<div class="tooltip tooltip-custom"><div class="title">Test</div><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>',
+      });
+    </script>
+    <style>
+      .btn:focus {
+        outline: none;
+        box-shadow: none;
+      }
+      @media (min-width: 768px) {
+        .container-small {
+          width: 300px;
+        }
+        .container-large {
+          width: 970px;
+        }
+      }
+      @media (min-width: 992px) {
+        .container-small {
+          width: 500px;
+        }
+        .container-large {
+          width: 1170px;
+        }
+      }
+      @media (min-width: 1200px) {
+        .container-small {
+          width: 700px;
+        }
+        .container-large {
+          width: 1500px;
+        }
+      }
+
+      .container-small,
+      .container-large {
+        max-width: 100%;
+      }
+      .carousel-image {
+        width: 100%;
+        height: 360px;
+        object-fit: cover;
+      }
+
+      .navbar-nav li:hover > ul.dropdown-menu {
+        display: block;
+      }
+
+      .dropdown-submenu {
+        position: relative;
+      }
+
+      .dropdown-submenu > .dropdown-menu {
+        top: 0;
+        left: 100%;
+        margin-top: -6px;
+      }
+
+      /* rotate caret on hover */
+      .dropdown-menu > li > a:hover:after {
+        text-decoration: underline;
+        transform: rotate(-45deg);
+      }
+      .dropdown-submenu.btn:focus-within {
+        background-color: white;
+      }
+      .dropdown-toggle::after {
+        display: inline-block;
+        width: 0.5em;
+        height: 0.5em;
+        margin: -0.3em 0 0 0.4em;
+        vertical-align: middle;
+        content: "";
+        border: 0.3em solid;
+        border-width: 0 0.15em 0.15em 0;
+        transform: rotateZ(45deg);
+      }
+      .accordion-button::after {
+        background-image: url("static/Bilder/plus-svgrepo-com.svg");
+      }
+      .accordion-button:not(.collapsed)::after {
+        background-image: url("static/Bilder/cross-svgrepo-com.svg");
+      }
+      .accordion-button:not(.collapsed) {
+        background-color: #fffae5;
+        color-scheme: #fffae5;
+      }
+      .accordion-button:hover {
+        background-color: #fffae5;
+        outline: none;
+      }
+      .table-borderless td,
+      .table-borderless th {
+        border: 0;
+      }
+      .btn-primary,
+      .btn-primary:hover,
+      .btn-primary:active,
+      .btn-primary:visited {
+        background-color: #344a9a !important;
+      }
+    </style>
+    
+    <!-- Add additional styles here -->
+    
+  </head>
+
+  <body class="bg-white">
+    <header class="bg-ufr-darkblue">
+      <nav
+        id="site-navigation"
+        class="navbar navbar-expand-xl"
+        aria-label="Oberes Menü"
+      >
+        <div class="container-fluid">
+          <div class="container">
+            <div class="d-flex flex-grow-1">
+              <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                  <a class="nav-link text-white me-0" href="#"></a>
+                </li>
+                <li class="nav-item d-flex align-items-center">
+                  <a class="navbar-brand" href="https://www.uni-freiburg.de">
+                    <img
+                      src="static/ufr-logo-white.svg"
+                      alt="Albert-Ludwigs-Universität Freiburg"
+                      width="339"
+                      height="55"
+                    />
+                  </a>
+                </li>
+                <li class="nav-item d-none d-xl-block align-self-center">
+                  <i class="fa fa-chevron-right fa-55 text-white ms-2 me-2"></i>
+                </li>
+                <li class="nav-item d-none d-xl-block mr-4">
+                  <h2>
+                    <a
+                      href="https://www.math.uni-freiburg.de"
+                      class="nav-link text-white"
+                      href="#"
+                    >
+                      Mathematical Institute</a
+                    >
+                  </h2>
+                </li>
+                <li class="nav-item d-none d-xl-block align-self-center">
+                  <i class="fa fa-chevron-right fa-55 text-white ms-2 me-2"></i>
+                </li>
+                <li class="nav-item d-none d-xl-block mr-4">
+                  <h2>
+                    <a class="nav-link text-white" href="index.html">
+                      AG Pfaffelhuber</a
+                    >
+                  </h2>
+                </li>
+                <li class="nav-item d-none d-xl-block align-self-center">
+                  <i class="fa fa-chevron-right fa-55 text-white ms-2 me-2"></i>
+                </li>
+              </ul>
+              <div
+                class="align-self-center justify-content-end"
+                id="navbarSupportedContentRight"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <nav class="navbar navbar-expand-xl navbar-dark flex bg-ufr-blue">
+        <div class="container-fluid">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="container">
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+              <ul class="navbar-nav align-items-lg-center">
+                <li class="nav-item dropdown px-0">
+                  <a
+                    class="nav-link dropdown-toggle active"
+                    href=""
+                    id="navbarDropdownMenuLink"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Research</a
+                  >
+                  <ul class="dropdown-menu" data-bs-theme="light">
+                    <li>
+                      <a class="dropdown-item text-black" href="projects.html"
+                        >Projects</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item text-black"
+                        href="publications.html"
+                        >Publications</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle active py-3 px-4"
+                    href=""
+                    id="navbarDropdownMenuLink"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    People</a
+                  >
+                  <ul class="dropdown-menu" data-bs-theme="light">
+                    <li>
+                      <a
+                        class="dropdown-item text-black"
+                        href="pfaffelhuber.html"
+                        >Peter Pfaffelhuber</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item text-black" href="stiefel.html"
+                        >Jakob Stiefel</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item text-black" href="heinzel.html"
+                        >Carola Heinzel</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item text-black" href="adeosun.html"
+                        >Samuel Adeosun</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item text-black" href="stroppel.html"
+                        >Sebastian Stroppel</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown px-3">
+                  <a
+                    class="nav-link dropdown-toggle active"
+                    href=""
+                    id="navbarDropdownMenuLink"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Lehre/Teaching</a
+                  >
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                    <li class="dropdown-submenu">
+                      <a
+                        class="dropdown-item text-black"
+                        href="2024WS_stochastic_processes.html"
+                        >Stochastic Processes (WS 2024)</a
+                      >
+                    </li>
+                    <li class="dropdown-submenu">
+                      <a
+                        class="dropdown-item text-black"
+                        href="2024WS_measure_theory.html"
+                        >Measure theory for probabilists (WS 2024)</a
+                      >
+                    </li>
+                    <li class="dropdown-submenu">
+                      <a
+                        class="dropdown-item text-black"
+                        href="2024SS_probability_theory.html"
+                        >Probability theory (SS 2024)</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    
+<br />
+<div class="container" id="inhalt">
+  <h2>Measure Theory for Probabilists (WS 2024)</h2>
+  <p>Prof. Dr. Peter Pfaffelhuber</p>
+  <p>Samuel Adeosun</p>
+
+  <div class="accordion" id="accordionExample">
+    <div class="accordion-item" id="kurz">
+      <h3 class="accordion-header" id="headerkurz">
+        <button
+          type="button"
+          class="accordion-button"
+          data-bs-target="#schueler"
+          aria-controls="schueler"
+          aria-expanded="true"
+          data-bs-toggle="collapse"
+        >
+          <h3 class="h5">Structure of the course</h3>
+        </button>
+      </h3>
+      <p></p>
+      <div
+        aria-labelledby="schueler"
+        class="accordion-collapse collapse show"
+        data-bs-parent="#accordionExample"
+        id="schueler"
+      >
+        <div class="accordion-body">
+          <p>
+            This is an online course which is given at the University of
+            Freiburg.
+          </p>
+          <p>
+            Requirements: If you want to have a <i>Studienleistung</i>, you must
+            hand in parts of the exercises. Please contact Peter Pfaffelhuber if
+            you want to do so.
+          </p>
+          <p>
+            Content: The course covers the material which is usually needed in
+            order to dive into measure theoretic aspects of probability theory.
+            Usually, in basic lectures on probability (e.g. taught in Freiburg
+            as <i>Stochastik 1</i> in the 3rd semester), no measure theory is
+            needed. Rather, the lecture in <i>Analysis 3</i> covers measure
+            theory. However, in case you want to specialize in probability
+            theory and did not attend <i>Analysis 3</i>, this course is for you.
+          </p>
+          <p>
+            Prerequisites: You need to know fundamentals of mathematics, such as
+            <i>sets, functions</i> etc. The course requires some knowledge in
+            <i>topology</i>, but tries to recall all explanations in this field.
+          </p>
+          <p>
+            Manuscript: The current version is
+            <a href="static/2024WS_measure_theory/manuscript.pdf">here</a>.
+          </p>
+          <p>
+            Videos: Below you find links to all Videos, or you look at the
+            <a
+              href="https://www.youtube.com/watch?v=tpy7MO0S0v8&list=PLH2Mmq5HX7Sy3FY6PiT1a3DiUsu6ziey_"
+              >playlist</a
+            >. A collection of all slides is <a href="static/2024WS_measure_theory/alle_slides.pdf">here</a>.
+          </p>
+          <p>Exercises: You can find the exercises as part of the manuscript.</p>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item" id="kurz">
+      <h3 class="accordion-header" id="headerkurz">
+        <button
+          type="button"
+          class="accordion-button collapsed"
+          data-bs-target="#online"
+          aria-controls="online"
+          aria-expanded="true"
+          data-bs-toggle="collapse"
+        >
+          <h3 class="h5">Videos</h3>
+        </button>
+      </h3>
+      <div
+        aria-labelledby="online"
+        class="accordion-collapse collapse "
+        data-bs-parent="#accordionExample"
+        id="online"
+      >
+        <div class="accordion-body">
+          <div class="row row-cols-1 row-cols-md-3 g-3">
+            <div class="col">
+              <div class="card h-100">
+                <center>
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/tpy7MO0S0v8?si=t1fCjPSMA1pVPb6M"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </center>
+                <div class="card-body">
+                  <h3 class="h5">1. Introduction</h3>
+                  <div class="card-text">
+                    <p>Some introductory remarks</p>
+                    <p><a href="static/2024WS_measure_theory/01.pdf">Slides</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <center>
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/ibxLR0Ed6tY?si=cbj7RLt59bI74ObU"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </center>
+                <div class="card-body">
+                  <h3 class="h5">2. Semi-rings and σ-fields</h3>
+                  <div class="card-text">
+                    <p>Covers Section 1.1</p>
+                    <p><a href="static/2024WS_measure_theory/02.pdf">Slides</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <center>
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/eF5m4A5Yzt0?si=wc6XZfm2INz6AUQU"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </center>
+                <div class="card-body">
+                  <h3 class="h5">3. Generators and extensions</h3>
+                  <div class="card-text">
+                    <p>
+                      Covers Section 1.2, and includes some repetition in
+                      topology (Appendix A)
+                    </p>
+                    <p><a href="static/2024WS_measure_theory/03.pdf">Slides</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <center>
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/K415DCGAndI?si=NaFZiSmpPYGM4OqO"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </center>
+                <div class="card-body">
+                  <h3 class="h5">4. Dynkin systems and compact systems</h3>
+                  <div class="card-text">
+                    <p>Covers Sections 1.3 and 1.4</p>
+                    <p><a href="static/2024WS_measure_theory/04.pdf">Slides</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <center>
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/3qEPkjcatbM?si=HxeX377JTdamOEdA"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </center>
+                <div class="card-body">
+                  <h3 class="h5">5. Set functions and outer measures</h3>
+                  <div class="card-text">
+                    <p>Covers Section 2.1</p>
+                    <p><a href="static/2024WS_measure_theory/05.pdf">Slides</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <center>
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/bJty372_KM8?si=rrLs1wB1dtARWZL4"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </center>
+                <div class="card-body">
+                  <h3 class="h5">6. σ-additivity</h3>
+                  <div class="card-text">
+                    <p>
+                      Covers Section 1.2, and includes some repetition in
+                      topology (Appendix A)
+                    </p>
+                    <p><a href="static/2024WS_measure_theory/06.pdf">Slides</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <center>
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/rsAwspVssXY?si=ANNUrGDL6DrXek9_"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </center>
+                <div class="card-body">
+                  <h3 class="h5">
+                    7. Uniqueness and extension of set functions
+                  </h3>
+                  <div class="card-text">
+                    <p>Covers Section 2.3</p>
+                    <p><a href="static/2024WS_measure_theory/07.pdf">Slides</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <center>
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/VFqQjJWKgoQ?si=1LRiOU_gK471j1hO"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </center>
+                <div class="card-body">
+                  <h3 class="h5">8. Measures on ℝ and image measures</h3>
+                  <div class="card-text">
+                    <p>Covers Sections 2.4 and 2.5</p>
+                    <p><a href="static/2024WS_measure_theory/08.pdf">Slides</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <center>
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/JrKhqzJyWPU?si=IDF_DWr9banAM0Z4"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </center>
+                <div class="card-body">
+                  <h3 class="h5">9. Approximation of measurable functions</h3>
+                  <p><a href="static/2024WS_measure_theory/09.pdf">Slides</a></p>
+                  <div class="card-text">
+                    <p>Covers Section 3.1</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <center>
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/H9SlDk2l6Uw?si=SPFW1qbir7dY20Lz"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </center>
+                <div class="card-body">
+                  <h3 class="h5">
+                    10. Defining the integral, and some properties
+                    <p><a href="static/2024WS_measure_theory/10.pdf">Slides</a></p>
+                  </h3>
+                  <div class="card-text">
+                    <p>Covers Sections 3.2, 3.3</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <center>
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/K_tVhCZn-88?si=LGbg9wp76gAyArKr"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </center>
+                <div class="card-body">
+                  <h3 class="h5">11. Convergence results</h3>
+                  <div class="card-text">
+                    <p>Covers Section 3.4</p>
+                    <p><a href="static/2024WS_measure_theory/11.pdf">Slides</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <center>
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/LDZ0Hl2VsxU?si=sE6Ng8F8vrlTWo5G"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </center>
+                <div class="card-body">
+                  <h3 class="h5">12. Basics of L^p -spaces</h3>
+                  <div class="card-text">
+                    <p>Covers Sections 4.1, 4.2</p>
+                    <p><a href="static/2024WS_measure_theory/12.pdf">Slides</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <center>
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/iItvEveHhbw?si=vbR25i9o2M14kzb2"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </center>
+                <div class="card-body">
+                  <h3 class="h5">13. The space L^2</h3>
+                  <div class="card-text">
+                    <p>Covers Section 4.3</p>
+                    <p><a href="static/2024WS_measure_theory/13.pdf">Slides</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <center>
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/usr-j70ag8c?si=-cw2lJsG9yBZt7DV"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </center>
+                <div class="card-body">
+                  <h3 class="h5">14. Theorem of Radon-Nikodým</h3>
+                  <div class="card-text">
+                    <p>Covers Section 4.4</p>
+                    <p><a href="static/2024WS_measure_theory/14.pdf">Slides</a></p>
+                </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <center>
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/S72C9rx6fyg?si=OL_jh5H4cOlaUINQ"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </center>
+                <div class="card-body">
+                  <h3 class="h5">15. Set systems on product spaces</h3>
+                  <div class="card-text">
+                    <p>Covers Sections 5.1, 5.2</p>
+                    <p><a href="static/2024WS_measure_theory/15.pdf">Slides</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <center>
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/QNiOL7LkDDo?si=JVrsfHgtM5zPHxD2"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </center>
+                <div class="card-body">
+                  <h3 class="h5">16. Measures on product spaces</h3>
+                  <div class="card-text">
+                    <p>Covers Section 5.3, 5.4</p>
+                    <p><a href="static/2024WS_measure_theory/16.pdf">Slides</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <center>
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/Rfe56mSRsGs?si=pdK33xZkNGyDKBl9"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </center>
+                <div class="card-body">
+                  <h3 class="h5">17. Projective limits</h3>
+                  <p><a href="static/2024WS_measure_theory/17.pdf">Slides</a></p>
+                  <div class="card-text">
+                    <p>Covers Section 5.5</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <div><br /></div>
+    <div><br /></div>
+
+    <div class="container">
+      <footer class="text-center text-white" style="background-color: #004a99">
+        <div class="container">
+          <section class="mt-2">
+            <div
+              class="row text-center d-flex justify-content-center pt-4 pb-4"
+            >
+              <div class="col-md-2">
+                <h6 class="text-uppercase font-weight-bold">
+                  <a href="contact.html" class="text-white">Impressum</a>
+                </h6>
+              </div>
+              <div class="col-md-2">
+                <h6 class="text-uppercase font-weight-bold">
+                  <a href="contact.html" class="text-white">Datenschutz</a>
+                </h6>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="text-center p-3" style="background-color: #143669">
+          © 2024 Copyright:
+          <a class="text-white" href="https://math.uni-freiburg.de/"
+            >Mathematisches Institut, Universität Freiburg</a
+          >
+        </div>
+      </footer>
+    </div>
+    <script>
+      if (location.hash !== null && location.hash !== "") {
+        $(location.hash + ".collapse").collapse("show");
+      }
+    </script>
+    <script>
+      var x = window.location.search.replace("?", "_");
+      var element = document.getElementById(x);
+      element.classList.add("show");
+      element.scrollIntoView();
+      var element = document.querySelector("[aria-controls=" + x + "]");
+      element.classList.remove("collapsed");
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+     
+  </body>
+</html>
