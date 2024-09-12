@@ -1,17 +1,3 @@
-css
-
-
-/*
-* #e7e7e7
-* "#ffd058": Master-Arbeit
-* #d7d7e7": Zeilen der Tabelle
-* f0db5f Präsentation der Master-Arbeit
-* #ffff66: Vertiefungsmodul, Mathematik, Reine Mathematik, Angewandte Mathematik
-* #e6e666:Seminar
-* #af8daa Wahlmodul
-* 
-*/
-
 body {
 }
 .praesentation-abschlussarbeit {
@@ -47,10 +33,10 @@ body {
 
 
 .bg-ufr-darkblue {
-    background-color:#00004a;
+    background-color: #143669;
 }
 .bg-ufr-blue {
-    background-color: #344A9A;
+    background-color: #004a99;
 }
 .bg-ufr-blue-80 {
     background-color: #5D6BAD;

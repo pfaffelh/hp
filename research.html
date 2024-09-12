@@ -253,6 +253,11 @@
                       >
                     </li>
                     <li>
+                      <a class="dropdown-item text-black" href="adeosun.html"
+                        >Samuel Adeosun</a
+                      >
+                    </li>
+                    <li>
                       <a class="dropdown-item text-black" href="stroppel.html"
                         >Sebastian Stroppel</a
                       >
@@ -302,26 +307,12 @@
   <div class="col-12">
     <div class="container" id="inhalt">
       <h1>Projects</h1>
-      <p>My research has three goals:</p>
-      <ul>
-        <li>
-          Stochastics is the basis for understanding in the life sciences.
-          Fields of application that we work on are population genetics,
-          forensic genetics and neuroscience.
-        </li>
-        <li>
-          The characterization and convergence of stochastic processes can be
-          studied by (so-called) martingale problems. We are working on the
-          development of new convergence results using this technique.
-        </li>
-        <li>
-          In recent years, mathematicians can formalize their research results
-          using the
-          <a href="https://leanprover.github.io/">Lean Theorem prover</a>. We
-          are working to expand the stochastics section of the corresponding
-          library.
-        </li>
-      </ul>
+      <p>Here are some descriptions of ongoing research projects.</p>
+      <p>
+        In all our work, we use probability theory as the basis for
+        understanding phenomena in the life sciences. Fields of application that
+        we work on are population genetics, forensic genetics and neuroscience.
+      </p>
     </div>
 
     <!--    <div class="container text-end">
@@ -394,12 +385,13 @@
           >
             <div class="accordion-body" id="forensicGenetics">
               <p>
-                We consider $K$ populations and data on the DNA sequence at $M$
-                different positions (i.e., we use $M$ different markers) for $N$
-                individuals. Based on this knowledge, we estimate the ancestry
-                of individuals with the Admixture Model. Specifically, we assume
-                that the ancestry of each individual is a mixture of the $K$
-                non-admixed populations, such as those from Europe or Africa.
+                We consider \(K\) populations and data on the DNA sequence at
+                \(M\) different positions (i.e., we use \(M\) different markers)
+                for \(N\) individuals. Based on this knowledge, we estimate the
+                ancestry of individuals with the Admixture Model. Specifically,
+                we assume that the ancestry of each individual is a mixture of
+                the $K$ non-admixed populations, such as those from Europe or
+                Africa.
               </p>
               <p>
                 We mainly focus on the following topics concerning the ancestry
@@ -430,22 +422,15 @@
                   make sense to classify this individual into one single
                   population. We provide statistical tests to e.g. evaluate
                   whether the classification makes sense. A Part of this work is
-                  joint with Sabine Lutz-Bonengel.
+                  joint with
+                  <a
+                    href="https://www.uniklinik-freiburg.de/rechtsmedizin/forensische-molekularbiologie.html"
+                    >Sabine Lutz-Bonengel</a
+                  >
+                  .
                 </li>
               </ul>
-
-              Zusammen mit
-              <a
-                href="https://www.stochastik.uni-freiburg.de/de/professoren/rohde"
-                >Angelika Rohde</a
-              >
-              und
-              <a
-                href="https://www.uniklinik-freiburg.de/rechtsmedizin/forensische-molekularbiologie.html"
-                >Sabine Lutz-Bonengel</a
-              >
-              bin ich Projektleiter in einem Projekt zur forensischen Genetik
-              des Sonderforschungsbereichs
+              This project if part of the CRC
               <a href="https://www.smalldata-initiative.de">Small Data.</a>
             </div>
           </div>
@@ -470,7 +455,22 @@
             id="_transposableElements"
           >
             <div class="accordion-body" id="transposableElements">
-              <p>TEs</p>
+              <p>
+              	TEs are mobile genetic elements and oftentimes in the process of 
+              	moving, they duplicate. In our ongoing research project, we are 
+              	interested in modeling the evolution of TEs in the species of 
+              	Macrotermes. By utilizing long-read, high-fidelity (HiFi) sequencing,
+              	we are able to annotate the TEs present in the Macrotermes genome 
+              	and study their abundance using some bioinformatic tools.
+	      </p>
+              <p>
+		Importantly, by employing a de novo annotation approach, we can also 
+		discover and characterize novel TE families that are not represented 
+		in existing TE libraries. This is a valuable endeavor, as the movement
+		and duplication of TEs can have significant genotypic and phenotypic 
+		consequences, such as gene disruption and the generation of new genetic 
+		elements.
+	      </p>
             </div>
           </div>
         </div>
@@ -495,6 +495,12 @@
           >
             <div class="accordion-body" id="CRNs">
               <p>CRNs</p>
+              <p>
+                The characterization and convergence of stochastic processes can
+                be studied by (so-called) martingale problems. We are working on
+                the development of new convergence results using this technique,
+                in particular corresponding to Chemical Reaction Networks.
+              </p>
             </div>
           </div>
         </div>
@@ -519,7 +525,11 @@
             id="_mathlib"
           >
             <div class="accordion-body" id="mathlib">
-              <p>Lean</p>
+              In recent years, mathematicians can formalize their research
+              results using the
+              <a href="https://leanprover.github.io/">Lean Theorem prover</a>.
+              We are working to expand the stochastics section of the
+              corresponding library.
             </div>
           </div>
         </div>
@@ -573,6 +583,11 @@
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
      
   </body>
 </html>

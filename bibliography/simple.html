@@ -1,0 +1,34 @@
+<ul>
+  {% for entry in entries %}
+  <li>
+    <span class="authors"> {{ entry.persons['author']|author_list }}. </span>
+    <span class="title">
+
+      {% if (entry|extra_urls).items() %}
+      {% for type, url in (entry|extra_urls).items() %}
+      <a href="{{ url|escape }}">{{ entry|title }}</a>.
+      {% endfor %}
+      {% else %}
+      {{ entry|title }}.
+      {% endif %}
+    </span>
+    <!-- {% if entry|main_url %}
+    <a href = "{{ entry|main_url }}">{{ entry|main_url }}</a>,
+    {% endif %}-->
+    <span class="venuetype">{{ entry|venue_type -}}</span
+    ><span class="venue">{{ entry|venue -}}</span>,
+
+    {% if entry.fields['volume'] %}
+    <span>{{ entry.fields['volume'] }}{% if entry.fields['number'] %}
+    ({{ entry.fields['number'] }}){% endif %}, </span>
+    {% endif %}
+    <span>{{ entry.fields['pages'] }} </span>,
+
+    <span class="date">
+      {{ entry.fields['month'] }} {{ entry.fields['year'] }}.
+    </span>
+
+  </li>
+
+  {% endfor %}
+</ul>
