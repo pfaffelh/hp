@@ -201,45 +201,27 @@
 
       <nav class="navbar navbar-expand-xl navbar-dark flex bg-ufr-blue">
         <div class="container-fluid">
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarTogglerDemo01"
-            aria-controls="navbarTogglerDemo01"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
           <div class="container">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarTogglerDemo01"
+              aria-controls="navbarTogglerDemo01"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-              <ul class="navbar-nav align-items-lg-center">
-                <li class="nav-item dropdown px-0">
-                  <a
-                    class="nav-link dropdown-toggle active"
-                    href=""
-                    id="navbarDropdownMenuLink"
-                    data-toggle="dropdown"
-                    aria-haspopup="true"
-                    aria-expanded="false"
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#"></a>
+                </li>
+                <li class="nav-item px-0">
+                  <a class="nav-link text-white  py-3 px-0" href="research.html"
+                    >Research</a
                   >
-                    Research</a
-                  >
-                  <ul class="dropdown-menu" data-bs-theme="light">
-                    <li>
-                      <a class="dropdown-item text-black" href="projects.html"
-                        >Projects</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        class="dropdown-item text-black"
-                        href="publications.html"
-                        >Publications</a
-                      >
-                    </li>
-                  </ul>
                 </li>
                 <li class="nav-item dropdown">
                   <a
@@ -284,7 +266,7 @@
                 </li>
                 <li class="nav-item dropdown px-3">
                   <a
-                    class="nav-link dropdown-toggle active"
+                    class="nav-link dropdown-toggle active py-3 px-0"
                     href=""
                     id="navbarDropdownMenuLink"
                     data-toggle="dropdown"
@@ -300,22 +282,15 @@
                     <li class="dropdown-submenu">
                       <a
                         class="dropdown-item text-black"
-                        href="2024WS_stochastic_processes.html"
-                        >Stochastic Processes (WS 2024)</a
+                        href="2024ss_wtheorie.html"
+                        >SoSe 2024, Wahrscheinlichkeitstheorie</a
                       >
                     </li>
                     <li class="dropdown-submenu">
                       <a
                         class="dropdown-item text-black"
-                        href="2024WS_measure_theory.html"
-                        >Measure theory for probabilists (WS 2024)</a
-                      >
-                    </li>
-                    <li class="dropdown-submenu">
-                      <a
-                        class="dropdown-item text-black"
-                        href="2024SS_probability_theory.html"
-                        >Probability theory (SS 2024)</a
+                        href="measure_theory.html"
+                        >Measure theory for probabilists</a
                       >
                     </li>
                   </ul>
@@ -334,7 +309,7 @@
     <div class="col-8">
       <h2>Information:</h2>
       <p></p>
-      <p>Teaching</p>
+      <p> I am a Ph.D. student under the supervision of Peter Pfaffelhuber in the Sonderforschungsbereich <a href="https://www.smalldata-initiative.de/">"Small Data"</a>.</p>
     </div>
     <div class="col-4">
       <img
@@ -361,7 +336,7 @@
                 data-bs-toggle="collapse"
                 type="button"
               >
-                <h3 class="h5">Forensic Genetics</h3>
+                <h3 class="h5">Research Topics</h3>
               </button>
             </h4>
             <div
@@ -372,8 +347,13 @@
             >
               <div class="accordion-body" id="researchTopics">
                 <ul>
-                  <li>List item 1</li>
-                  <li>List item 2</li>
+                 <li> Admixture Model: We consider K populations and data of the DNA sequence at M different positions (i.e., we use M different markers) for N individuals. 
+                  Based on this knowledge, we estimate the ancestry of individuals with the Admixture Model.
+                  Specifically, we assume that the ancestry of each individual is a mixture of the K non-admixed populations, such as those from Europe or Africa. We are interested in
+                   the theoretical properties of the esimtator (e.g. consistency) and in improving the state-of-the art methods to infer the ancestry.
+             </li>
+                  <li> Maximum Entropy and its Application to Metabolic Networks  </li>
+                  <li> Branching Processes and its Application to Cancer Research </li>
                 </ul>
               </div>
             </div>
@@ -388,7 +368,7 @@
                 data-bs-toggle="collapse"
                 type="button"
               >
-                <h3 class="h5">Publications</h3>
+                <h3 class="h5">Teaching</h3>
               </button>
             </h4>
             <div
@@ -398,18 +378,44 @@
               data-bs-parent="#accordionExample"
             >
               <div class="accordion-body" id="publications">
-                <p>Here are some publications.</p>
+                <p> Winter Term 2023: One-dimensional diffusions and stochastic differential equations (Teaching Assistant) </p>
               </div>
             </div>
           </div>
+
+ <!-- Talks -->
+      <div class="accordion-item" id="_talks">
+        <h4 class="accordion-header" id="header_talks">
+          <button
+            aria-controls="_talks"
+            aria-expanded="false"
+            class="accordion-button collapsed"
+            data-bs-target="#_talks"
+            data-bs-toggle="collapse"
+            type="button"
+          >
+            <h3 class="h5">Talks</h3>
+          </button>
+        </h4>
+        <div
+          id="_talks"
+          aria-labelledby="_talks"
+          class="accordion-collapse collapse"
+          data-bs-parent="#accordionExample"
+        >
+          <div class="accordion-body" id="talks">
+            <ul>
+           <li> Carola Sophia Heinzel, Peter Pfaffelhuber, <i> Admixture Model -- Flat Likelihood, Consistency, and a Central Limit Result  </i>, May 23, (2024), Stochastic Processes in Evolutionary Biology, Luminy, France. </li>
+ <li> Carola Sophia Heinzel, Peter Pfaffelhuber, <i> Non-unique Estimators and a Central Limit Result in the Admixture Model  </i>, June 26, (2024), Research Students Conference in Population Genomics 2024, Edinburgh, UK.  </li>
+ <li> Carola Sophia Heinzel, Johann Fredrik Jadebeck, Elisabeth Zelle, Johannes Seiffarth, Katharina Nöh,<i>Combining Knowledge about Metabolic Networks and Single-cell Data with Maximum Entropy  </i>, July 5, (2024), 43rd International Workshop on Bayesian Inference and Maximum Entropy Methods in Science and Engineering, Gent, Belgium. </li>
+ <li> Carola Sophia Heinzel, Lukas Hoffmann, Sabine Lutz-Bonengel, Peter Pfaffelhuber, <i> Classification in Biogeographical Analysis: When does it make Sense and What are the Alternatives?  </i>,  September 12, (2024), 30th Congress of the International Society for Forensic Genetics -- ISFG 2024, Santiago the Compostela, Spain.  </li>
+ <li> Carola Sophia Heinzel, Lennart Purucker, Frank Hutter, Peter Pfaffelhuber, <i> Improving Machine Learning for Small Genetic Data Using Mathematical Statistics </i>, October 8, (2024), SmallData Symposium 2024, Freiburg, Germany.  </li>
+            </ul>
+          </div>
         </div>
       </div>
-
-      <p></p>
-    </div>
-  </div>
-  
-
+   </div>
+</div>
     <div><br /></div>
     <div><br /></div>
 
