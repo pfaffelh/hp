@@ -6,4 +6,4 @@ In order to modify and put new version online, do:
 2. run `python3 build.py` (and cancel with Ctrl-C)
 3. git add --all; git commit -m ""; git push
 
-Then, after a few moments, the new version is [here](https://pfaffelh.github.io/hp/).
+Then, after a few moments/minutes, the new version is [here](https://pfaffelh.github.io/hp/).
