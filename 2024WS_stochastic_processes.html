@@ -1,340 +1,255 @@
 <!DOCTYPE html>
 <html lang="de">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Mathematical Institute, Universität Freiburg, AG Pfaffelhuber</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      id="unitheme-style-css"
-      href="static/unitheme.css?ver=2.0.02"
-      type="text/css"
-      media="all"
-    />
-    <link
-      rel="stylesheet"
-      href="static/ufr-colors.css"
-      type="text/css"
-      media="all"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    />
-    <script></script>
-    <link href="static/ufr-colors.css" type="text/css" media="all" />
-    <script>
-      $('[data-toggle="tooltip"]').tooltip({
-        template:
-          '<div class="tooltip tooltip-custom"><div class="title">Test</div><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>',
-      });
-    </script>
-    <style>
-      .btn:focus {
-        outline: none;
-        box-shadow: none;
-      }
-      @media (min-width: 768px) {
-        .container-small {
-          width: 300px;
-        }
-        .container-large {
-          width: 970px;
-        }
-      }
-      @media (min-width: 992px) {
-        .container-small {
-          width: 500px;
-        }
-        .container-large {
-          width: 1170px;
-        }
-      }
-      @media (min-width: 1200px) {
-        .container-small {
-          width: 700px;
-        }
-        .container-large {
-          width: 1500px;
-        }
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mathematical Institute, Universität Freiburg, AG Pfaffelhuber</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <link rel="stylesheet" id="unitheme-style-css" href="static/unitheme.css?ver=2.0.02" type="text/css" media="all" />
+  <link rel="stylesheet" href="static/ufr-colors.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <script></script>
+  <link href="static/ufr-colors.css" type="text/css" media="all" />
+  <script>
+    $('[data-toggle="tooltip"]').tooltip({
+      template:
+        '<div class="tooltip tooltip-custom"><div class="title">Test</div><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>',
+    });
+  </script>
+  <style>
+    .btn:focus {
+      outline: none;
+      box-shadow: none;
+    }
+
+    @media (min-width: 768px) {
+      .container-small {
+        width: 300px;
       }
 
-      .container-small,
       .container-large {
-        max-width: 100%;
+        width: 970px;
       }
-      .carousel-image {
-        width: 100%;
-        height: 360px;
-        object-fit: cover;
+    }
+
+    @media (min-width: 992px) {
+      .container-small {
+        width: 500px;
       }
 
-      .navbar-nav li:hover > ul.dropdown-menu {
-        display: block;
+      .container-large {
+        width: 1170px;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      .container-small {
+        width: 700px;
       }
 
-      .dropdown-submenu {
-        position: relative;
+      .container-large {
+        width: 1500px;
       }
+    }
 
-      .dropdown-submenu > .dropdown-menu {
-        top: 0;
-        left: 100%;
-        margin-top: -6px;
-      }
+    .container-small,
+    .container-large {
+      max-width: 100%;
+    }
 
-      /* rotate caret on hover */
-      .dropdown-menu > li > a:hover:after {
-        text-decoration: underline;
-        transform: rotate(-45deg);
-      }
-      .dropdown-submenu.btn:focus-within {
-        background-color: white;
-      }
-      .dropdown-toggle::after {
-        display: inline-block;
-        width: 0.5em;
-        height: 0.5em;
-        margin: -0.3em 0 0 0.4em;
-        vertical-align: middle;
-        content: "";
-        border: 0.3em solid;
-        border-width: 0 0.15em 0.15em 0;
-        transform: rotateZ(45deg);
-      }
-      .accordion-button::after {
-        background-image: url("static/Bilder/plus-svgrepo-com.svg");
-      }
-      .accordion-button:not(.collapsed)::after {
-        background-image: url("static/Bilder/cross-svgrepo-com.svg");
-      }
-      .accordion-button:not(.collapsed) {
-        background-color: #fffae5;
-        color-scheme: #fffae5;
-      }
-      .accordion-button:hover {
-        background-color: #fffae5;
-        outline: none;
-      }
-      .table-borderless td,
-      .table-borderless th {
-        border: 0;
-      }
-      .btn-primary,
-      .btn-primary:hover,
-      .btn-primary:active,
-      .btn-primary:visited {
-        background-color: #344a9a !important;
-      }
-    </style>
-    
-    <!-- Add additional styles here -->
-    
-  </head>
+    .carousel-image {
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+    }
 
-  <body class="bg-white">
-    <header class="bg-ufr-darkblue">
-      <nav
-        id="site-navigation"
-        class="navbar navbar-expand-xl"
-        aria-label="Oberes Menü"
-      >
-        <div class="container-fluid">
-          <div class="container">
-            <div class="d-flex flex-grow-1">
-              <ul class="navbar-nav me-auto">
-                <li class="nav-item">
-                  <a class="nav-link text-white me-0" href="#"></a>
-                </li>
-                <li class="nav-item d-flex align-items-center">
-                  <a class="navbar-brand" href="https://www.uni-freiburg.de">
-                    <img
-                      src="static/ufr-logo-white.svg"
-                      alt="Albert-Ludwigs-Universität Freiburg"
-                      width="339"
-                      height="55"
-                    />
-                  </a>
-                </li>
-                <li class="nav-item d-none d-xl-block align-self-center">
-                  <i class="fa fa-chevron-right fa-55 text-white ms-2 me-2"></i>
-                </li>
-                <li class="nav-item d-none d-xl-block mr-4">
-                  <h2>
-                    <a
-                      href="https://www.math.uni-freiburg.de"
-                      class="nav-link text-white"
-                      href="#"
-                    >
-                      Mathematical Institute</a
-                    >
-                  </h2>
-                </li>
-                <li class="nav-item d-none d-xl-block align-self-center">
-                  <i class="fa fa-chevron-right fa-55 text-white ms-2 me-2"></i>
-                </li>
-                <li class="nav-item d-none d-xl-block mr-4">
-                  <h2>
-                    <a class="nav-link text-white" href="index.html">
-                      AG Pfaffelhuber</a
-                    >
-                  </h2>
-                </li>
-                <li class="nav-item d-none d-xl-block align-self-center">
-                  <i class="fa fa-chevron-right fa-55 text-white ms-2 me-2"></i>
-                </li>
-              </ul>
-              <div
-                class="align-self-center justify-content-end"
-                id="navbarSupportedContentRight"
-              ></div>
-            </div>
+    .navbar-nav li:hover>ul.dropdown-menu {
+      display: block;
+    }
+
+    .dropdown-submenu {
+      position: relative;
+    }
+
+    .dropdown-submenu>.dropdown-menu {
+      top: 0;
+      left: 100%;
+      margin-top: -6px;
+    }
+
+    /* rotate caret on hover */
+    .dropdown-menu>li>a:hover:after {
+      text-decoration: underline;
+      transform: rotate(-45deg);
+    }
+
+    .dropdown-submenu.btn:focus-within {
+      background-color: white;
+    }
+
+    .dropdown-toggle::after {
+      display: inline-block;
+      width: 0.5em;
+      height: 0.5em;
+      margin: -0.3em 0 0 0.4em;
+      vertical-align: middle;
+      content: "";
+      border: 0.3em solid;
+      border-width: 0 0.15em 0.15em 0;
+      transform: rotateZ(45deg);
+    }
+
+    .accordion-button::after {
+      background-image: url("static/Bilder/plus-svgrepo-com.svg");
+    }
+
+    .accordion-button:not(.collapsed)::after {
+      background-image: url("static/Bilder/cross-svgrepo-com.svg");
+    }
+
+    .accordion-button:not(.collapsed) {
+      background-color: #fffae5;
+      color-scheme: #fffae5;
+    }
+
+    .accordion-button:hover {
+      background-color: #fffae5;
+      outline: none;
+    }
+
+    .table-borderless td,
+    .table-borderless th {
+      border: 0;
+    }
+
+    .btn-primary,
+    .btn-primary:hover,
+    .btn-primary:active,
+    .btn-primary:visited {
+      background-color: #344a9a !important;
+    }
+  </style>
+  
+  <!-- Add additional styles here -->
+  
+</head>
+
+<body class="bg-white">
+  <header class="bg-ufr-darkblue">
+    <nav id="site-navigation" class="navbar navbar-expand-xl" aria-label="Oberes Menü">
+      <div class="container-fluid">
+        <div class="container">
+          <div class="d-flex flex-grow-1">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link text-white me-0" href="#"></a>
+              </li>
+              <li class="nav-item d-flex align-items-center">
+                <a class="navbar-brand" href="https://www.uni-freiburg.de">
+                  <img src="static/ufr-logo-white.svg" alt="Albert-Ludwigs-Universität Freiburg" width="339"
+                    height="55" />
+                </a>
+              </li>
+              <li class="nav-item d-none d-xl-block align-self-center">
+                <i class="fa fa-chevron-right fa-55 text-white ms-2 me-2"></i>
+              </li>
+              <li class="nav-item d-none d-xl-block mr-4">
+                <h2>
+                  <a href="https://www.math.uni-freiburg.de" class="nav-link text-white" href="#">
+                    Mathematical Institute</a>
+                </h2>
+              </li>
+              <li class="nav-item d-none d-xl-block align-self-center">
+                <i class="fa fa-chevron-right fa-55 text-white ms-2 me-2"></i>
+              </li>
+              <li class="nav-item d-none d-xl-block mr-4">
+                <h2>
+                  <a class="nav-link text-white" href="index.html">
+                    AG Pfaffelhuber</a>
+                </h2>
+              </li>
+              <li class="nav-item d-none d-xl-block align-self-center">
+                <i class="fa fa-chevron-right fa-55 text-white ms-2 me-2"></i>
+              </li>
+            </ul>
+            <div class="align-self-center justify-content-end" id="navbarSupportedContentRight"></div>
           </div>
         </div>
-      </nav>
+      </div>
+    </nav>
 
-      <nav class="navbar navbar-expand-xl navbar-dark flex bg-ufr-blue">
-        <div class="container-fluid">
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarTogglerDemo01"
-            aria-controls="navbarTogglerDemo01"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="container">
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-              <ul class="navbar-nav align-items-lg-center">
-                <li class="nav-item dropdown px-0">
-                  <a
-                    class="nav-link dropdown-toggle active"
-                    href=""
-                    id="navbarDropdownMenuLink"
-                    data-toggle="dropdown"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                  >
-                    Research</a
-                  >
-                  <ul class="dropdown-menu" data-bs-theme="light">
-                    <li>
-                      <a class="dropdown-item text-black" href="projects.html"
-                        >Projects</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        class="dropdown-item text-black"
-                        href="publications.html"
-                        >Publications</a
-                      >
-                    </li>
-                  </ul>
-                </li>
-                <li class="nav-item dropdown">
-                  <a
-                    class="nav-link dropdown-toggle active py-3 px-4"
-                    href=""
-                    id="navbarDropdownMenuLink"
-                    data-toggle="dropdown"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                  >
-                    People</a
-                  >
-                  <ul class="dropdown-menu" data-bs-theme="light">
-                    <li>
-                      <a
-                        class="dropdown-item text-black"
-                        href="pfaffelhuber.html"
-                        >Peter Pfaffelhuber</a
-                      >
-                    </li>
-                    <li>
-                      <a class="dropdown-item text-black" href="stiefel.html"
-                        >Jakob Stiefel</a
-                      >
-                    </li>
-                    <li>
-                      <a class="dropdown-item text-black" href="heinzel.html"
-                        >Carola Heinzel</a
-                      >
-                    </li>
-                    <li>
-                      <a class="dropdown-item text-black" href="adeosun.html"
-                        >Samuel Adeosun</a
-                      >
-                    </li>
-                    <li>
-                      <a class="dropdown-item text-black" href="stroppel.html"
-                        >Sebastian Stroppel</a
-                      >
-                    </li>
-                  </ul>
-                </li>
-                <li class="nav-item dropdown px-3">
-                  <a
-                    class="nav-link dropdown-toggle active"
-                    href=""
-                    id="navbarDropdownMenuLink"
-                    data-toggle="dropdown"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                  >
-                    Lehre/Teaching</a
-                  >
-                  <ul
-                    class="dropdown-menu"
-                    aria-labelledby="navbarDropdownMenuLink"
-                  >
-                    <li class="dropdown-submenu">
-                      <a
-                        class="dropdown-item text-black"
-                        href="2024WS_stochastic_processes.html"
-                        >Stochastic Processes (WS 2024)</a
-                      >
-                    </li>
-                    <li class="dropdown-submenu">
-                      <a
-                        class="dropdown-item text-black"
-                        href="2024WS_measure_theory.html"
-                        >Measure theory for probabilists (WS 2024)</a
-                      >
-                    </li>
-                    <li class="dropdown-submenu">
-                      <a
-                        class="dropdown-item text-black"
-                        href="2024SS_probability_theory.html"
-                        >Probability theory (SS 2024)</a
-                      >
-                    </li>
-                    <li class="dropdown-submenu">
-                      <a
-                        class="dropdown-item text-black"
-                        href="formal_friday.html"
-                        >Formal Friday (ongoing)</a
-                      >
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
+    <nav class="navbar navbar-expand-xl navbar-dark flex bg-ufr-blue">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+          aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="container">
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <ul class="navbar-nav align-items-lg-center">
+              <li class="nav-item dropdown px-0">
+                <a class="nav-link active py-3 px-3" href="research.html" >
+                  Research</a>
+              <li>
+                <a class="nav-link active py-3 px-4" href="publications.html"
+                  href="publications.html">Publications</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle active py-3 px-4" href="" id="navbarDropdownMenuLink"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  People</a>
+                <ul class="dropdown-menu" data-bs-theme="light">
+                  <li>
+                    <a class="dropdown-item text-black" href="pfaffelhuber.html">Peter Pfaffelhuber</a>
+                  </li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li>
+                    <a class="dropdown-item text-black" href="adeosun.html">Samuel Adeosun</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item text-black" href="heinzel.html">Carola Heinzel</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item text-black" href="stroppel.html">Sebastian Stroppel</a>
+                  </li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li>
+                    <a class="dropdown-item text-black" href="alumni.html">Alumni</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown px-3">
+                <a class="nav-link dropdown-toggle active" href="" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+                  Lehre/Teaching</a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li class="dropdown-submenu">
+                    <a class="dropdown-item text-black" href="2024WS_stochastic_processes.html">Stochastic Processes (WS
+                      2024)</a>
+                  </li>
+                  <li class="dropdown-submenu">
+                    <a class="dropdown-item text-black" href="2024WS_measure_theory.html">Measure theory for
+                      probabilists (WS 2024)</a>
+                  </li>
+                  <li class="dropdown-submenu">
+                    <a class="dropdown-item text-black" href="2024SS_probability_theory.html">Probability theory (SS
+                      2024)</a>
+                  </li>
+                  <li class="dropdown-submenu">
+                    <a class="dropdown-item text-black" href="formal_friday.html">Formal Friday (ongoing)</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
           </div>
         </div>
-      </nav>
-    </header>
+      </div>
+    </nav>
+  </header>
 
-    
+  
 <br />
 <div class="container" id="inhalt">
   <h2>Stochastic Processes (WS 2024)</h2>
@@ -1327,57 +1242,50 @@
 </div>
 
 
-    <div><br /></div>
-    <div><br /></div>
+  <div><br /></div>
+  <div><br /></div>
 
-    <div class="container">
-      <footer class="text-center text-white" style="background-color: #004a99">
-        <div class="container">
-          <section class="mt-2">
-            <div
-              class="row text-center d-flex justify-content-center pt-4 pb-4"
-            >
-              <div class="col-md-2">
-                <h6 class="text-uppercase font-weight-bold">
-                  <a href="contact.html" class="text-white">Impressum</a>
-                </h6>
-              </div>
-              <div class="col-md-2">
-                <h6 class="text-uppercase font-weight-bold">
-                  <a href="contact.html" class="text-white">Datenschutz</a>
-                </h6>
-              </div>
+  <div class="container">
+    <footer class="text-center text-white" style="background-color: #004a99">
+      <div class="container">
+        <section class="mt-2">
+          <div class="row text-center d-flex justify-content-center pt-4 pb-4">
+            <div class="col-md-2">
+              <h6 class="text-uppercase font-weight-bold">
+                <a href="contact.html" class="text-white">Impressum</a>
+              </h6>
             </div>
-          </section>
-        </div>
-        <div class="text-center p-3" style="background-color: #143669">
-          © 2024 Copyright:
-          <a class="text-white" href="https://math.uni-freiburg.de/"
-            >Mathematisches Institut, Universität Freiburg</a
-          >
-        </div>
-      </footer>
-    </div>
-    <script>
-      if (location.hash !== null && location.hash !== "") {
-        $(location.hash + ".collapse").collapse("show");
-      }
-    </script>
-    <script>
-      var x = window.location.search.replace("?", "_");
-      var element = document.getElementById(x);
-      element.classList.add("show");
-      element.scrollIntoView();
-      var element = document.querySelector("[aria-controls=" + x + "]");
-      element.classList.remove("collapsed");
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script
-      id="MathJax-script"
-      async
-      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
-    ></script>
-     
-  </body>
+            <div class="col-md-2">
+              <h6 class="text-uppercase font-weight-bold">
+                <a href="contact.html" class="text-white">Datenschutz</a>
+              </h6>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="text-center p-3" style="background-color: #143669">
+        © 2024 Copyright:
+        <a class="text-white" href="https://math.uni-freiburg.de/">Mathematisches Institut, Universität Freiburg</a>
+      </div>
+    </footer>
+  </div>
+  <script>
+    if (location.hash !== null && location.hash !== "") {
+      $(location.hash + ".collapse").collapse("show");
+    }
+  </script>
+  <script>
+    var x = window.location.search.replace("?", "_");
+    var element = document.getElementById(x);
+    element.classList.add("show");
+    element.scrollIntoView();
+    var element = document.querySelector("[aria-controls=" + x + "]");
+    element.classList.remove("collapsed");
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+   
+</body>
+
 </html>
