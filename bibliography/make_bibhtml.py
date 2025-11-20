@@ -4,7 +4,7 @@ from jinja2 import FileSystemLoader, Template
 
 BIBFILE = "own-bib.bib"
 TEMPLATE = "simple.html"
-HTMLFile = "../templates/mypapers.html"
+HTMLFile = "../templates/publications_content.html"
 
 def decode_latex(text):
     """ Wandelt LaTeX-Akzente und andere Befehle in Unicode um """
