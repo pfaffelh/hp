@@ -1,0 +1,979 @@
+:root {
+  --ufr-blue: #34499a;
+  --ufr-blue-80: #5c6dae;
+  --ufr-blue-60: #8591c2;
+  --ufr-blue-40: #adb6d6;
+  --ufr-blue-20: #d6daea;
+  --ufr-darkblue: #000149;
+  --ufr-lightblue: #edf0fa;
+  --ufr-yellow: #ffe863;
+  --ufr-yellow-80: #ffec82;
+  --ufr-yellow-60: #fff1a1;
+  --ufr-yellow-40: #fff5c0;
+  --ufr-yellow-20: #fffadf;
+  --ufr-black: #2a2a2a;
+  --ufr-white: #ffffff;
+  --ufr-link: var(--ufr-blue);
+  --ufr-link-hover: var(--ufr-blue-80);
+}
+
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  color: var(--ufr-black);
+  background-color: var(--ufr-white);
+}
+
+/* Identity-colored links */
+a {
+  color: var(--ufr-link);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+a:hover {
+  color: var(--ufr-link-hover);
+}
+
+/* ---- Header (white bg, black logo + icons; horizontal alignment via .container inside) ---- */
+.ufr-header {
+  background-color: var(--ufr-white);
+  color: var(--ufr-black);
+  padding: 25px 0 15px;
+  position: relative;
+  overflow-x: clip;
+}
+@media (min-width: 768px) {
+  .ufr-header {
+    padding: 42px 0 20px;
+  }
+}
+@media (min-width: 1200px) {
+  .ufr-header {
+    padding: 70px 0 35px;
+  }
+}
+.ufr-header a,
+.ufr-header a:visited {
+  color: var(--ufr-black);
+  text-decoration: none;
+}
+.ufr-header a:hover {
+  color: var(--ufr-blue-80);
+}
+
+/* Breadcrumb bar (white bg, full width; inner .container aligns with main content) */
+.ufr-breadcrumb-bar {
+  background-color: var(--ufr-white);
+  color: var(--ufr-black);
+  padding: 12px 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+@media (min-width: 768px) {
+  .ufr-breadcrumb-bar {
+    padding: 14px 0;
+  }
+}
+@media (min-width: 1200px) {
+  .ufr-breadcrumb-bar {
+    padding: 16px 0;
+  }
+}
+.ufr-breadcrumb-bar a {
+  color: var(--ufr-black);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+.ufr-breadcrumb-bar a:hover {
+  color: var(--ufr-blue);
+  text-decoration-thickness: 2px;
+}
+.ufr-breadcrumb-bar i {
+  color: var(--ufr-blue);
+}
+
+.ufr-logo-link {
+  display: inline-block;
+  flex: 0 1 auto;
+}
+
+/* Brand column: small UFR logo on top, big sub-site title below */
+.ufr-header-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+@media (min-width: 1200px) {
+  .ufr-header-brand {
+    gap: 15px;
+  }
+}
+
+/* Header logo sizes — kompakt */
+.ufr-logo-large {
+  width: 100%;
+  max-width: 120px;
+  height: auto;
+}
+@media (min-width: 768px) {
+  .ufr-logo-large {
+    max-width: 145px;
+  }
+}
+@media (min-width: 1200px) {
+  .ufr-logo-large {
+    max-width: 215px;
+  }
+}
+
+/* Sub-site title ("Mathematisches Institut") */
+.ufr-subsite-title {
+  display: block;
+  color: var(--ufr-black);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.05rem;
+  line-height: 1.35;
+  max-width: 500px;
+}
+@media (min-width: 768px) {
+  .ufr-subsite-title {
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+  }
+}
+@media (min-width: 1200px) {
+  .ufr-subsite-title {
+    font-size: 1.875rem;
+    line-height: 2.75rem;
+    max-width: 578px;
+  }
+}
+.ufr-subsite-title:hover {
+  color: var(--ufr-blue-80);
+  text-decoration: none;
+}
+
+/* Menu / language buttons in header — stacked icon + label, no border */
+.ufr-header-actions {
+  display: flex;
+  align-items: flex-start;
+  gap: 28px;
+}
+.ufr-icon-button {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  background: transparent;
+  border: 0;
+  padding: 4px 8px;
+  color: var(--ufr-black);
+  font-size: 0.95rem;
+  line-height: 1.2;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  text-decoration: none;
+  min-width: 44px;
+}
+.ufr-icon-button i {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+.ufr-icon-button:hover,
+.ufr-icon-button:focus {
+  color: var(--ufr-blue-80);
+}
+.ufr-icon-button:focus-visible {
+  outline: 2px dotted var(--ufr-black);
+  outline-offset: 4px;
+}
+
+/* Hide top-right menu/lang on mobile — bottom bar takes over */
+@media (max-width: 767px) {
+  .ufr-header-actions {
+    display: none;
+  }
+  .ufr-breadcrumb-bar {
+    font-size: 0.85rem;
+  }
+}
+
+/* ---- UFR-style accordion (vertical) ----
+   Mirrors uni-freiburg.de's wp-block-ufr-accordion for vertical
+   layout: items separated by 3px borders, chevron on the right
+   that rotates on open. Built on Bootstrap's collapse widget. */
+.ufr-accordion {
+  margin-top: 20px;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .ufr-accordion {
+    margin-top: 30px;
+  }
+}
+@media (min-width: 1200px) {
+  .ufr-accordion {
+    margin-top: 35px;
+  }
+}
+.ufr-accordion-item {
+  display: block;
+  position: relative;
+  border-bottom: 3px solid var(--ufr-black);
+  background: var(--ufr-white);
+}
+.ufr-accordion-item:first-child {
+  border-top: 3px solid var(--ufr-black);
+}
+.ufr-accordion-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 16px 0;
+  width: 100%;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  text-align: left;
+  color: var(--ufr-black);
+}
+@media (min-width: 768px) {
+  .ufr-accordion-header {
+    padding: 20px 0;
+  }
+}
+.ufr-accordion-header:hover {
+  color: var(--ufr-blue);
+}
+.ufr-accordion-header:focus-visible {
+  outline: 2px dotted var(--ufr-black);
+  outline-offset: 6px;
+}
+.ufr-accordion-header-content {
+  flex-grow: 1;
+  min-width: 0;
+  padding-right: 16px;
+}
+.ufr-accordion-header-content .ufr-accordion-title {
+  display: block;
+  font-size: 1.125rem;
+  line-height: 1.4;
+  font-weight: 500;
+  margin: 0;
+  color: inherit;
+}
+@media (min-width: 768px) {
+  .ufr-accordion-header-content .ufr-accordion-title {
+    font-size: 1.25rem;
+  }
+}
+.ufr-accordion-header-content .ufr-accordion-meta {
+  display: block;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: var(--ufr-black);
+  margin-top: 4px;
+  opacity: 0.85;
+}
+.ufr-accordion-chevron {
+  flex-shrink: 0;
+  width: 30px;
+  height: 40px;
+  align-self: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ufr-black);
+  transform: rotate(90deg);
+  transition: transform 0.3s ease;
+}
+@media (min-width: 768px) {
+  .ufr-accordion-chevron {
+    width: 35px;
+    height: 50px;
+  }
+}
+@media (min-width: 1200px) {
+  .ufr-accordion-chevron {
+    width: 40px;
+    height: 70px;
+  }
+}
+.ufr-accordion-header[aria-expanded="true"] .ufr-accordion-chevron {
+  transform: rotate(-90deg);
+}
+.ufr-accordion-chevron svg {
+  width: 100%;
+  height: 100%;
+}
+.ufr-accordion-body {
+  padding: 8px 0 28px;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.ufr-accordion-body h5 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 16px 0 6px;
+  color: var(--ufr-black);
+}
+.ufr-accordion-body h5:first-child {
+  margin-top: 0;
+}
+.ufr-accordion-body p {
+  margin: 0 0 12px;
+}
+.ufr-accordion-body a {
+  color: var(--ufr-blue);
+}
+.ufr-accordion-body .ufr-accordion-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  border: 2px solid var(--ufr-blue);
+  padding: 4px 12px;
+  background: var(--ufr-white);
+  color: var(--ufr-blue);
+  text-decoration: none;
+}
+.ufr-accordion-body .ufr-accordion-link:hover {
+  background: var(--ufr-blue);
+  color: var(--ufr-white);
+}
+
+/* ---- Personen-Kontaktdaten (im Akkordeon-Body bei Studienberatung, Prüfungsamt, …) ---- */
+.ufr-person-contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 24px;
+  margin: 0 0 12px;
+  list-style: none;
+  padding: 0;
+}
+.ufr-person-contact li {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+}
+.ufr-person-contact i {
+  color: var(--ufr-blue);
+  width: 16px;
+  text-align: center;
+}
+
+/* Gelb hinterlegter Hinweis-Block für News/Achtung */
+.ufr-alert {
+  background-color: var(--ufr-yellow-40);
+  padding: 12px 16px;
+  margin: 16px 0;
+  border-left: 4px solid var(--ufr-yellow);
+}
+.ufr-alert > :last-child {
+  margin-bottom: 0;
+}
+.ufr-alert .ufr-alert-title {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+/* ---- News-Archiv: einheitliche Karten, keine Floats ---- */
+.ufr-news-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.ufr-news-item {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 20px 24px;
+  background-color: var(--ufr-blue-20);
+}
+.ufr-news-item.is-today {
+  background-color: var(--ufr-yellow-40);
+}
+.ufr-news-item.is-reversed {
+  flex-direction: row-reverse;
+}
+.ufr-news-image {
+  flex: 0 0 240px;
+  max-width: 240px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.ufr-news-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 220px;
+  object-fit: contain;
+}
+.ufr-news-text {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.ufr-news-text h3 {
+  margin: 0 0 8px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+.ufr-news-text p,
+.ufr-news-text div {
+  margin: 0 0 12px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.ufr-news-text > *:last-child {
+  margin-bottom: 0;
+}
+.ufr-news-text img {
+  max-width: 100%;
+  height: auto;
+}
+@media (max-width: 575px) {
+  .ufr-news-item,
+  .ufr-news-item.is-reversed {
+    flex-direction: column;
+  }
+  .ufr-news-image {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 100%;
+  }
+  .ufr-news-image img {
+    max-height: 260px;
+  }
+}
+
+/* Nested accordion (smaller, thinner borders) */
+.ufr-accordion--nested {
+  margin-top: 16px;
+}
+.ufr-accordion--nested .ufr-accordion-item {
+  border-bottom: 1px solid var(--ufr-blue-40);
+}
+.ufr-accordion--nested .ufr-accordion-item:first-child {
+  border-top: 1px solid var(--ufr-blue-40);
+}
+.ufr-accordion--nested .ufr-accordion-header {
+  padding: 12px 0;
+}
+.ufr-accordion--nested .ufr-accordion-header-content .ufr-accordion-title {
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+.ufr-accordion--nested .ufr-accordion-chevron {
+  width: 22px;
+  height: 30px;
+}
+.ufr-accordion--nested .ufr-accordion-body {
+  padding: 4px 0 20px;
+}
+
+/* ---- Language switcher modal ---- */
+.ufr-lang-modal .modal-content {
+  background-color: var(--ufr-blue);
+  color: var(--ufr-white);
+  border: 0;
+  border-radius: 0;
+  padding: 48px 40px;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .ufr-lang-modal .modal-content {
+    padding: 60px 64px;
+  }
+}
+.ufr-lang-modal .modal-dialog {
+  max-width: 520px;
+}
+.ufr-lang-modal .btn-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  filter: invert(1) grayscale(100%) brightness(200%);
+  opacity: 0.9;
+  width: 24px;
+  height: 24px;
+}
+.ufr-lang-title {
+  color: var(--ufr-white);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 24px;
+}
+.ufr-lang-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.ufr-lang-list li {
+  border-bottom: 1px solid var(--ufr-blue-80);
+  padding: 12px 0;
+  text-align: center;
+}
+.ufr-lang-list li:last-child {
+  border-bottom: 0;
+}
+.ufr-lang-list a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: var(--ufr-white);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 5px;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  font-weight: 500;
+}
+.ufr-lang-list a[aria-current="true"] {
+  color: var(--ufr-yellow);
+  text-decoration-color: var(--ufr-yellow);
+}
+.ufr-lang-list a:hover {
+  color: var(--ufr-yellow-40);
+  text-decoration-color: var(--ufr-yellow-40);
+}
+
+/* ---- Mobile bottom action bar ---- */
+.ufr-mobile-bar {
+  display: none;
+}
+@media (max-width: 767px) {
+  .ufr-mobile-bar {
+    display: flex;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 80px;
+    background-color: var(--ufr-darkblue);
+    color: var(--ufr-white);
+    border-top: 1px solid var(--ufr-blue-80);
+    z-index: 1030;
+    padding: 12px 16px;
+    margin: 0;
+    list-style: none;
+  }
+  .ufr-mobile-bar > li {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .ufr-mobile-bar button,
+  .ufr-mobile-bar a {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    background: transparent;
+    border: 0;
+    color: var(--ufr-white);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    min-width: 44px;
+    padding: 4px 8px;
+    line-height: 1.1;
+  }
+  .ufr-mobile-bar button:hover,
+  .ufr-mobile-bar a:hover {
+    color: var(--ufr-yellow-40);
+  }
+  .ufr-mobile-bar i {
+    font-size: 1.25rem;
+  }
+  body.has-ufr-bottom-bar {
+    padding-bottom: 81px;
+  }
+}
+
+/* ---- Offcanvas menu — slides in from the right ---- */
+.ufr-offcanvas {
+  background-color: var(--ufr-darkblue);
+  color: var(--ufr-white);
+  border: none !important;
+  width: min(90vw, 480px) !important;
+}
+@media (max-width: 767px) {
+  .ufr-offcanvas.offcanvas-end,
+  .ufr-offcanvas.offcanvas-start {
+    width: 100vw !important;
+    max-width: 100vw !important;
+  }
+}
+.ufr-offcanvas .offcanvas-header {
+  padding: 24px 32px 16px;
+  position: relative;
+  z-index: 1;
+}
+.ufr-offcanvas .offcanvas-body {
+  padding: 8px 0 32px;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+/* Decorative UFR seal — softly visible in the menu background */
+.ufr-menu-seal {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  top: 60px;
+  right: -120px;
+  width: 380px;
+  height: auto;
+  opacity: 0.12;
+  color: var(--ufr-blue-40);
+}
+.ufr-offcanvas .offcanvas-header {
+  padding: 24px 32px 16px;
+}
+.ufr-offcanvas .offcanvas-title {
+  color: var(--ufr-white);
+  font-weight: 600;
+}
+.ufr-offcanvas .btn-close {
+  filter: invert(1) grayscale(100%) brightness(200%);
+  opacity: 0.9;
+}
+.ufr-offcanvas .offcanvas-body {
+  padding: 8px 0 32px;
+}
+.ufr-offcanvas .ufr-menu-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+.ufr-offcanvas .ufr-menu-list > li {
+  margin: 0;
+  padding: 14px 32px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Wrapper für zwei vertikale Spalten (links/rechts) ab xl. */
+.ufr-menu-cols {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 1200px) {
+  .ufr-offcanvas {
+    width: min(90vw, 880px) !important;
+  }
+  .ufr-menu-cols {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .ufr-menu-cols > .ufr-menu-list {
+    flex: 1 1 50%;
+    min-width: 0;
+  }
+}
+.ufr-offcanvas .ufr-menu-item {
+  display: inline-block;
+  color: var(--ufr-white);
+  text-decoration: none;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 2px;
+}
+.ufr-offcanvas .ufr-menu-item:hover {
+  color: var(--ufr-yellow-40);
+  border-bottom-color: var(--ufr-yellow-40);
+  text-decoration: none;
+}
+.ufr-offcanvas .ufr-menu-section-title {
+  display: block;
+  color: var(--ufr-yellow);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+.ufr-offcanvas .ufr-menu-sub {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.ufr-offcanvas .ufr-menu-sub a {
+  display: inline-block;
+  color: var(--ufr-white);
+  text-decoration: none;
+  font-size: 1rem;
+  line-height: 1.4rem;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 1px;
+}
+.ufr-offcanvas .ufr-menu-sub a:hover {
+  color: var(--ufr-yellow-40);
+  border-bottom-color: var(--ufr-yellow-40);
+}
+
+/* Footer links inside the menu */
+.ufr-menu-footer {
+  margin-top: auto;
+  padding: 24px 32px 0;
+  list-style: none;
+  margin-bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+.ufr-menu-footer li {
+  white-space: nowrap;
+}
+.ufr-menu-footer li:not(:last-child)::after {
+  content: "|";
+  margin: 0 10px;
+  color: var(--ufr-blue-40);
+}
+.ufr-menu-footer a {
+  color: var(--ufr-white);
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid var(--ufr-white);
+  padding-bottom: 1px;
+}
+.ufr-menu-footer a:hover {
+  color: var(--ufr-yellow-40);
+  border-bottom-color: var(--ufr-yellow-40);
+}
+
+/* Override default Bootstrap btn-primary so existing `btn btn-primary` */
+/* picks up the new UFR look without changing every template. */
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited,
+.btn-primary:focus {
+  background-color: var(--ufr-white) !important;
+  color: var(--ufr-black) !important;
+  border: 3px solid var(--ufr-black) !important;
+  border-radius: 0 !important;
+  font-weight: 500 !important;
+  box-shadow: none !important;
+}
+.btn-primary:hover {
+  text-decoration: underline !important;
+  text-decoration-thickness: 3px !important;
+  text-underline-offset: 6px !important;
+}
+.btn-primary.is-active,
+.btn-primary.is-active:hover,
+.btn-primary.is-active:focus {
+  background-color: var(--ufr-yellow) !important;
+}
+
+/* Lecture-module-button (used in reihe.html) */
+button.lecture-module-button,
+.btn.lecture-module-button {
+  background-color: var(--ufr-white) !important;
+  color: var(--ufr-black) !important;
+  border: 3px solid var(--ufr-black) !important;
+  border-radius: 0 !important;
+  padding: 14px 20px !important;
+  font-weight: 500 !important;
+  text-decoration: none !important;
+  white-space: normal !important;
+  word-break: keep-all !important;
+  overflow-wrap: break-word;
+  transition: none !important;
+}
+button.lecture-module-button:hover,
+.btn.lecture-module-button:hover {
+  background-color: var(--ufr-yellow-20) !important;
+  color: var(--ufr-black) !important;
+  text-decoration: none !important;
+}
+
+/* ---- Footer ---- */
+.ufr-footer {
+  background-color: var(--ufr-darkblue);
+  color: var(--ufr-white);
+  padding: 35px 24px 45px;
+  margin-top: 32px;
+  position: relative;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .ufr-footer {
+    padding: 40px 48px 50px;
+  }
+}
+@media (min-width: 1200px) {
+  .ufr-footer {
+    padding: 63px 139px 70px;
+  }
+}
+.ufr-footer a {
+  color: var(--ufr-white);
+  text-decoration: none;
+}
+.ufr-footer a:hover {
+  color: var(--ufr-yellow-40);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 6px;
+}
+.ufr-footer-nav {
+  margin: 0 auto;
+  max-width: 652px;
+}
+.ufr-footer-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+}
+@media (min-width: 768px) {
+  .ufr-footer-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 31px 80px;
+  }
+}
+.ufr-footer-links li {
+  text-align: center;
+  line-height: 1.375rem;
+}
+.ufr-footer-institute {
+  text-align: center;
+  margin: 37px auto 0;
+  max-width: 312px;
+}
+@media (min-width: 768px) {
+  .ufr-footer-institute {
+    margin-top: 54px;
+    max-width: 672px;
+  }
+}
+.ufr-footer-institute h2 {
+  color: var(--ufr-white);
+  font-weight: 500;
+  font-size: 1.25rem;
+  margin: 0 0 15px;
+}
+@media (min-width: 1200px) {
+  .ufr-footer-institute h2 {
+    font-size: 2.3125rem;
+    line-height: 3.125rem;
+    margin-bottom: 34px;
+  }
+}
+.ufr-footer-institute p {
+  margin: 0;
+  line-height: 1.5625rem;
+}
+.ufr-footer-divider {
+  height: 2px;
+  width: 8rem;
+  background-color: var(--ufr-white);
+  margin: 40px auto 0;
+}
+@media (min-width: 768px) {
+  .ufr-footer-divider {
+    margin-top: 80px;
+  }
+}
+.ufr-footer-university {
+  text-align: center;
+  margin-top: 40px;
+}
+@media (min-width: 768px) {
+  .ufr-footer-university {
+    margin-top: 50px;
+  }
+}
+.ufr-footer-university .ufr-footer-logo {
+  display: block;
+  margin: 80px auto 10px;
+  width: 268px;
+  max-width: 100%;
+}
+@media (min-width: 768px) {
+  .ufr-footer-university .ufr-footer-logo {
+    width: 329px;
+    margin-bottom: 15px;
+  }
+}
+@media (min-width: 1200px) {
+  .ufr-footer-university .ufr-footer-logo {
+    width: 535px;
+    margin-bottom: 20px;
+  }
+}
+.ufr-footer-university p {
+  margin: 0 auto;
+  line-height: 1.5625rem;
+  max-width: 100%;
+}
+@media (min-width: 768px) {
+  .ufr-footer-university p {
+    width: 500px;
+  }
+}
+@media (min-width: 1200px) {
+  .ufr-footer-university p {
+    width: 841px;
+  }
+}
+/* ---- Content area ---- */
+main#main-content {
+  padding-top: 32px;
+  padding-bottom: 48px;
+}
+@media (min-width: 768px) {
+  main#main-content {
+    padding-top: 48px;
+  }
+}
+@media (min-width: 1200px) {
+  main#main-content {
+    padding-top: 64px;
+  }
+}
+
+main h1,
+main h2,
+main h3 {
+  color: var(--ufr-black);
+  font-weight: 600;
+}
+main h1 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+}

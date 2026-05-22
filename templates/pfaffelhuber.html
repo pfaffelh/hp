@@ -35,55 +35,64 @@
       </p>
     </div>
     <div class="col-4">
-      <img src="static/Bilder/peter_pfaffelhuber_relax.jpg" style="float: right" title="peter_pfaffelhuber_bild"
-        align="right" height="355" width="270" alt="Peter_Pfaffelhuber_Bild_zugeschnitten" class="px-4" />
+      <img src="static/Bilder/peter_pfaffelhuber_relax.jpg" style="float: right; width: 270px; max-width: 100%; height: auto;"
+        title="peter_pfaffelhuber_bild" alt="Peter_Pfaffelhuber_Bild_zugeschnitten" class="px-4" />
     </div>
   </div>
   <div class="col-12">
-    <div id="accordion">
-      <div class="accordion accordion-flush" id="accordionExample">
-        <div class="accordion-item" id="_vorbereitung">
-          <h4 class="accordion-header" id="header_vorbereitung">
-            <button aria-controls="_researchTopics" aria-expanded="false" class="accordion-button collapsed"
-              data-bs-target="#_researchTopics" data-bs-toggle="collapse" type="button">
-              <h3 class="h5">Research topics</h3>
-            </button>
-          </h4>
-          <div aria-labelledby="_researchTopics" class="accordion-collapse collapse" data-bs-parent="#accordionExample"
-            id="_researchTopics">
-            <div class="accordion-body" id="researchTopics">
-              <ul>
-                <li>Probabilistic modeling in the life sciences</li>
-                <li>Population genetics</li>
-                <li>Chemical reaction networks</li>
-                <li>Formalizing probability</li>
-              </ul>
-            </div>
+    <div class="ufr-accordion">
+      <div class="ufr-accordion-item">
+        <button type="button" class="ufr-accordion-header" data-bs-toggle="collapse"
+          data-bs-target="#_researchTopics" aria-expanded="false" aria-controls="_researchTopics">
+          <span class="ufr-accordion-header-content">
+            <span class="ufr-accordion-title">Research topics</span>
+          </span>
+          <span class="ufr-accordion-chevron" aria-hidden="true">
+            <svg viewBox="0 0 35 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 5 L25.6 25 L5 45" stroke="currentColor" stroke-width="6" />
+            </svg>
+          </span>
+        </button>
+        <div id="_researchTopics" class="collapse">
+          <div class="ufr-accordion-body">
+            <ul>
+              <li>Probabilistic modeling in the life sciences</li>
+              <li>Population genetics</li>
+              <li>Chemical reaction networks</li>
+              <li>Formalizing probability</li>
+            </ul>
           </div>
         </div>
-        <div class="accordion-item" id="_einfuehrungswoche">
-          <h4 class="accordion-header" id="header_einfuehrungswoche">
-            <button aria-controls="_publications" aria-expanded="false" class="accordion-button collapsed"
-              data-bs-target="#_publications" data-bs-toggle="collapse" type="button">
-              <h3 class="h5">Publications</h3>
-            </button>
-          </h4>
-          <div id="_publications" aria-labelledby="_publications" class="accordion-collapse collapse"
-            data-bs-parent="#accordionExample">
-            <div class="accordion-body" id="publications">
-              <p>
-                My research is published in both, mathematical and biological
-                journals. <br /><br />
-                Here is the list from
-                <a href="http://www.ams.org/mathscinet/search/publications.html?pg1=IID&amp;s1=790871">MathSciNet</a>
-                <br />
-                Here is the list from
-                <a href="http://scholar.google.com/citations?user=3CbtWncAAAAJ&amp;hl=de">google scholar</a>
-                <br>
-                Here is my
-                <a href="https://orcid.org/0000-0002-6421-5460">orcid profile</a>.
-              </p>
-            </div>
+      </div>
+      <div class="ufr-accordion-item">
+        <button type="button" class="ufr-accordion-header" data-bs-toggle="collapse"
+          data-bs-target="#_publications" aria-expanded="false" aria-controls="_publications">
+          <span class="ufr-accordion-header-content">
+            <span class="ufr-accordion-title">Publications</span>
+          </span>
+          <span class="ufr-accordion-chevron" aria-hidden="true">
+            <svg viewBox="0 0 35 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 5 L25.6 25 L5 45" stroke="currentColor" stroke-width="6" />
+            </svg>
+          </span>
+        </button>
+        <div id="_publications" class="collapse">
+          <div class="ufr-accordion-body">
+            <p>
+              My research is published in both, mathematical and biological
+              journals. Only peer-reviewed papers are listed.
+            </p>
+            {% include 'publications_content.html' %}
+            <p>
+              Here is the list from
+              <a href="http://www.ams.org/mathscinet/search/publications.html?pg1=IID&amp;s1=790871">MathSciNet</a>
+              <br />
+              Here is the list from
+              <a href="http://scholar.google.com/citations?user=3CbtWncAAAAJ&amp;hl=de">google scholar</a>
+              <br>
+              Here is my
+              <a href="https://orcid.org/0000-0002-6421-5460">orcid profile</a>.
+            </p>
           </div>
         </div>
       </div>

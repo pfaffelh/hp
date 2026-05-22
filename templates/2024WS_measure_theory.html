@@ -5,28 +5,21 @@
   <p>Prof. Dr. Peter Pfaffelhuber</p>
   <p>Samuel Adeosun</p>
 
-  <div class="accordion" id="accordionExample">
-    <div class="accordion-item" id="kurz">
-      <h3 class="accordion-header" id="headerkurz">
-        <button
-          type="button"
-          class="accordion-button"
-          data-bs-target="#schueler"
-          aria-controls="schueler"
-          aria-expanded="true"
-          data-bs-toggle="collapse"
-        >
-          <h3 class="h5">Structure of the course</h3>
-        </button>
-      </h3>
-      <p></p>
-      <div
-        aria-labelledby="schueler"
-        class="accordion-collapse collapse show"
-        data-bs-parent="#accordionExample"
-        id="schueler"
-      >
-        <div class="accordion-body">
+  <div class="ufr-accordion">
+    <div class="ufr-accordion-item">
+      <button type="button" class="ufr-accordion-header" data-bs-toggle="collapse"
+        data-bs-target="#schueler" aria-expanded="true" aria-controls="schueler">
+        <span class="ufr-accordion-header-content">
+          <span class="ufr-accordion-title">Structure of the course</span>
+        </span>
+        <span class="ufr-accordion-chevron" aria-hidden="true">
+          <svg viewBox="0 0 35 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 5 L25.6 25 L5 45" stroke="currentColor" stroke-width="6" />
+          </svg>
+        </span>
+      </button>
+      <div id="schueler" class="collapse show">
+        <div class="ufr-accordion-body">
           <p>
             This is a hybrid course which is given at the University of
             Freiburg. Lectures will be given with videos (see below). Tutorials take place in person, Wednesdays at 10:15 in Hörsaal II (Albertstr. 23b), starting 16th  of October, 2024.
@@ -344,26 +337,20 @@
         </div>
       </div>
     </div>
-    <div class="accordion-item" id="kurz">
-      <h3 class="accordion-header" id="headerkurz">
-        <button
-          type="button"
-          class="accordion-button collapsed"
-          data-bs-target="#online"
-          aria-controls="online"
-          aria-expanded="true"
-          data-bs-toggle="collapse"
-        >
-          <h3 class="h5">Videos</h3>
-        </button>
-      </h3>
-      <div
-        aria-labelledby="online"
-        class="accordion-collapse collapse {% if anchor == 'online' %}show{% endif %}"
-        data-bs-parent="#accordionExample"
-        id="online"
-      >
-        <div class="accordion-body">
+    <div class="ufr-accordion-item">
+      <button type="button" class="ufr-accordion-header" data-bs-toggle="collapse"
+        data-bs-target="#online" aria-expanded="false" aria-controls="online">
+        <span class="ufr-accordion-header-content">
+          <span class="ufr-accordion-title">Videos</span>
+        </span>
+        <span class="ufr-accordion-chevron" aria-hidden="true">
+          <svg viewBox="0 0 35 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 5 L25.6 25 L5 45" stroke="currentColor" stroke-width="6" />
+          </svg>
+        </span>
+      </button>
+      <div id="online" class="collapse">
+        <div class="ufr-accordion-body">
           <div class="row row-cols-1 row-cols-md-3 g-3">
             <div class="col">
               <div class="card h-100">

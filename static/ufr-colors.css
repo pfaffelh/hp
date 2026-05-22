@@ -1,5 +1,3 @@
-body {
-}
 .praesentation-abschlussarbeit {
     background-color: #f6f1e3;
 }
@@ -30,13 +28,11 @@ body {
 .fachdidaktik {
     background-color: #00a082;
 }
-
-
 .bg-ufr-darkblue {
-    background-color: #143669;
+    background-color: #00004a
 }
 .bg-ufr-blue {
-    background-color: #004a99;
+    background-color :#344A9A;
 }
 .bg-ufr-blue-80 {
     background-color: #5D6BAD;
