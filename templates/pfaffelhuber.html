@@ -55,12 +55,118 @@
         </button>
         <div id="_researchTopics" class="collapse">
           <div class="ufr-accordion-body">
-            <ul>
-              <li>Probabilistic modeling in the life sciences</li>
-              <li>Population genetics</li>
-              <li>Chemical reaction networks</li>
-              <li>Formalizing probability</li>
-            </ul>
+
+            <h4 class="mt-2">Markov Processes in the Life Sciences</h4>
+            <div class="row g-3 align-items-start">
+              <div class="col-md-4">
+                <img src="static/research/transposable.png"
+                     class="img-fluid mb-2 rounded"
+                     alt="Schematic of transposable element insertions in a genome">
+                <h5>Transposable elements</h5>
+                <p>
+                  Transposable elements (TEs) are mobile genetic
+                  elements that can dislocate within a genome, leaving
+                  copies of themselves at new loci. In humans they
+                  account for roughly 54% of the genome. We model the
+                  abundance of TEs in population samples — currently
+                  in termite species — using multi-scale Markov
+                  processes that couple replication, excision and
+                  drift.
+                </p>
+                <p class="text-muted"><em>with Samuel Adeosun</em></p>
+              </div>
+              <div class="col-md-4">
+                <img src="static/research/ratchet.jpg"
+                     class="img-fluid mb-2 rounded"
+                     alt="Cartoon of Muller's ratchet">
+                <h5>Muller's ratchet</h5>
+                <p>
+                  Muller's ratchet describes the irreversible
+                  accumulation of slightly deleterious mutations in
+                  asexual populations: every time the fittest class
+                  is lost by genetic drift the ratchet clicks one
+                  notch further. We study the speed of the ratchet
+                  via martingale problems for the underlying
+                  measure-valued process and quantify how it depends
+                  on the underlying mutation model.
+                </p>
+                <p class="text-muted"><em>with Carola Heinzel</em></p>
+              </div>
+              <div class="col-md-4">
+                <img src="static/research/crn.png"
+                     class="img-fluid mb-2 rounded"
+                     alt="State graph of a chemical reaction network with rate constants">
+                <h5>Chemical reaction networks</h5>
+                <p>
+                  Chemical reaction networks are Markov jump
+                  processes on systems where some species are
+                  abundant and some are rare. Introducing a scaling
+                  parameter \(N\), we study the dynamics as
+                  \(N \to \infty\) and automate the derivation of
+                  laws of large numbers and central limit theorems
+                  on different time scales.
+                </p>
+                <p class="text-muted"><em>with Sebastian Stroppel</em></p>
+              </div>
+            </div>
+
+            <hr>
+
+            <h4 class="mt-3">Probability Theory for Machine Learning</h4>
+            <div class="row g-3 align-items-center">
+              <div class="col-md-5 text-center">
+                <img src="static/research/pfn.png"
+                     class="img-fluid rounded"
+                     alt="Prior-Data Fitted Network: context dataset and query feed into a transformer that outputs a predictive distribution">
+              </div>
+              <div class="col-md-7">
+                <p>
+                  Prior-Data Fitted Networks (PFNs) are
+                  transformer-based foundation models that are trained
+                  on synthetic datasets sampled from a Bayesian prior.
+                  Given a context dataset
+                  \(\mathcal{D} = \{(x_i, y_i)\}_{i=1}^n\) and a query
+                  point \(x^\star\), a trained PFN approximates the
+                  posterior predictive distribution
+                  \(p(y \mid x^\star, \mathcal{D})\) in a single
+                  forward pass — no per-task gradient descent required
+                  at inference time. We investigate the statistical
+                  properties of these implicit Bayesian posteriors and
+                  the conditions under which they are well calibrated.
+                </p>
+                <p class="text-muted">
+                  <em>Project C01 within
+                  <a href="https://www.smalldata-initiative.de/">CRC 1597 SmallData</a>,
+                  together with Jana Naue</em>
+                </p>
+              </div>
+            </div>
+
+            <hr>
+
+            <h4 class="mt-3">Formalizing Probability</h4>
+            <div class="row g-3 align-items-center">
+              <div class="col-md-3 text-center">
+                <img src="static/research/lean_logo.png"
+                     class="img-fluid"
+                     style="max-height: 120px;"
+                     alt="Lean Prover logo">
+              </div>
+              <div class="col-md-9">
+                <p>
+                  <a href="https://lean-lang.org/">Lean</a> is both a
+                  functional programming language and an interactive
+                  theorem prover. Its mathematical library
+                  <a href="https://leanprover-community.github.io/mathlib4_docs/">mathlib</a>
+                  builds mathematics machine-checked from the ground
+                  up. We contribute to extending the library with
+                  results from probability theory, currently focusing
+                  on stochastic processes, Brownian motion, and
+                  measure-theoretic foundations.
+                </p>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
