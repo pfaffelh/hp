@@ -1,6 +1,11 @@
+import sys
 from staticjinja import Site
 
 if __name__ == "__main__":
-    site = Site.make_site(staticpaths=["static/"])
-    # enable automatic reloading
-    site.render(use_reloader=True)
+    watch = "--watch" in sys.argv
+    site = Site.make_site(
+        searchpath="templates",
+        outpath="_site",
+        staticpaths=["static/"],
+    )
+    site.render(use_reloader=watch)

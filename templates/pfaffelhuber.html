@@ -43,6 +43,32 @@
     <div class="ufr-accordion">
       <div class="ufr-accordion-item">
         <button type="button" class="ufr-accordion-header" data-bs-toggle="collapse"
+          data-bs-target="#_theses" aria-expanded="false" aria-controls="_theses">
+          <span class="ufr-accordion-header-content">
+            <span class="ufr-accordion-title">Bachelor and Master theses</span>
+          </span>
+          <span class="ufr-accordion-chevron" aria-hidden="true">
+            <svg viewBox="0 0 35 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 5 L25.6 25 L5 45" stroke="currentColor" stroke-width="6" />
+            </svg>
+          </span>
+        </button>
+        <div>Note: If you are looking for a thesis within the Master of Education programme, please 
+          look at the Bachelor's theses.
+        </div>
+        <div id="_theses" class="collapse">
+          <div class="ufr-accordion-body">
+            {# To add a thesis: create templates/theses/_NAME.html and add
+               one {% include 'theses/_NAME.html' %} line below. To remove
+               or temporarily hide one, just comment out its include line. #}
+            {% include 'theses/_greedy_all_heads.html' %}
+            {% include 'theses/_pfn_martingale.html' %}
+            {% include 'theses/_lean_formalization.html' %}
+          </div>
+        </div>
+      </div>
+      <div class="ufr-accordion-item">
+        <button type="button" class="ufr-accordion-header" data-bs-toggle="collapse"
           data-bs-target="#_researchTopics" aria-expanded="false" aria-controls="_researchTopics">
           <span class="ufr-accordion-header-content">
             <span class="ufr-accordion-title">Research topics</span>
