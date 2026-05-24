@@ -28,8 +28,7 @@ jobs:
         run: pip install staticjinja pybtex jinja2 latexcodec markdown
 
       - name: Regenerate publications HTML from BibTeX
-        working-directory: bibliography
-        run: python make_bibhtml.py
+        run: python scripts/make_bibhtml.py
 
       - name: Render site
         run: python build.py

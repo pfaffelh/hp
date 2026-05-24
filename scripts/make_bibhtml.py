@@ -1,11 +1,20 @@
+"""Render publications_content_<stem>.html for each bibliography/*.bib file.
+
+Run from the repository root, or anywhere else — paths are resolved
+relative to this file's location.
+"""
+
 import re
 from pathlib import Path
-import latexcodec  # noqa: F401  -- registers the "latex" codec used below
-from pybtex.database.input import bibtex
-from jinja2 import Template
 
-TEMPLATE = "simple.html"
-OUTDIR = Path("../templates")
+import latexcodec  # noqa: F401  -- registers the "latex" codec used below
+from jinja2 import Template
+from pybtex.database.input import bibtex
+
+REPO = Path(__file__).resolve().parent.parent
+BIB_DIR = REPO / "bibliography"
+TEMPLATE = BIB_DIR / "simple.html"
+OUTDIR = REPO / "templates"
 OUTPATTERN = "publications_content_{stem}.html"
 
 
@@ -54,12 +63,11 @@ def render(bibfile, outfile, template):
     entries = get_bibdata(bib_data)
     with open(outfile, "w", encoding="utf-8") as f:
         f.write(template.render({"entries": entries}))
-    print(f"Generated {outfile} with {len(entries)} entries.")
+    print(f"Generated {outfile.relative_to(REPO)} with {len(entries)} entries.")
 
 
 if __name__ == "__main__":
-    with open(TEMPLATE, "r", encoding="utf-8") as f:
-        template = Template(f.read())
-    for bibfile in sorted(Path(".").glob("*.bib")):
+    template = Template(TEMPLATE.read_text(encoding="utf-8"))
+    for bibfile in sorted(BIB_DIR.glob("*.bib")):
         outfile = OUTDIR / OUTPATTERN.format(stem=bibfile.stem)
         render(bibfile, outfile, template)
