@@ -41,7 +41,7 @@ jobs:
         uses: xu-cheng/latex-action@v3
         with:
           working_directory: templates/theses/_latex
-          root_file: 2026_*.tex
+          root_file: "*.tex"
           glob_root_files: true
           compiler: latexmk
           args: -xelatex -interaction=nonstopmode -file-line-error
