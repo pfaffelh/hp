@@ -53,7 +53,14 @@ def get_bibdata(bib_data):
             "note":    entry.fields.get("note", ""),
             "url":     entry.fields.get("journal_url", ""),
         })
-    return sorted(data, key=lambda x: (-int(x["year"]), x["author"]))
+    return sorted(
+        data,
+        key=lambda x: (
+            0 if x["journal"].strip().lower() == "submitted" else 1,
+            -int(x["year"]),
+            x["author"],
+        ),
+    )
 
 
 def render(bibfile, outfile, template):
