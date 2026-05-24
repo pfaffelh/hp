@@ -1,11 +1,61 @@
-{% include 'theses/current/_gamblers_ruin.html' %}
+<h5>Bachelor thesis: The variance of the playing time in Gambler's Ruin (January 2026)</h5>
+<p>Two players play against each other. Both players stake one Euro per
+round; player \(A\) (\(B\)) wins with probability \(p\) (\(1-p\)).
+Starting with bankrolls \(x\) and \(N-x\), the game runs for a random
+time \(T\) until one player is ruined. The classical result is
+\(E[T] = x(N-x)\); the aim of the thesis is to compute \(V[T]\). This
+can be done via generating functions, or somewhat more directly.</p>
+<ul>
+<li>Jiri Andel and Sarka Sudecova. Variance of the game duration in the
+  gambler's ruin problem. <em>Statistics and Probability Letters</em> 82(9),
+  1750–1754, 2012.</li>
+<li>E. Bach. Moments in the duration of play. <em>Statistics and
+  Probability Letters</em> 36, 1–7, 1997.</li>
+<li>William Feller. <em>An Introduction to Probability Theory and its
+  Applications</em> (3rd edition). New York: Wiley, 1968.</li>
+</ul>
 <p><a href="static/theses/gamblers_ruin.pdf">Download as PDF</a></p>
 <hr>
-{% include 'theses/current/_greedy_all_heads.html' %}
+<h5>Master thesis: The greedy strategy in the all-heads coin game (May 2026)</h5>
+<p>In the <em>all-heads coin game</em> a player repeatedly tosses a pool of
+coins, each landing heads with probability \(p\). After every round,
+all coins showing heads are set aside and the remaining coins (tails)
+are re-tossed. A round in which no coin shows heads is lost; the
+player wins as soon as the pool is empty. The <em>greedy</em> strategy — set
+aside every head — yields the success probability \(b_{n,p}\) when
+starting with \(n\) coins.</p>
+<p>The thesis consists of working through
+<a href="https://github.com/pfaffelh/coins/blob/main/Oscillation/paper2.pdf">paper2.pdf</a>
+in detail and writing up all the arguments and details.</p>
 <p><a href="static/theses/greedy_all_heads.pdf">Download as PDF</a></p>
 <hr>
-{% include 'theses/current/_lean_formalization.html' %}
+<h5>Bachelor and Master thesis: Lean formalization (ongoing)</h5>
+<p>We are running several formalization projects for the
+<a href="https://lean-lang.org/">Lean Interactive Theorem Prover</a>. Here is a
+list of topics you can contribute to:</p>
+<ul>
+<li>Poisson convergence</li>
+<li>Large deviations</li>
+<li>Specific distributions</li>
+<li>Random graphs</li>
+<li>Generating random numbers</li>
+<li>Statistics</li>
+</ul>
 <p><a href="static/theses/lean_formalization.pdf">Download as PDF</a></p>
 <hr>
-{% include 'theses/current/_pfn_martingale.html' %}
+<h5>Master thesis: Prior-Data Fitted Networks and Martingale Posteriors (June 2026)</h5>
+<p>Summary of <a href="https://arxiv.org/abs/2505.11325">arXiv:2505.11325</a>:
+Prior-data fitted networks (PFNs) have emerged as promising foundation
+models for prediction from tabular datasets, achieving
+state-of-the-art performance on small to moderate data sizes without
+tuning. While PFNs are motivated by Bayesian ideas, they do not
+provide any uncertainty quantification for predictive means,
+quantiles, or similar quantities. The paper proposes a principled,
+efficient, and tuning-free sampling procedure to construct Bayesian
+posteriors for such estimates based on martingale posteriors, and
+proves its convergence. Several simulated and real-world data
+examples showcase the efficiency and calibration of the method in
+inference applications.</p>
+<p>The thesis consists of placing martingale posterior distributions in
+the framework of theoretical statistics and implementing them.</p>
 <p><a href="static/theses/pfn_martingale.pdf">Download as PDF</a></p>

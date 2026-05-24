@@ -27,8 +27,26 @@ Mit Ctrl-C beenden. Das `_site/`-Verzeichnis ist gitignored.
 
 ## Publikationsliste
 
-`templates/publications_content.html` wird aus
-`bibliography/pfaffelhuber.bib` erzeugt — die CI ruft dafür
+`templates/publications_content_*.html` werden aus
+`bibliography/*.bib` erzeugt — die CI ruft dafür
 `bibliography/make_bibhtml.py` vor dem Build auf. Wenn Du nur die
 `.bib` änderst, reicht also auch ein Push; lokal regenerieren geht
 mit `cd bibliography && python make_bibhtml.py`.
+
+## Abschlussarbeiten-Themen
+
+Aktive Themen liegen als Markdown unter `templates/theses/current/_*.md`.
+Erste Zeile `# Titel (Monat Jahr)`, der Rest beliebiges Markdown
+(`[Text](URL)`, `*Hervorhebung*`, Bullet-Listen, MathJax `\(...\)`).
+
+`scripts/make_theses.py` (läuft in CI vor dem Build) erzeugt daraus
+- den aggregierten HTML-Block, der in Pfaffelhubers Theses-Akkordeon
+  eingeblendet wird,
+- eine LaTeX-Datei je Thema unter `templates/theses/_latex/<slug>.tex`,
+  die anschließend zu einem CD-konformen PDF kompiliert und unter
+  `static/theses/<slug>.pdf` ausgeliefert wird (Download-Link im
+  Akkordeon).
+
+Lokal regenerieren: `python scripts/make_theses.py`.
+
+Thema abgeben: `.md`-Datei nach `templates/theses/archive/` verschieben.

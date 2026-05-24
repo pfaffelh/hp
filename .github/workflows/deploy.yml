@@ -25,7 +25,7 @@ jobs:
           python-version: "3.12"
 
       - name: Install dependencies
-        run: pip install staticjinja pybtex jinja2 latexcodec
+        run: pip install staticjinja pybtex jinja2 latexcodec markdown
 
       - name: Regenerate publications HTML from BibTeX
         working-directory: bibliography
