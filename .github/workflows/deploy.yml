@@ -42,12 +42,12 @@ jobs:
 
       - name: Compile thesis topic PDFs
         uses: xu-cheng/latex-action@v3
+        continue-on-error: true
         with:
           working_directory: templates/theses/_latex
           root_file: "*.tex"
           latexmk_use_xelatex: true
           args: -f -interaction=nonstopmode -file-line-error
-          continue_on_error: true
 
       - name: Move thesis PDFs into _site
         run: |
