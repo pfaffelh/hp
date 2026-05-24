@@ -15,7 +15,7 @@ GitHub Pages deployt: bei jedem Push auf `master` läuft
 ## Lokal vorschauen, bevor man pusht
 
 ```bash
-python3 build.py --watch
+python3 scripts/build.py --watch
 ```
 
 Rendert die Templates nach `_site/` und beobachtet sie auf
@@ -24,6 +24,10 @@ Rendert die Templates nach `_site/` und beobachtet sie auf
 <http://localhost:8000>).
 
 Mit Ctrl-C beenden. Das `_site/`-Verzeichnis ist gitignored.
+Statische Assets (Bilder, CSS, PDFs unter `static/`) werden nicht
+von staticjinja kopiert — die CI macht das per `cp -r static _site/static`;
+lokal vor dem Browser-Test einmal selbst kopieren, falls Du Asset-Links
+testen willst.
 
 ## Publikationsliste
 
