@@ -43,7 +43,7 @@
 \usekomavar{fromphone}\\ % Telefonnummer des Absenders
 \usekomavar{fromemail}\\ % E-Mail-Adresse des Absenders
 \usekomavar{fromurl}\\ \vspace{3mm}%
-\ifkomavarempty{Postadresse}{}{\usekomavar{Postadresse}\\ \vspace{3mm}}%
+% Postadresse-Block: aktivieren, sobald \setkomavar{Postadresse}{...} oben gesetzt ist
 \ifkomavarempty{Besuchsadresse}{}{\usekomavar{Besuchsadresse}\\ \vspace{3mm}}%
 \ifkomavarempty{Aktenzeichen}{}{\usekomavar{Aktenzeichen}\\ \vspace{3mm}}%
 \ifkomavarempty{frombank}{}{\usekomavar{frombank}\\ \vspace{3mm}}%
