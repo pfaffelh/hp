@@ -154,7 +154,7 @@ def main() -> None:
         aggregate_lines.append(aggregated_snippet(slug, html_path.name))
         print(f"  {html_path.name}  ->  {tex_path.relative_to(REPO)}")
 
-    AGGREGATE.write_text("\n".join(aggregate_lines), encoding="utf-8")
+    AGGREGATE.write_text("<hr>\n".join(aggregate_lines), encoding="utf-8")
     print(f"Wrote {AGGREGATE.relative_to(REPO)} with {len(aggregate_lines)} entries.")
 
 
