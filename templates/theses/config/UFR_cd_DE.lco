@@ -1,0 +1,119 @@
+% Datei: UFR_cd_DE.lco
+% Autor: Dr. Carl Skarbek für die Abteilung Marketing & Events der Universität Freiburg
+% October 2024
+% Diese Datei sollte nicht verändert werden, damit die Corporate-Design-Elemente der Universität Freiburg erhalten bleiben.
+% Rechte liegen bei der Albert-Ludwigs-Universität Frieburg
+% Weitere Informationen zum Corporate Design finden Sie unter https://cd.uni-freiburg.de/
+
+\ProvidesFile{UFR_cd_DE.lco}[%
+  01.10.2024
+  LaTeX2e unsupported letter configuration option%
+]
+
+% Paket "graphicx" laden, falls möglich
+\if@atdocument\else\RequirePackage{graphicx}\fi
+
+% Schriftart für das Corporate Design laden
+\usepackage{helvet} 
+\renewcommand*{\familydefault}{\sfdefault} % Schriftart für das gesamte Dokument auf Sans Serif setzen
+
+% Farben für das Corporate Design definieren
+\usepackage[dvipsnames]{xcolor} % Farben definieren
+    \definecolor{uniblau}{cmyk}{90, 75, 0, 0} % Uni Freiburg Blau
+
+% Deutsche Spracheinstellung
+% \usepackage[ngerman]{babel}
+
+% Seitengeometrie anpassen
+\usepackage{typearea}
+\usepackage{eso-pic}
+
+%Datumsformatierung
+\usepackage[datesep=.\,]{datetime2} % datesep legt Trennzeichen und ggf. Abstand zwischen Tag, Monat und Jahr fest.
+\DTMsetdatestyle{ddmmyyyy} % Datumsausgabe in reiner Zahlform
+
+% Falzmarken formatieren
+\KOMAoptions{foldmarks= Tbmlpv} % Nur die Falzmarke oben links hinzufügen
+\setkomafont{foldmark}{\color{uniblau}} % Farbe der Falzmarken ändern
+\setplength{tfoldmarklength}{3mm} % Länge der Falzmarken ändern
+\setplength{foldmarkhpos}{3.5mm} % Position der Falzmarken im Rand ändern
+\setplength{foldmarkthickness}{2pt} % Dicke der Falzmarken ändern
+
+% Horizontale Ränder des Brieftextes anpassen
+\addtolength{\oddsidemargin}{-20mm}
+\setlength{\textwidth}{120mm}
+\setplength{locwidth}{45mm}
+
+% Größe des zusätzlichen Absender-Informationsfeldes anpassen
+\setplength{locheight}{180mm}
+
+% Texthöhe anpassen, um eine einheitliche Höhe auf allen Seiten zu gewährleisten
+\setlength{\textheight}{225mm}
+
+% Höhe der Rücksendeadresse anpassen, um Adresse in einer Zeile unterzubringen
+\setplength{backaddrheight}{10mm}
+\setplength{toaddrwidth}{90mm}
+
+% Abstand vor der Unterschrift anpassen
+\setplength{sigbeforevskip}{20mm}
+
+% Benutzerdefinierter Kopf mit Logo oben links
+\setkomavar{firsthead}{
+\vbox to 0pt {
+    \vspace{5mm} % Logo um 5mm nach unten verschieben
+    \hspace{-6mm}
+    \includegraphics[width=8.5cm]{config/UFR_Wortmarke.pdf}
+    % Anmerkung: Falls man die Steuer- und Wortmarkendateien zentral an einer Stelle
+    %            bereithalten und nicht in jedes Verzeichnis hineinkopieren möchte,
+    %            in dem man Briefe erstellt und abspeichert, sollten an dieser Stelle
+    %            absolute Pfade verwendet werden:
+    % \includegraphics[width=8.5cm]{/Pfad/zur/Datei/UFR_Wortmarke.pdf}
+    }
+}
+
+% Fußzeile auf der ersten Seite mit korrektem Nummerierungsschema
+\setplength{firstfootvpos}{280mm} % Position der Fußzeile
+\renewcommand*\pagemark{%
+  \usekomafont{pagenumber}{\thepage~/~\letterlastpage}%
+}
+
+% Seitenstil für die folgenden Seiten
+\pagestyle{headings} % Stil für nachfolgende Seiten
+\setkomavar{nexthead}{} % Kopfzeile nach der ersten Seite leeren
+\setkomavar{nextfoot}{ % Fußzeile nach der ersten Seite definieren       
+    \begin{tabular}[t]{l@{}}% 
+    \end{tabular}%
+    \hfill
+    \begin{tabular}[t]{r@{}}%
+        \hspace{5.8cm}\pagemark%
+    \end{tabular}%
+    \hfill
+    \begin{tabular}[t]{r@{}}%
+    
+       \end{tabular}%
+    }
+
+% Einige Variablen definieren
+\newkomavar{universityname}
+\newkomavar{Einrichtung1}
+\newkomavar{Einrichtung2}
+\newkomavar{position}
+\newkomavar{userphone} % Durchwahlnummer
+% \newkomavar{Postadresse}
+\newkomavar{Besuchsadresse}
+\newkomavar{bearbeitetvon}
+\newkomavar{Aktenzeichen}
+\newkomavar{secondarylogo}
+\newkomavar{thedate}
+
+% Einige konstante Variablen als Standard festlegen
+\setkomavar{universityname}{Albert-Ludwigs-Universität~Freiburg}
+\setkomavar{fromphone}{T +49 761~/~203-\usekomavar{userphone}}
+\setkomavar{backaddress}{\usekomavar{universityname} - \usekomavar{Einrichtung2} - 79085 \nobreak Freiburg}
+% Nicht DIN-konforme linksbündige Datumsangabe entfernt, eavh, 19.09.2024
+% \setkomavar{date}{\flushleft\vspace{-\baselineskip}\usekomavar{thedate}\par} % Datum auf linksbündig setzen (automatisch auf das heutige Datum gesetzt)
+% Unterdrückung der Datumsausgabe rechtsbündig über dem Textblock (Datum soll am Rand neben dem Fließtext stehen)
+% Achtung: Variable date darf nicht leer sein, sonst bricht TeX mit Fehlermeldung ab!
+\setkomavar{date}{~}
+
+\endinput 

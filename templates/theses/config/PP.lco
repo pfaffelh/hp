@@ -1,0 +1,69 @@
+% Datei: UFR_cd_NAME.lco
+% Autor: Dr. Carl Skarbek für die Abteilung Marketing & Events der Universität Freiburg
+% October 2024
+% Diese Datei sollte nicht verändert werden, damit die Corporate-Design-Elemente der Universität Freiburg erhalten bleiben.
+% Rechte liegen bei der Albert-Ludwigs-Universität Frieburg
+% Weitere Informationen zum Corporate Design finden Sie unter https://cd.uni-freiburg.de/
+
+\ProvidesFile{UFR_cd_NAME.lco}[%
+  01.10.2024
+  LaTeX2e unsupported letter configuration option%
+] % Ändern Sie dies bei Bedarf, wenn Sie den Dateinamen ändern
+
+\LoadLetterOption{config/UFR_cd_DE} % Laden der Corporate-Design-Elemente und Formatierungen
+% Anmerkung: Falls man die Steuerdateien zentral an einer Stelle bereithalten und nicht in jedes
+%            Verzeichnis hineinkopieren möchte, in dem man Briefe erstellt und abspeichert,
+%            sollten an dieser Stelle absolute Pfade verwendet werden:
+% \LoadLetterOption{/Pfad/zur/Datei/UFR_cd_DE}
+
+% Personalisierung
+\setkomavar{fromname}{Peter Pfaffelhuber} % Name des Absenders (Titel, Vorname, Nachname)
+\setkomavar{position}{} % Position des Absenders
+\setkomavar{Einrichtung1}{} % Z.B. Fakultät/Institut
+\setkomavar{Einrichtung2}{Mathematisches Institut} % Z.B. Abteilung/Büro
+\setkomavar{userphone}{5667} % Durchwahl nach 203-
+\setkomavar{fromemail}{\href{mailto:p.p@stochastik.uni-freiburg.de}{p.p@stochastik.uni-freiburg.de}}  % E-Mail-Adresse des Absenders
+\setkomavar{fromurl}{\href{https://pfaffelh.github.io/hp}{pfaffelh.github.io/hp}}
+ % URL der Einrichtung oder Abteilung
+% \setkomavar{Postadresse}{} % Postadresse des Absenders
+\setkomavar{Besuchsadresse}{Ernst-Zermelo-Str. 1 \\ Raum 233 \\ 79104 Freiburg} % Besuchsadresse des Absenders
+\setkomavar{bearbeitetvon}{} % Name der bearbeitenden Person
+\setkomavar{Aktenzeichen}{} % Aktenzeichen und Nummer
+\setkomavar{frombank}{} % Bankverbindung des Absenders
+\setkomavar{signature}{\usekomavar{fromname}} % Unterschrift, basierend auf dem Absendernamen
+
+% Reihenfolge und Abstände der definierten Variablen, NICHT ÄNDERN
+\setkomavar{location}{\raggedright
+\textbf{\usekomavar{universityname}}\\ \vspace{3mm} % Name der Universität, fettgedruckt
+\small \usekomavar{Einrichtung1}\\ % Hierarchieebene 1, z.B. Fakultät oder Institut
+\usekomavar{Einrichtung2}\\ \vspace{3mm} % Hierarchieebene 2, z.B. Abteilung oder Büro
+\usekomavar{fromname}\\ % Name des Absenders
+\usekomavar{position}\\ \vspace{3mm} % Position des Absenders
+\usekomavar{fromphone}\\ % Telefonnummer des Absenders
+\usekomavar{fromemail}\\ % E-Mail-Adresse des Absenders
+\usekomavar{fromurl}\\ \vspace{3mm} % URL der Einrichtung oder Abteilung
+% Postadresse\\
+% \usekomavar{Postadresse}\\ \vspace{3mm} % Postadresse des Absenders (auskommentiert: nicht gesetzt)
+% Besuchsadresse\\
+\usekomavar{Besuchsadresse}\\ \vspace{3mm} % Besuchsadresse des Absenders
+\usekomavar{Aktenzeichen} \\ \vspace{3mm} % Aktenzeichen
+\usekomavar{frombank}\\ \vspace{3mm} % Bankverbindung
+\usekomavar{thedate} % DIN-konforme Platzierung des Datums
+}
+
+% Zum Hinzufügen eines zusätzlichen Logos unten rechts auf der ersten Seite
+\setkomavar{firstfoot}{%    
+    \begin{tabular}[t]{l@{}}% 
+    \end{tabular}%
+    \hfill
+    \begin{tabular}[t]{r@{}}%
+       \pagemark% % Seitenzahlenanzeige
+    \end{tabular}%
+    \hfill
+    \begin{tabular}[t]{r@{}}%
+      %\includegraphics[width=4cm]{UFR_Wortmarke.pdf} % HIER SEKUNDÄRES LOGO-GRAFIKDATEI EINFÜGEN
+      % Anmerkung: Auch hier ggf. wie oben mit absoluten Pfaden arbeiten.
+    \end{tabular}%
+    \hfill
+}
+\endinput 

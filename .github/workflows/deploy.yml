@@ -37,6 +37,22 @@ jobs:
       - name: Copy static assets
         run: cp -r static _site/static
 
+      - name: Compile thesis topic PDFs
+        uses: xu-cheng/latex-action@v3
+        with:
+          working_directory: templates/theses
+          root_file: 2026_*.tex
+          glob_root_files: true
+          compiler: latexmk
+          args: -xelatex -interaction=nonstopmode -file-line-error
+
+      - name: Move thesis PDFs into _site
+        run: |
+          mkdir -p _site/static/theses
+          if compgen -G "templates/theses/*.pdf" > /dev/null; then
+            mv templates/theses/*.pdf _site/static/theses/
+          fi
+
       - uses: actions/configure-pages@v5
 
       - uses: actions/upload-pages-artifact@v3
