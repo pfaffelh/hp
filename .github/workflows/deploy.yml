@@ -42,26 +42,10 @@ jobs:
 
       - name: Compile thesis topic PDFs
         uses: xu-cheng/latex-action@v3
-        continue-on-error: true
         with:
           working_directory: templates/theses/_latex
-          # Each .tex emits non-fatal KOMA warnings, so we run our own
-          # loop here (PDFs ARE produced) instead of letting the action
-          # stop on the first non-zero latexmk exit.
-          root_file: __noop__
+          root_file: "*.tex"
           latexmk_use_xelatex: true
-          pre_compile: |
-            for f in *.tex; do
-              echo "===== Compiling $f ====="
-              latexmk -xelatex -f -interaction=nonstopmode -file-line-error "$f" || true
-            done
-            # Second pass to resolve \pageref{LastPage} (1 / ?? -> 1 / 1)
-            for f in *.tex; do
-              latexmk -xelatex -f -interaction=nonstopmode -file-line-error "$f" || true
-            done
-            ls -la *.pdf
-            # Drop the dummy root_file so the action's own compile finds nothing to do.
-            : > __noop__.tex
 
       - name: Move thesis PDFs into _site
         run: |
