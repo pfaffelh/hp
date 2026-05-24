@@ -1,3 +1,5 @@
+staticjinja
 pybtex
 jinja2
 latexcodec
+markdown

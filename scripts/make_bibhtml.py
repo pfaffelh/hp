@@ -13,7 +13,7 @@ from pybtex.database.input import bibtex
 
 REPO = Path(__file__).resolve().parent.parent
 BIB_DIR = REPO / "bibliography"
-TEMPLATE = BIB_DIR / "simple.html"
+TEMPLATE = Path(__file__).resolve().parent / "simple.html"
 OUTDIR = REPO / "templates"
 OUTPATTERN = "publications_content_{stem}.html"
 
