@@ -29,11 +29,14 @@ def decode_latex(text):
 def format_authors(persons):
     authors = []
     for person in persons:
-        first_initials = " ".join(
-            [name[0] + "." for name in person.get_part_as_text("first").split()]
-        )
-        last_name = person.get_part_as_text("last")
-        authors.append(f"{last_name}, {first_initials}")
+        last = person.get_part_as_text("last").strip()
+        first = person.get_part_as_text("first").strip()
+        # BibTeX convention: `... and others` becomes a person with name "others"
+        if last == "others" and not first:
+            authors.append("et al.")
+            continue
+        first_initials = " ".join(n[0] + "." for n in first.split())
+        authors.append(f"{last}, {first_initials}" if first_initials else last)
     return decode_latex(", ".join(authors))
 
 

@@ -1,12 +1,17 @@
 <ul>
   {% for entry in entries %}
   <li>
-    <span class="authors"> {{ entry['author'] }}. </span>
-    <span class="title">{% if entry['url'] != "" %} <a href="{{ entry['url']|escape }}">{{ entry['title'] }}</a>. {% else %}{{ entry['title'] }}.{% endif %} </span>
-    {% if entry['volume'] != "" %} <span>{{ entry['volume'] }}{% if entry['number'] %}({{ entry['number'] }}), {% endif %} </span> {% endif %}<span>{{ entry['pages'] }} </span>,
-    <span class="date"> {{ entry['journal'] }}. </span>
-    <span class="date"> {{ entry['year'] }}. </span>
+    <span class="authors">{{ entry['author'] }}</span>
+    <span class="title">
+      {%- if entry['url'] %}<a href="{{ entry['url']|escape }}">{{ entry['title'] }}</a>{% else %}{{ entry['title'] }}{% endif -%}.
+    </span>
+    {%- if entry['volume'] %}
+    <span>{{ entry['volume'] }}{% if entry['number'] %}({{ entry['number'] }}){% endif %}{% if entry['pages'] %}, {{ entry['pages'] }}{% endif %},</span>
+    {%- elif entry['pages'] %}
+    <span>{{ entry['pages'] }},</span>
+    {%- endif %}
+    <span class="date">{{ entry['journal'] }}.</span>
+    <span class="date">{{ entry['year'] }}.</span>
   </li>
-
   {% endfor %}
 </ul>
