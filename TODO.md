@@ -2,13 +2,6 @@
 
 Offene Punkte nach dem UFR-Theme-Umbau.
 
-## Inhalte fehlen
-
-- **2025WS Measure Theory — Lösungen**: die Übungstabelle verlinkt
-  `static/2025WS_measure_theory/Tutorial1_Sol.pdf` … `Tutorial14_Sol.pdf`,
-  diese Dateien fehlen aber im Verzeichnis (nur die Aufgabenblätter
-  sind hochgeladen).
-
 ## Verwaiste Root-HTMLs (alte Pre-UFR-Theme-Optik, kein Template)
 
 Diese Dateien sind aus dem neuen Menü nicht mehr verlinkt, existieren
