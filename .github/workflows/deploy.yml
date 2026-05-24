@@ -42,9 +42,7 @@ jobs:
         with:
           working_directory: templates/theses/_latex
           root_file: "*.tex"
-          glob_root_files: true
-          compiler: latexmk
-          args: -xelatex -interaction=nonstopmode -file-line-error
+          latexmk_use_xelatex: true
 
       - name: Move thesis PDFs into _site
         run: |
