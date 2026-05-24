@@ -35,19 +35,18 @@
 % Reihenfolge und Abstände der definierten Variablen, NICHT ÄNDERN
 \setkomavar{location}{\raggedright
 \textbf{\usekomavar{universityname}}\\ \vspace{3mm} % Name der Universität, fettgedruckt
-\small \usekomavar{Einrichtung1}\\ % Hierarchieebene 1, z.B. Fakultät oder Institut
-\usekomavar{Einrichtung2}\\ \vspace{3mm} % Hierarchieebene 2, z.B. Abteilung oder Büro
+\small
+\ifkomavarempty{Einrichtung1}{}{\usekomavar{Einrichtung1}\\}%
+\ifkomavarempty{Einrichtung2}{}{\usekomavar{Einrichtung2}\\ \vspace{3mm}}%
 \usekomavar{fromname}\\ % Name des Absenders
-\usekomavar{position}\\ \vspace{3mm} % Position des Absenders
+\ifkomavarempty{position}{}{\usekomavar{position}\\ \vspace{3mm}}%
 \usekomavar{fromphone}\\ % Telefonnummer des Absenders
 \usekomavar{fromemail}\\ % E-Mail-Adresse des Absenders
-\usekomavar{fromurl}\\ \vspace{3mm} % URL der Einrichtung oder Abteilung
-% Postadresse\\
-% \usekomavar{Postadresse}\\ \vspace{3mm} % Postadresse des Absenders (auskommentiert: nicht gesetzt)
-% Besuchsadresse\\
-\usekomavar{Besuchsadresse}\\ \vspace{3mm} % Besuchsadresse des Absenders
-\usekomavar{Aktenzeichen} \\ \vspace{3mm} % Aktenzeichen
-\usekomavar{frombank}\\ \vspace{3mm} % Bankverbindung
+\usekomavar{fromurl}\\ \vspace{3mm}%
+\ifkomavarempty{Postadresse}{}{\usekomavar{Postadresse}\\ \vspace{3mm}}%
+\ifkomavarempty{Besuchsadresse}{}{\usekomavar{Besuchsadresse}\\ \vspace{3mm}}%
+\ifkomavarempty{Aktenzeichen}{}{\usekomavar{Aktenzeichen}\\ \vspace{3mm}}%
+\ifkomavarempty{frombank}{}{\usekomavar{frombank}\\ \vspace{3mm}}%
 \usekomavar{thedate} % DIN-konforme Platzierung des Datums
 }
 

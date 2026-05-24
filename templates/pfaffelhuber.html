@@ -58,12 +58,12 @@
             <div>Note: If you are looking for a thesis within the Master of Education programme, please 
               look at the Bachelor's theses.
             </div>
-            {# To add a thesis: create templates/theses/_NAME.html and add
-               one {% include 'theses/_NAME.html' %} line below. To remove
-               or temporarily hide one, just comment out its include line. #}
-            {% include 'theses/_greedy_all_heads.html' %}
-            {% include 'theses/_pfn_martingale.html' %}
-            {% include 'theses/_lean_formalization.html' %}
+            {# Active thesis topics: drop an _NAME.html into
+               templates/theses/current/. scripts/make_theses.py
+               regenerates _aggregated.html (this include) plus the
+               LaTeX source for the downloadable PDF. To retire a
+               topic, move its partial to templates/theses/archive/. #}
+            {% include 'theses/_aggregated.html' %}
           </div>
         </div>
       </div>

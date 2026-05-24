@@ -11,3 +11,4 @@
 *.fdb_latexmk
 *.synctex.gz
 templates/theses/_latex/*.pdf
+templates/theses/_latex/*.tex

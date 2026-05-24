@@ -37,19 +37,28 @@ jobs:
       - name: Copy static assets
         run: cp -r static _site/static
 
+      - name: Generate thesis LaTeX sources from HTML partials
+        run: python scripts/make_theses.py
+
       - name: Compile thesis topic PDFs
         uses: xu-cheng/latex-action@v3
         with:
           working_directory: templates/theses/_latex
           root_file: "*.tex"
           latexmk_use_xelatex: true
+          args: -f -interaction=nonstopmode -file-line-error
+          continue_on_error: true
 
       - name: Move thesis PDFs into _site
         run: |
           mkdir -p _site/static/theses
-          if compgen -G "templates/theses/_latex/*.pdf" > /dev/null; then
-            mv templates/theses/_latex/*.pdf _site/static/theses/
+          pdfs=$(ls templates/theses/_latex/*.pdf 2>/dev/null || true)
+          if [ -z "$pdfs" ]; then
+            echo "::error::No thesis PDFs produced"
+            exit 1
           fi
+          mv $pdfs _site/static/theses/
+          echo "Moved $(echo "$pdfs" | wc -w) PDFs into _site/static/theses/"
 
       - uses: actions/configure-pages@v5
 

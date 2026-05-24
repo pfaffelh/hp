@@ -1,0 +1,26 @@
+\documentclass[10pt, a4paper, backaddress = off, refline = narrow, enlargefirstpage]{scrlttr2}
+
+\LoadLetterOption{config/PP}
+
+\setkomavar{thedate}{\today}
+\usepackage[colorlinks=true,urlcolor=uniblau]{hyperref}
+\setplength{subjectaftervskip}{0cm}
+\setplength{refvpos}{5cm}
+\usepackage[onehalfspacing]{setspace}
+\usepackage{amsmath, amsfonts}
+
+\begin{document}
+
+\setkomavar{subject}{ {{- subject -}} }
+
+\begin{letter}{}
+
+\opening{\strut}
+
+\vspace{-.5cm}
+
+\sloppy
+{{ body }}
+
+\end{letter}
+\end{document}
