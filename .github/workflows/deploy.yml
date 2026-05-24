@@ -30,14 +30,14 @@ jobs:
       - name: Regenerate publications HTML from BibTeX
         run: python scripts/make_bibhtml.py
 
+      - name: Regenerate thesis LaTeX sources and aggregated HTML
+        run: python scripts/make_theses.py
+
       - name: Render site
         run: python scripts/build.py
 
       - name: Copy static assets
         run: cp -r static _site/static
-
-      - name: Generate thesis LaTeX sources from HTML partials
-        run: python scripts/make_theses.py
 
       - name: Compile thesis topic PDFs
         uses: xu-cheng/latex-action@v3
