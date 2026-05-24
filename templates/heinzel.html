@@ -1,4 +1,4 @@
-{% extends '_base.html' %}{% block title %}Home{% endblock %}{% block content %}
+{% extends '_base.html' %}{% block title %}Carola Heinzel{% endblock %}{% block content %}
 <div class="container">
   <h1>Carola Heinzel</h1>
   <div class="row">
@@ -22,8 +22,8 @@
       </p>
     </div>
     <div class="col-4">
-      <img src="static/Bilder/ec-hinzel-carola-1536x1152.jpg" style="float: right; width: 270px; max-width: 100%; height: auto;"
-        title="nn_bild" alt="nn" class="px-4" />
+      <img src="static/Bilder/carola_heinzel.jpg" style="float: right; width: 270px; max-width: 100%; height: auto;"
+        title="Carola Heinzel" alt="Carola Heinzel" class="px-4" />
     </div>
     <div class="col-12">
       <div class="ufr-accordion">
@@ -108,6 +108,7 @@
           <div id="_publications" class="collapse">
             <div class="ufr-accordion-body">
               <p>My Orcid profile is <a href="https://orcid.org/0009-0000-9042-949X">here</a>.</p>
+              {% include 'publications_content_heinzel.html' %}
             </div>
           </div>
         </div>

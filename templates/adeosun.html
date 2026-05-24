@@ -1,4 +1,4 @@
-{% extends '_base.html' %}{% block title %}Home{% endblock %}{% block content %}
+{% extends '_base.html' %}{% block title %}Samuel Ayomide Adeosun{% endblock %}{% block content %}
 <div class="container">
   <h1>Samuel Ayomide Adeosun</h1>
   <div class="row">
@@ -24,8 +24,8 @@
       <img
         src="static/Bilder/samuel.jpg"
         style="float: right; width: 270px; max-width: 100%; height: auto;"
-        title="nn_bild"
-        alt="nn"
+        title="Samuel Ayomide Adeosun"
+        alt="Samuel Ayomide Adeosun"
         class="px-4"
       />
     </div>
@@ -49,6 +49,24 @@
                 <li>Transposable elements</li>
                 <li>Markov Processes</li>
               </ul>
+            </div>
+          </div>
+        </div>
+        <div class="ufr-accordion-item">
+          <button type="button" class="ufr-accordion-header" data-bs-toggle="collapse"
+            data-bs-target="#_publications" aria-expanded="false" aria-controls="_publications">
+            <span class="ufr-accordion-header-content">
+              <span class="ufr-accordion-title">Publications</span>
+            </span>
+            <span class="ufr-accordion-chevron" aria-hidden="true">
+              <svg viewBox="0 0 35 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 5 L25.6 25 L5 45" stroke="currentColor" stroke-width="6" />
+              </svg>
+            </span>
+          </button>
+          <div id="_publications" class="collapse">
+            <div class="ufr-accordion-body">
+              {% include 'publications_content_adeosun.html' %}
             </div>
           </div>
         </div>

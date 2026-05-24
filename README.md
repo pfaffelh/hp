@@ -28,7 +28,7 @@ Mit Ctrl-C beenden. Das `_site/`-Verzeichnis ist gitignored.
 ## Publikationsliste
 
 `templates/publications_content.html` wird aus
-`bibliography/own-bib.bib` erzeugt — die CI ruft dafür
+`bibliography/pfaffelhuber.bib` erzeugt — die CI ruft dafür
 `bibliography/make_bibhtml.py` vor dem Build auf. Wenn Du nur die
 `.bib` änderst, reicht also auch ein Push; lokal regenerieren geht
 mit `cd bibliography && python make_bibhtml.py`.

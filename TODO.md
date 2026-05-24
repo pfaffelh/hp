@@ -47,6 +47,6 @@ löschen oder als Template ins neue Layout überführen.
   -Videos — die Links zeigen daher auf `static/2024WS_measure_theory/`
   (Folien-PDFs liegen nicht doppelt vor).
 - `templates/publications_content.html` bleibt — wird von
-  `bibliography/make_bibhtml.py` aus `bibliography/own-bib.bib`
+  `bibliography/make_bibhtml.py` aus `bibliography/pfaffelhuber.bib`
   erzeugt und in `pfaffelhuber.html`s Publications-Akkordeon per
   `{% include %}` eingebunden.

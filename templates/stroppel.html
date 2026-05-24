@@ -1,6 +1,6 @@
-{% extends '_base.html' %}{% block title %}Home{% endblock %}{% block content %}
+{% extends '_base.html' %}{% block title %}Sebastian Stroppel{% endblock %}{% block content %}
 <div class="container">
-  <h1>Sebstian Stroppel</h1>
+  <h1>Sebastian Stroppel</h1>
   <div class="row">
     <div class="col-8">
       <p>Currently, I am a PhD student in the <a href="https://uni-freiburg.de/stochastik/">probability group</a> within
@@ -23,7 +23,7 @@
     </div>
     <div class="col-4">
       <img src="static/Bilder/nn.png" style="float: right; width: 270px; max-width: 100%; height: auto;"
-        title="nn_bild" alt="nn" class="px-4" />
+        title="Sebastian Stroppel" alt="Sebastian Stroppel" class="px-4" />
     </div>
     <div class="col-12">
       <div class="ufr-accordion">
@@ -45,6 +45,24 @@
                 <li>Chemical Reaction Netowrks</li>
                 <li>Formalizing probability using Lean</li>
               </ul>
+            </div>
+          </div>
+        </div>
+        <div class="ufr-accordion-item">
+          <button type="button" class="ufr-accordion-header" data-bs-toggle="collapse"
+            data-bs-target="#_publications" aria-expanded="false" aria-controls="_publications">
+            <span class="ufr-accordion-header-content">
+              <span class="ufr-accordion-title">Publications</span>
+            </span>
+            <span class="ufr-accordion-chevron" aria-hidden="true">
+              <svg viewBox="0 0 35 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 5 L25.6 25 L5 45" stroke="currentColor" stroke-width="6" />
+              </svg>
+            </span>
+          </button>
+          <div id="_publications" class="collapse">
+            <div class="ufr-accordion-body">
+              {% include 'publications_content_stroppel.html' %}
             </div>
           </div>
         </div>

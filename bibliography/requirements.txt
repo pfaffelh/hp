@@ -1,1 +1,3 @@
 pybtex
+jinja2
+latexcodec
