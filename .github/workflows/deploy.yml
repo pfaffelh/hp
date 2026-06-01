@@ -44,7 +44,9 @@ jobs:
         with:
           working_directory: templates/theses/_latex
           root_file: "*.tex"
-          latexmk_use_xelatex: true
+          # pdflatex (the action's default): the Freiburg CD loads `helvet`
+          # and is built for pdflatex. Under xelatex, Helvetica's bold shape
+          # silently falls back to regular, so bold subjects render unbolded.
 
       - name: Move thesis PDFs into _site
         run: |

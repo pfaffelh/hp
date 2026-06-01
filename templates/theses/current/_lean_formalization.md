@@ -6,7 +6,8 @@ list of topics you can contribute to:
 
 - Poisson convergence
 - Large deviations
-- Specific distributions
+- Specific probability distributions
+- Markov chains
 - Random graphs
 - Generating random numbers
 - Statistics

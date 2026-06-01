@@ -2,7 +2,7 @@
 
 Two players play against each other. Both players stake one Euro per
 round; player \(A\) (\(B\)) wins with probability \(p\) (\(1-p\)).
-Starting with bankrolls \(x\) and \(N-x\), the game runs for a random
+Starting with amounts \(x\) and \(N-x\), the game runs for a random
 time \(T\) until one player is ruined. The classical result is
 \(E[T] = x(N-x)\); the aim of the thesis is to compute \(V[T]\). This
 can be done via generating functions, or somewhat more directly.

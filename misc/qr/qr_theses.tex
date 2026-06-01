@@ -1,5 +1,29 @@
-\documentclass[border=0pt]{standalone}
+\documentclass[a4paper]{article}
+\usepackage[margin=1.5cm]{geometry}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{lscape}
+\usepackage{graphicx}
 \usepackage{qrcode}
+\pagestyle{empty}
 \begin{document}
-\qrcode[height=8cm]{https://pfaffelh.github.io/hp/pfaffelhuber.html\#_theses}
+
+% First page: "Theses" in bold, landscape, filling the A4 sheet.
+\begin{landscape}
+  \vspace*{\fill}
+  \begin{center}
+    \resizebox{\linewidth}{!}{\textbf{Theses}}
+  \end{center}
+  \vspace*{\fill}
+\end{landscape}
+
+\newpage
+
+% Second page: QR code linking to the Theses section of the homepage.
+\vspace*{\fill}
+\begin{center}
+  \qrcode[height=8cm]{https://pfaffelh.github.io/hp/pfaffelhuber.html\#_theses}
+\end{center}
+\vspace*{\fill}
+
 \end{document}

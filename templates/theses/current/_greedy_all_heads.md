@@ -8,6 +8,6 @@ player wins as soon as the pool is empty. The *greedy* strategy — set
 aside every head — yields the success probability \(b_{n,p}\) when
 starting with \(n\) coins.
 
-The thesis consists of working through
-[paper2.pdf](https://github.com/pfaffelh/coins/blob/main/Oscillation/paper2.pdf)
-in detail and writing up all the arguments and details.
+Recently, I have assistend AI to find a formula for \(b_{n,p}\). The goal 
+of the thesis is to check all arguments, as well as a proper write-up. See
+[paper2.pdf](https://github.com/pfaffelh/coins/blob/main/Oscillation/paper2.pdf).

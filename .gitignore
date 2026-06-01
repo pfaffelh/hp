@@ -12,5 +12,6 @@
 *.synctex.gz
 templates/theses/_latex/*.pdf
 templates/theses/_latex/*.tex
+static/theses/
 misc/**/*.pdf
 static/teaching/probability/
