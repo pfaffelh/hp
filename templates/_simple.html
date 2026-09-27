@@ -3,7 +3,7 @@
   <li>
     <span class="authors">{{ entry['author'] }}</span>
     <span class="title">
-      {%- if entry['url'] %}<a href="{{ entry['url']|escape }}">{{ entry['title'] }}</a>{% else %}{{ entry['title'] }}{% endif -%}.
+      {%- if entry['url'] %}<a href="{{ entry['url']|escape }}">{{ entry['title'] }}</a>{% else %}{{ entry['title'] }}{% endif -%}{% if entry['title'][-1:] not in '?!.' %}.{% endif %}
     </span>
     {%- if entry['volume'] %}
     <span>{{ entry['volume'] }}{% if entry['number'] %}({{ entry['number'] }}){% endif %}{% if entry['pages'] %}, {{ entry['pages'] }}{% endif %},</span>
