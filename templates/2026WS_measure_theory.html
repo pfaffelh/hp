@@ -1,0 +1,723 @@
+{% extends '_base.html' %}{% block title %}Measure Theory for Probabilists (WS 2026/27){% endblock %}{% block content %}
+  
+<br />
+<div class="container" id="inhalt">
+  <h2>Measure Theory for Probabilists (WS 2026/27)</h2>
+  <p>Prof. Dr. Peter Pfaffelhuber</p>
+  <p>
+    Assistants:
+    <a href="mailto:felix.ndonfack@stochastik.uni-freiburg.de"
+      >Félix Barrez Tambe Ndonfack</a
+    >,
+    <a href="mailto:carola.heinzel@stochastik.uni-freiburg.de"
+      >Carola Heinzel</a
+    >
+  </p>
+
+  <div class="ufr-accordion">
+    <div class="ufr-accordion-item">
+      <button type="button" class="ufr-accordion-header" data-bs-toggle="collapse"
+        data-bs-target="#schueler" aria-expanded="true" aria-controls="schueler">
+        <span class="ufr-accordion-header-content">
+          <span class="ufr-accordion-title">Structure of the course</span>
+        </span>
+        <span class="ufr-accordion-chevron" aria-hidden="true">
+          <svg viewBox="0 0 35 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 5 L25.6 25 L5 45" stroke="currentColor" stroke-width="6" />
+          </svg>
+        </span>
+      </button>
+      <div id="schueler" class="collapse show">
+        <div class="ufr-accordion-body">
+          <p>
+            This is a hybrid course which is given at the University of
+            Freiburg. Lectures will be given with videos (see below). Tutorials take place in person, Tuesdays, 14:15–15:45, in seminar
+            room 232 (Ernst-Zermelo-Str. 1), starting 20th of October, 2026.
+          </p>
+          <p>
+            Requirements for the <i>Studienleistung</i>: Handing in your
+            solutions is voluntary &ndash; do so if you would like feedback from
+            Félix. What counts are the crosses: on every sheet you mark
+            (cross) the exercises which you are able to present in the tutorial.
+            Every cross earns you as many points as the exercise is worth. If
+            you handed in a solution, you may set your crosses after you have
+            received Félix's feedback, so that you know whether your solution is
+            correct. In the tutorial, Félix picks at random who presents a
+            crossed exercise, preferably among those who have not presented yet.
+            If you cannot properly explain the solution you crossed, all your
+            points of that session are removed; if this happens three times, the
+            <i>Studienleistung</i> is not awarded. Over the semester, you need to
+            cross at least 50% of all exercise points in order to obtain the
+            <i>Studienleistung</i>.
+          </p>
+          <p>
+            If you want to have a <i>Prüfungsleistung</i>, you must pass the
+            exam.
+          </p>
+          <p>
+            Content: The course covers the material which is usually needed in
+            order to dive into measure theoretic aspects of probability theory.
+            Usually, in basic lectures on probability (e.g. taught in Freiburg
+            as <i>Stochastik 1</i> in the 3rd semester), no measure theory is
+            needed. Rather, the lecture in <i>Analysis 3</i> covers measure
+            theory. However, in case you want to specialize in probability
+            theory and did not attend <i>Analysis 3</i>, this course is for you.
+          </p>
+          <p>
+            Prerequisites: You need to know fundamentals of mathematics, such as
+            <i>sets, functions</i> etc. The course requires some knowledge in
+            <i>topology</i>, but tries to recall all explanations in this field.
+          </p>
+          <p>
+            Manuscript: The current version is
+            <a href="static/2024WS_measure_theory/manuscript.pdf">here</a>.
+          </p>
+          <p>
+            Videos: Below you find links to all Videos, or you look at the
+            <a
+              href="https://www.youtube.com/watch?v=tpy7MO0S0v8&list=PLH2Mmq5HX7Sy3FY6PiT1a3DiUsu6ziey_"
+              >playlist</a
+            >. A collection of all slides is
+            <a href="static/2024WS_measure_theory/alle_slides.pdf">here</a>.
+          </p>
+          <p>Exercise sheets: The homeworks are handed out on Tuesdays, and can be handed in by Monday, 10:00. It is allowed to hand in solutions with one partner, i.e. two students hand in one solution.</p>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col"></th>
+                <th scope="col">Sections</th>
+                <th scope="col">Handed out</th>
+                <th scope="col">can be handed in</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <p>
+                    <a href="static/2025WS_measure_theory/Tutorial1.pdf"
+                      >Sheet 1: Repetition Topology 1</a
+                    >
+                  </p>
+                </td>
+                <td>Appendix A</td>
+                <td>20.10.2026</td>
+                <td>--</td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <a href="static/2025WS_measure_theory/Tutorial2.pdf"
+                      >Sheet 2: Repetition Topology 2</a
+                    >
+                  </p>
+                </td>
+                <td>Appendix A</td>
+                <td>20.10.2026</td>
+                <td>26.10.2026</td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <a href="static/2025WS_measure_theory/Tutorial3.pdf"
+                      >Sheet 3: Repetition Topology 3</a
+                    >
+                  </p>
+                </td>
+                <td>Appendix A</td>
+                <td>27.10.2026</td>
+                <td>2.11.2026</td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <a href="static/2025WS_measure_theory/Tutorial4.pdf"
+                      >Sheet 4: Some known integrals</a
+                    >
+                  </p>
+                </td>
+                <td>Basics</td>
+                <td>3.11.2026</td>
+                <td>9.11.2026</td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <a href="static/2025WS_measure_theory/Tutorial5.pdf"
+                      >Sheet 5: Semi-rings and sigma-fields</a
+                    >
+                  </p>
+                </td>
+                <td>Section 1.1, Videos 1, 2</td>
+                <td>10.11.2026</td>
+                <td>16.11.2026</td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <a href="static/2025WS_measure_theory/Tutorial6.pdf"
+                      >Sheet 6: Set systems</a
+                    >
+                  </p>
+                </td>
+                <td>Sections 1.2, 1.3, 1.4, Videos 3, 4</td>
+                <td>17.11.2026</td>
+                <td>23.11.2026</td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <a href="static/2025WS_measure_theory/Tutorial7.pdf"
+                      >Sheet 7: Set functions</a
+                    >
+                  </p>
+                </td>
+                <td>Sections 2.1, 2.2, Videos 5, 6</td>
+                <td>24.11.2026</td>
+                <td>30.11.2026</td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <a href="static/2025WS_measure_theory/Tutorial8.pdf"
+                      >Sheet 8: Uniqueness and extension of set functions</a
+                    >
+                  </p>
+                </td>
+                <td>Section 2.3, Video 7</td>
+                <td>1.12.2026</td>
+                <td>7.12.2026</td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <a href="static/2025WS_measure_theory/Tutorial9.pdf"
+                      >Sheet 9: Measures on $\mathbb R$</a
+                    >
+                  </p>
+                </td>
+                <td>Section 2.4, 2.5, 3.1, Video 8, 9</td>
+                <td>8.12.2026</td>
+                <td>14.12.2026</td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <a href="static/2025WS_measure_theory/Tutorial10.pdf"
+                      >Sheet 10: The Lebesgue integral</a
+                    >
+                  </p>
+                </td>
+                <td>Section 3.2, 3.3, 3.4, Video 10, 11</td>
+                <td>15.12.2026</td>
+                <td>21.12.2026</td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <a href="static/2025WS_measure_theory/Tutorial11.pdf"
+                      >Sheet 11: Basics of $L^p$-spaces</a
+                    >
+                  </p>
+                </td>
+                <td>Section 4.1, 4.2, Video 12</td>
+                <td>22.12.2026</td>
+                <td>11.1.2027</td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <a href="static/2025WS_measure_theory/Tutorial12.pdf"
+                      >Sheet 12: $L^2$</a
+                    >
+                  </p>
+                </td>
+                <td>Section 4.3, Video 13</td>
+                <td>12.1.2027</td>
+                <td>18.1.2027</td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <a href="static/2025WS_measure_theory/Tutorial13.pdf"
+                      >Sheet 13: Densities</a
+                    >
+                  </p>
+                </td>
+                <td>Section 4.4, Video 14</td>
+                <td>19.1.2027</td>
+                <td>25.1.2027</td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <a href="static/2025WS_measure_theory/Tutorial14.pdf"
+                      >Sheet 14: Product spaces</a
+                    >
+                  </p>
+                </td>
+                <td>Section 5, Videos 15, 16, 17</td>
+                <td>26.1.2027</td>
+                <td>1.2.2027</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="ufr-accordion-item">
+      <button type="button" class="ufr-accordion-header" data-bs-toggle="collapse"
+        data-bs-target="#online" aria-expanded="false" aria-controls="online">
+        <span class="ufr-accordion-header-content">
+          <span class="ufr-accordion-title">Videos</span>
+        </span>
+        <span class="ufr-accordion-chevron" aria-hidden="true">
+          <svg viewBox="0 0 35 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 5 L25.6 25 L5 45" stroke="currentColor" stroke-width="6" />
+          </svg>
+        </span>
+      </button>
+      <div id="online" class="collapse">
+        <div class="ufr-accordion-body">
+          <div class="row row-cols-1 row-cols-md-3 g-3">
+            <div class="col">
+              <div class="card h-100">
+                <div class="text-center">
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/tpy7MO0S0v8?si=t1fCjPSMA1pVPb6M"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <div class="card-body">
+                  <h3 class="h5">1. Introduction</h3>
+                  <div class="card-text">
+                    <p>Some introductory remarks</p>
+                    <p>
+                      <a href="static/2024WS_measure_theory/01.pdf">Slides</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <div class="text-center">
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/ibxLR0Ed6tY?si=cbj7RLt59bI74ObU"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <div class="card-body">
+                  <h3 class="h5">2. Semi-rings and σ-fields</h3>
+                  <div class="card-text">
+                    <p>Covers Section 1.1</p>
+                    <p>
+                      <a href="static/2024WS_measure_theory/02.pdf">Slides</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <div class="text-center">
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/eF5m4A5Yzt0?si=wc6XZfm2INz6AUQU"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <div class="card-body">
+                  <h3 class="h5">3. Generators and extensions</h3>
+                  <div class="card-text">
+                    <p>
+                      Covers Section 1.2, and includes some repetition in
+                      topology (Appendix A)
+                    </p>
+                    <p>
+                      <a href="static/2024WS_measure_theory/03.pdf">Slides</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <div class="text-center">
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/K415DCGAndI?si=NaFZiSmpPYGM4OqO"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <div class="card-body">
+                  <h3 class="h5">4. Dynkin systems and compact systems</h3>
+                  <div class="card-text">
+                    <p>Covers Sections 1.3 and 1.4</p>
+                    <p>
+                      <a href="static/2024WS_measure_theory/04.pdf">Slides</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <div class="text-center">
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/3qEPkjcatbM?si=HxeX377JTdamOEdA"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <div class="card-body">
+                  <h3 class="h5">5. Set functions and outer measures</h3>
+                  <div class="card-text">
+                    <p>Covers Section 2.1</p>
+                    <p>
+                      <a href="static/2024WS_measure_theory/05.pdf">Slides</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <div class="text-center">
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/bJty372_KM8?si=rrLs1wB1dtARWZL4"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <div class="card-body">
+                  <h3 class="h5">6. σ-additivity</h3>
+                  <div class="card-text">
+                    <p>
+                      Covers Section 1.2, and includes some repetition in
+                      topology (Appendix A)
+                    </p>
+                    <p>
+                      <a href="static/2024WS_measure_theory/06.pdf">Slides</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <div class="text-center">
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/rsAwspVssXY?si=ANNUrGDL6DrXek9_"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <div class="card-body">
+                  <h3 class="h5">
+                    7. Uniqueness and extension of set functions
+                  </h3>
+                  <div class="card-text">
+                    <p>Covers Section 2.3</p>
+                    <p>
+                      <a href="static/2024WS_measure_theory/07.pdf">Slides</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <div class="text-center">
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/VFqQjJWKgoQ?si=1LRiOU_gK471j1hO"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <div class="card-body">
+                  <h3 class="h5">8. Measures on ℝ and image measures</h3>
+                  <div class="card-text">
+                    <p>Covers Sections 2.4 and 2.5</p>
+                    <p>
+                      <a href="static/2024WS_measure_theory/08.pdf">Slides</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <div class="text-center">
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/JrKhqzJyWPU?si=IDF_DWr9banAM0Z4"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <div class="card-body">
+                  <h3 class="h5">9. Approximation of measurable functions</h3>
+                  <p>
+                    <a href="static/2024WS_measure_theory/09.pdf">Slides</a>
+                  </p>
+                  <div class="card-text">
+                    <p>Covers Section 3.1</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <div class="text-center">
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/H9SlDk2l6Uw?si=SPFW1qbir7dY20Lz"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <div class="card-body">
+                  <h3 class="h5">
+                    10. Defining the integral, and some properties
+                    <p>
+                      <a href="static/2024WS_measure_theory/10.pdf">Slides</a>
+                    </p>
+                  </h3>
+                  <div class="card-text">
+                    <p>Covers Sections 3.2, 3.3</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <div class="text-center">
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/K_tVhCZn-88?si=LGbg9wp76gAyArKr"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <div class="card-body">
+                  <h3 class="h5">11. Convergence results</h3>
+                  <div class="card-text">
+                    <p>Covers Section 3.4</p>
+                    <p>
+                      <a href="static/2024WS_measure_theory/11.pdf">Slides</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <div class="text-center">
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/LDZ0Hl2VsxU?si=sE6Ng8F8vrlTWo5G"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <div class="card-body">
+                  <h3 class="h5">12. Basics of L^p -spaces</h3>
+                  <div class="card-text">
+                    <p>Covers Sections 4.1, 4.2</p>
+                    <p>
+                      <a href="static/2024WS_measure_theory/12.pdf">Slides</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <div class="text-center">
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/iItvEveHhbw?si=vbR25i9o2M14kzb2"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <div class="card-body">
+                  <h3 class="h5">13. The space L^2</h3>
+                  <div class="card-text">
+                    <p>Covers Section 4.3</p>
+                    <p>
+                      <a href="static/2024WS_measure_theory/13.pdf">Slides</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <div class="text-center">
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/usr-j70ag8c?si=-cw2lJsG9yBZt7DV"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <div class="card-body">
+                  <h3 class="h5">14. Theorem of Radon-Nikodým</h3>
+                  <div class="card-text">
+                    <p>Covers Section 4.4</p>
+                    <p>
+                      <a href="static/2024WS_measure_theory/14.pdf">Slides</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <div class="text-center">
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/S72C9rx6fyg?si=OL_jh5H4cOlaUINQ"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <div class="card-body">
+                  <h3 class="h5">15. Set systems on product spaces</h3>
+                  <div class="card-text">
+                    <p>Covers Sections 5.1, 5.2</p>
+                    <p>
+                      <a href="static/2024WS_measure_theory/15.pdf">Slides</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <div class="text-center">
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/QNiOL7LkDDo?si=JVrsfHgtM5zPHxD2"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <div class="card-body">
+                  <h3 class="h5">16. Measures on product spaces</h3>
+                  <div class="card-text">
+                    <p>Covers Section 5.3, 5.4</p>
+                    <p>
+                      <a href="static/2024WS_measure_theory/16.pdf">Slides</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <div class="text-center">
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/Rfe56mSRsGs?si=pdK33xZkNGyDKBl9"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <div class="card-body">
+                  <h3 class="h5">17. Projective limits</h3>
+                  <p>
+                    <a href="static/2024WS_measure_theory/17.pdf">Slides</a>
+                  </p>
+                  <div class="card-text">
+                    <p>Covers Section 5.5</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
